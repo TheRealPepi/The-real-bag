@@ -1451,5 +1451,108 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "SITG Brand Palette",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Controls the colors used by every section starting with \"sitg-\" on the home page. Defaults reproduce the original brand palette."
+      },
+      {
+        "type": "header",
+        "content": "Greens"
+      },
+      {
+        "type": "color",
+        "id": "sitg_green_deep",
+        "label": "Deep green (hero & dark backgrounds)",
+        "default": "#2B4A3E"
+      },
+      {
+        "type": "color",
+        "id": "sitg_green_mid",
+        "label": "Mid green",
+        "default": "#3A6355"
+      },
+      {
+        "type": "color",
+        "id": "sitg_green_light",
+        "label": "Light green (accent)",
+        "default": "#4A7D6B"
+      },
+      {
+        "type": "color",
+        "id": "sitg_green_check",
+        "label": "Checkmark green",
+        "default": "#4A7D6B"
+      },
+      {
+        "type": "header",
+        "content": "Amber & Gold"
+      },
+      {
+        "type": "color",
+        "id": "sitg_amber",
+        "label": "Amber (primary accent)",
+        "default": "#D4763C"
+      },
+      {
+        "type": "color",
+        "id": "sitg_amber_light",
+        "label": "Amber light (hover / soft accent)",
+        "default": "#E8945A"
+      },
+      {
+        "type": "color",
+        "id": "sitg_gold",
+        "label": "Gold",
+        "default": "#C9A84C"
+      },
+      {
+        "type": "header",
+        "content": "Neutrals"
+      },
+      {
+        "type": "color",
+        "id": "sitg_cream",
+        "label": "Cream (light section background)",
+        "default": "#F5F0E8"
+      },
+      {
+        "type": "color",
+        "id": "sitg_white",
+        "label": "Off-white (cards)",
+        "default": "#FEFCF9"
+      },
+      {
+        "type": "color",
+        "id": "sitg_charcoal",
+        "label": "Charcoal (headings / body text)",
+        "default": "#1A1A1A"
+      },
+      {
+        "type": "color",
+        "id": "sitg_warm_gray",
+        "label": "Warm gray (body copy)",
+        "default": "#6B6560"
+      },
+      {
+        "type": "color",
+        "id": "sitg_warm_gray_light",
+        "label": "Warm gray light",
+        "default": "#9B9590"
+      },
+      {
+        "type": "header",
+        "content": "Status"
+      },
+      {
+        "type": "color",
+        "id": "sitg_red_soft",
+        "label": "Soft red (negative / \"no\" markers)",
+        "default": "#C44D3F"
+      }
+    ]
   }
 ]

@@ -2,25 +2,10 @@
    STILL IN THE GAME — Landing Page Styles
    ============================================ */
 
-/* ---------- Reset & Variables ---------- */
+/* ---------- Reset ---------- */
+/* Brand palette CSS variables (--sitg-*) are emitted by layout/theme.liquid
+   from the "SITG Brand Palette" theme settings group. */
 .sitg *, .sitg *::before, .sitg *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --sitg-green-deep: #2B4A3E;
-  --sitg-green-mid: #3A6355;
-  --sitg-green-light: #4A7D6B;
-  --sitg-amber: #D4763C;
-  --sitg-amber-light: #E8945A;
-  --sitg-gold: #C9A84C;
-  --sitg-cream: #F5F0E8;
-  --sitg-cream-dark: #EBE4D8;
-  --sitg-charcoal: #1A1A1A;
-  --sitg-warm-gray: #6B6560;
-  --sitg-warm-gray-light: #9B9590;
-  --sitg-white: #FEFCF9;
-  --sitg-red-soft: #C44D3F;
-  --sitg-green-check: #4A7D6B;
-}
 
 .sitg { font-family: 'DM Sans', sans-serif; color: var(--sitg-charcoal); -webkit-font-smoothing: antialiased; }
 .sitg .bebas { font-family: 'Bebas Neue', sans-serif; }
