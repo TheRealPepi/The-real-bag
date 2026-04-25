@@ -1,14 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "sitg_hero": {
       "type": "sitg-hero",
       "settings": {
+        "product_image": "shopify://shop_images/SERV_TRAD_MARLI.jpg",
         "badge_text": "The first 4-mechanism joint formula",
         "headline_line1": "YOUR BODY WAS",
         "headline_line2": "BUILT FOR THIS.",
         "headline_line3": "WE KEEP IT THAT WAY.",
         "subheadline": "Not a joint supplement for aging bodies. Performance fuel for active adults who refuse to sit this one out. Four clinically studied branded ingredients. One daily ritual.",
         "cta_text": "Start Your Ritual",
+        "cta_link": "",
         "rating": "50+ Clinical Trials",
         "review_count": "supporting these ingredients",
         "guarantee_title": "90-Day",
@@ -24,25 +35,93 @@
     "sitg_marquee": {
       "type": "sitg-marquee",
       "blocks": {
-        "m1": { "type": "message", "settings": { "text": "CLINICALLY STUDIED DOSES" } },
-        "m2": { "type": "message", "settings": { "text": "4 BRANDED INGREDIENTS" } },
-        "m3": { "type": "message", "settings": { "text": "ZERO PROPRIETARY BLENDS" } },
-        "m4": { "type": "message", "settings": { "text": "BUILT FOR ACTIVE ADULTS" } },
-        "m5": { "type": "message", "settings": { "text": "NSAID-COMPARABLE RESULTS" } },
-        "m6": { "type": "message", "settings": { "text": "90-DAY MONEY-BACK GUARANTEE" } },
-        "m7": { "type": "message", "settings": { "text": "SHIPS TODAY" } }
+        "m1": {
+          "type": "message",
+          "settings": {
+            "text": "CLINICALLY STUDIED DOSES"
+          }
+        },
+        "m2": {
+          "type": "message",
+          "settings": {
+            "text": "4 BRANDED INGREDIENTS"
+          }
+        },
+        "m3": {
+          "type": "message",
+          "settings": {
+            "text": "ZERO PROPRIETARY BLENDS"
+          }
+        },
+        "m4": {
+          "type": "message",
+          "settings": {
+            "text": "BUILT FOR ACTIVE ADULTS"
+          }
+        },
+        "m5": {
+          "type": "message",
+          "settings": {
+            "text": "NSAID-COMPARABLE RESULTS"
+          }
+        },
+        "m6": {
+          "type": "message",
+          "settings": {
+            "text": "90-DAY MONEY-BACK GUARANTEE"
+          }
+        },
+        "m7": {
+          "type": "message",
+          "settings": {
+            "text": "SHIPS TODAY"
+          }
+        }
       },
-      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6", "m7"],
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7"
+      ],
       "settings": {}
     },
     "sitg_reframe": {
       "type": "sitg-reframe",
       "blocks": {
-        "card1": { "type": "card", "settings": { "icon": "🎯", "title": "THE \"SLOW DOWN\" LIE", "description": "People who internalize \"you're declining\" narratives are 32% more likely to develop chronic pain (Yale, 7-year longitudinal study). The framing isn't just wrong — it makes things worse." } },
-        "card2": { "type": "card", "settings": { "icon": "🧩", "title": "THE ONE-TRICK PROBLEM", "description": "Most supplements hit a single inflammatory pathway. Your body has four pathways involved in joint discomfort. Covering one while ignoring three is like fixing one tire on a car that needs four." } },
-        "card3": { "type": "card", "settings": { "icon": "🔍", "title": "THE HIDDEN-DOSE GAME", "description": "Proprietary blends. \"Proprietary matrices.\" Generic ingredients marketed as premium. 60+ SKUs researched and most can't even tell you how much of each ingredient you're actually getting." } }
+        "card1": {
+          "type": "card",
+          "settings": {
+            "icon": "🎯",
+            "title": "THE \"SLOW DOWN\" LIE",
+            "description": "People who internalize \"you're declining\" narratives are 32% more likely to develop chronic pain (Yale, 7-year longitudinal study). The framing isn't just wrong — it makes things worse."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "icon": "🧩",
+            "title": "THE ONE-TRICK PROBLEM",
+            "description": "Most supplements hit a single inflammatory pathway. Your body has four pathways involved in joint discomfort. Covering one while ignoring three is like fixing one tire on a car that needs four."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "icon": "🔍",
+            "title": "THE HIDDEN-DOSE GAME",
+            "description": "Proprietary blends. \"Proprietary matrices.\" Generic ingredients marketed as premium. 60+ SKUs researched and most can't even tell you how much of each ingredient you're actually getting."
+          }
+        }
       },
-      "block_order": ["card1", "card2", "card3"],
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
       "settings": {
         "eyebrow": "Let's be honest",
         "headline": "EVERY JOINT SUPPLEMENT TELLS YOU<br>YOU'RE BROKEN. YOU'RE NOT.",
@@ -52,12 +131,65 @@
     "sitg_ingredients": {
       "type": "sitg-ingredients",
       "blocks": {
-        "ing1": { "type": "ingredient", "settings": { "branded_name": "Meriva® by Indena", "ingredient_name": "CURCUMIN PHYTOSOME", "dose": "1,000 mg/day delivering ~200 mg curcuminoids", "mechanism_icon": "⚡", "mechanism_name": "COX-2 & NF-κB Inhibition", "description": "The deepest evidence base of any joint supplement ingredient. An umbrella meta-analysis of 11 prior meta-analyses confirmed significant reductions in pain, stiffness, and function. Proven comparable to prescription NSAIDs — with zero GI side effects.", "stat_number": "50%+", "stat_label": "WOMAC score reduction in 8-month clinical study. The gold standard used by Thorne, Jarrow, and Momentous." } },
-        "ing2": { "type": "ingredient", "settings": { "branded_name": "AprèsFlex® (20% AKBA)", "ingredient_name": "BOSWELLIA SERRATA", "dose": "100 mg/day — the lowest effective dose of any ingredient", "mechanism_icon": "🔥", "mechanism_name": "5-Lipoxygenase Inhibition", "description": "Covers the second major inflammatory cascade that curcumin doesn't touch. Benefits appear as early as day 5 — the fastest onset of any botanical studied. Effects persisted a full month after stopping, suggesting possible disease-modifying action.", "stat_number": "61.7%", "stat_label": "WOMAC pain reduction. Safest high-efficacy option for adults taking blood thinners, statins, or diabetes meds." } },
-        "ing3": { "type": "ingredient", "settings": { "branded_name": "UC-II® by Lonza", "ingredient_name": "UNDENATURED TYPE II COLLAGEN", "dose": "40 mg/day — only 40 mg needed", "mechanism_icon": "🛡️", "mechanism_name": "Oral Immune Tolerance", "description": "Outperformed glucosamine + chondroitin in a head-to-head 191-patient RCT. Works through a unique mechanism: tiny doses of native collagen reprogram T-cells to stop immune-mediated cartilage destruction. 40 mg adds virtually no capsule burden.", "stat_number": "41%", "stat_label": "Pain reduction in the landmark Lugo 2016 trial — outperforming glucosamine + chondroitin on every measure." } },
-        "ing4": { "type": "ingredient", "settings": { "branded_name": "Levagen+® by Gencor", "ingredient_name": "PEA — PALMITOYLETHANOLAMIDE", "dose": "350 mg micronized with LipiSperse® technology", "mechanism_icon": "🧠", "mechanism_name": "Endocannabinoid Modulation", "description": "The most compelling emerging ingredient in joint health. A 2025 meta-analysis found significant pain reduction at 6, 8, and 24 weeks. Works through PPAR-α receptor activation — a mechanism entirely distinct from every other ingredient in this formula.", "stat_number": "1.75×", "stat_label": "Greater absorption than standard PEA via cold-water dispersibility technology. No major brand combines PEA with joint ingredients — until now." } }
+        "ing1": {
+          "type": "ingredient",
+          "settings": {
+            "branded_name": "Meriva® by Indena",
+            "ingredient_name": "CURCUMIN PHYTOSOME",
+            "dose": "1,000 mg/day delivering ~200 mg curcuminoids",
+            "mechanism_icon": "⚡",
+            "mechanism_name": "COX-2 & NF-κB Inhibition",
+            "description": "The deepest evidence base of any joint supplement ingredient. An umbrella meta-analysis of 11 prior meta-analyses confirmed significant reductions in pain, stiffness, and function. Proven comparable to prescription NSAIDs — with zero GI side effects.",
+            "stat_number": "50%+",
+            "stat_label": "WOMAC score reduction in 8-month clinical study. The gold standard used by Thorne, Jarrow, and Momentous."
+          }
+        },
+        "ing2": {
+          "type": "ingredient",
+          "settings": {
+            "branded_name": "AprèsFlex® (20% AKBA)",
+            "ingredient_name": "BOSWELLIA SERRATA",
+            "dose": "100 mg/day — the lowest effective dose of any ingredient",
+            "mechanism_icon": "🔥",
+            "mechanism_name": "5-Lipoxygenase Inhibition",
+            "description": "Covers the second major inflammatory cascade that curcumin doesn't touch. Benefits appear as early as day 5 — the fastest onset of any botanical studied. Effects persisted a full month after stopping, suggesting possible disease-modifying action.",
+            "stat_number": "61.7%",
+            "stat_label": "WOMAC pain reduction. Safest high-efficacy option for adults taking blood thinners, statins, or diabetes meds."
+          }
+        },
+        "ing3": {
+          "type": "ingredient",
+          "settings": {
+            "branded_name": "UC-II® by Lonza",
+            "ingredient_name": "UNDENATURED TYPE II COLLAGEN",
+            "dose": "40 mg/day — only 40 mg needed",
+            "mechanism_icon": "🛡️",
+            "mechanism_name": "Oral Immune Tolerance",
+            "description": "Outperformed glucosamine + chondroitin in a head-to-head 191-patient RCT. Works through a unique mechanism: tiny doses of native collagen reprogram T-cells to stop immune-mediated cartilage destruction. 40 mg adds virtually no capsule burden.",
+            "stat_number": "41%",
+            "stat_label": "Pain reduction in the landmark Lugo 2016 trial — outperforming glucosamine + chondroitin on every measure."
+          }
+        },
+        "ing4": {
+          "type": "ingredient",
+          "settings": {
+            "branded_name": "Levagen+® by Gencor",
+            "ingredient_name": "PEA — PALMITOYLETHANOLAMIDE",
+            "dose": "350 mg micronized with LipiSperse® technology",
+            "mechanism_icon": "🧠",
+            "mechanism_name": "Endocannabinoid Modulation",
+            "description": "The most compelling emerging ingredient in joint health. A 2025 meta-analysis found significant pain reduction at 6, 8, and 24 weeks. Works through PPAR-α receptor activation — a mechanism entirely distinct from every other ingredient in this formula.",
+            "stat_number": "1.75×",
+            "stat_label": "Greater absorption than standard PEA via cold-water dispersibility technology. No major brand combines PEA with joint ingredients — until now."
+          }
+        }
       },
-      "block_order": ["ing1", "ing2", "ing3", "ing4"],
+      "block_order": [
+        "ing1",
+        "ing2",
+        "ing3",
+        "ing4"
+      ],
       "settings": {
         "eyebrow": "What's inside",
         "headline": "FOUR MECHANISMS.<br>FOUR BRANDED INGREDIENTS.<br>ZERO GUESSWORK.",
@@ -67,15 +199,68 @@
     "sitg_science": {
       "type": "sitg-science",
       "blocks": {
-        "stat1": { "type": "stat", "settings": { "number": "50+", "label": "Randomized controlled trials supporting these ingredients" } },
-        "stat2": { "type": "stat", "settings": { "number": "15+", "label": "Meta-analyses — the gold standard of clinical evidence" } },
-        "stat3": { "type": "stat", "settings": { "number": "4", "label": "Distinct biological mechanisms in one formula" } },
-        "stat4": { "type": "stat", "settings": { "number": "6", "label": "Ingredients in this category proven comparable to NSAIDs" } },
-        "trial1": { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (BCM-95, 1,500mg)", "vs": "vs. Diclofenac 100mg/day", "result": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)" } },
-        "trial2": { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (C. domestica, 1,500mg)", "vs": "vs. Ibuprofen 1,200mg/day", "result": "Non-inferior; fewer GI complaints at p=0.046 (Kuptniratsaikul 2014, n=367)" } },
-        "trial3": { "type": "nsaid_trial", "settings": { "ingredient": "Boswellia 1,000mg", "vs": "vs. Valdecoxib 10mg/day", "result": "Non-inferior; benefit persisted 1 month after stopping therapy (Sontakke 2007, n=66)" } }
+        "stat1": {
+          "type": "stat",
+          "settings": {
+            "number": "50+",
+            "label": "Randomized controlled trials supporting these ingredients"
+          }
+        },
+        "stat2": {
+          "type": "stat",
+          "settings": {
+            "number": "15+",
+            "label": "Meta-analyses — the gold standard of clinical evidence"
+          }
+        },
+        "stat3": {
+          "type": "stat",
+          "settings": {
+            "number": "4",
+            "label": "Distinct biological mechanisms in one formula"
+          }
+        },
+        "stat4": {
+          "type": "stat",
+          "settings": {
+            "number": "6",
+            "label": "Ingredients in this category proven comparable to NSAIDs"
+          }
+        },
+        "trial1": {
+          "type": "nsaid_trial",
+          "settings": {
+            "ingredient": "Curcumin (BCM-95, 1,500mg)",
+            "vs": "vs. Diclofenac 100mg/day",
+            "result": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)"
+          }
+        },
+        "trial2": {
+          "type": "nsaid_trial",
+          "settings": {
+            "ingredient": "Curcumin (C. domestica, 1,500mg)",
+            "vs": "vs. Ibuprofen 1,200mg/day",
+            "result": "Non-inferior; fewer GI complaints at p=0.046 (Kuptniratsaikul 2014, n=367)"
+          }
+        },
+        "trial3": {
+          "type": "nsaid_trial",
+          "settings": {
+            "ingredient": "Boswellia 1,000mg",
+            "vs": "vs. Valdecoxib 10mg/day",
+            "result": "Non-inferior; benefit persisted 1 month after stopping therapy (Sontakke 2007, n=66)"
+          }
+        }
       },
-      "block_order": ["stat1", "stat2", "stat3", "stat4", "trial1", "trial2", "trial3"],
+      "block_order": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4",
+        "trial1",
+        "trial2",
+        "trial3"
+      ],
       "settings": {
         "eyebrow": "The evidence",
         "headline": "BACKED BY 50+ CLINICAL TRIALS.<br>NOT BACKED BY MARKETING BUDGETS.",
@@ -86,14 +271,87 @@
     "sitg_comparison": {
       "type": "sitg-comparison",
       "blocks": {
-        "row1": { "type": "row", "settings": { "row_label": "Pain pathways covered", "us_type": "text", "us_value": "4", "comp1_type": "text", "comp1_value": "1", "comp2_type": "text", "comp2_value": "1–2" } },
-        "row2": { "type": "row", "settings": { "row_label": "Clinically dosed ingredients", "us_type": "check", "comp1_type": "x", "comp2_type": "x" } },
-        "row3": { "type": "row", "settings": { "row_label": "All doses disclosed", "us_type": "check", "comp1_type": "check", "comp2_type": "x" } },
-        "row4": { "type": "row", "settings": { "row_label": "Endocannabinoid support (PEA)", "us_type": "check", "comp1_type": "x", "comp2_type": "x" } },
-        "row5": { "type": "row", "settings": { "row_label": "Daily pills", "us_type": "text", "us_value": "2", "comp1_type": "text", "comp1_value": "2–3", "comp2_type": "text", "comp2_value": "8–12" } },
-        "row6": { "type": "row", "settings": { "row_label": "Monthly price", "us_type": "text", "us_value": "$49", "comp1_type": "text", "comp1_value": "🤷", "comp2_type": "text", "comp2_value": "$80+" } }
+        "row1": {
+          "type": "row",
+          "settings": {
+            "row_label": "Pain pathways covered",
+            "us_type": "text",
+            "us_value": "4",
+            "comp1_type": "text",
+            "comp1_value": "1",
+            "comp2_type": "text",
+            "comp2_value": "1–2"
+          }
+        },
+        "row2": {
+          "type": "row",
+          "settings": {
+            "row_label": "Clinically dosed ingredients",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row3": {
+          "type": "row",
+          "settings": {
+            "row_label": "All doses disclosed",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "check",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row4": {
+          "type": "row",
+          "settings": {
+            "row_label": "Endocannabinoid support (PEA)",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row5": {
+          "type": "row",
+          "settings": {
+            "row_label": "Daily pills",
+            "us_type": "text",
+            "us_value": "2",
+            "comp1_type": "text",
+            "comp1_value": "2–3",
+            "comp2_type": "text",
+            "comp2_value": "8–12"
+          }
+        },
+        "row6": {
+          "type": "row",
+          "settings": {
+            "row_label": "Monthly price",
+            "us_type": "text",
+            "us_value": "$49",
+            "comp1_type": "text",
+            "comp1_value": "🤷",
+            "comp2_type": "text",
+            "comp2_value": "$80+"
+          }
+        }
       },
-      "block_order": ["row1", "row2", "row3", "row4", "row5", "row6"],
+      "block_order": [
+        "row1",
+        "row2",
+        "row3",
+        "row4",
+        "row5",
+        "row6"
+      ],
       "settings": {
         "eyebrow": "The honest comparison",
         "headline": "US VS. THEM",
@@ -105,13 +363,49 @@
     "sitg_timeline": {
       "type": "sitg-timeline",
       "blocks": {
-        "ms1": { "type": "milestone", "settings": { "when": "DAY 5", "what": "<strong>Boswellia kicks in first.</strong> AprèsFlex begins reducing 5-LOX inflammation — the fastest onset of any botanical studied. You may notice morning stiffness starting to ease." } },
-        "ms2": { "type": "milestone", "settings": { "when": "WEEKS 2–4", "what": "<strong>Curcumin anti-inflammatory effects build.</strong> Meriva's phytosome delivery starts reducing COX-2 and NF-κB — a second inflammatory pathway now covered. PEA begins modulating pain signals via the endocannabinoid system." } },
-        "ms3": { "type": "milestone", "settings": { "when": "WEEKS 4–8", "what": "<strong>Full curcumin + PEA synergy.</strong> Inflammatory biomarkers (CRP, TNF-α) significantly reduced. Most people report noticeable improvement in daily activities — stairs, morning stiffness, exercise recovery." } },
-        "ms4": { "type": "milestone", "settings": { "when": "MONTHS 2–3", "what": "<strong>UC-II oral tolerance fully establishes.</strong> Your immune system is now reprogrammed to reduce immune-mediated cartilage breakdown. This is where structural, lasting benefit begins." } },
-        "ms5": { "type": "milestone", "settings": { "when": "MONTH 3+", "what": "<strong>All four mechanisms fully active.</strong> Deepening structural benefit from UC-II. Cumulative anti-inflammatory action. This is the long game — the benefit keeps building." } }
+        "ms1": {
+          "type": "milestone",
+          "settings": {
+            "when": "DAY 5",
+            "what": "<strong>Boswellia kicks in first.</strong> AprèsFlex begins reducing 5-LOX inflammation — the fastest onset of any botanical studied. You may notice morning stiffness starting to ease."
+          }
+        },
+        "ms2": {
+          "type": "milestone",
+          "settings": {
+            "when": "WEEKS 2–4",
+            "what": "<strong>Curcumin anti-inflammatory effects build.</strong> Meriva's phytosome delivery starts reducing COX-2 and NF-κB — a second inflammatory pathway now covered. PEA begins modulating pain signals via the endocannabinoid system."
+          }
+        },
+        "ms3": {
+          "type": "milestone",
+          "settings": {
+            "when": "WEEKS 4–8",
+            "what": "<strong>Full curcumin + PEA synergy.</strong> Inflammatory biomarkers (CRP, TNF-α) significantly reduced. Most people report noticeable improvement in daily activities — stairs, morning stiffness, exercise recovery."
+          }
+        },
+        "ms4": {
+          "type": "milestone",
+          "settings": {
+            "when": "MONTHS 2–3",
+            "what": "<strong>UC-II oral tolerance fully establishes.</strong> Your immune system is now reprogrammed to reduce immune-mediated cartilage breakdown. This is where structural, lasting benefit begins."
+          }
+        },
+        "ms5": {
+          "type": "milestone",
+          "settings": {
+            "when": "MONTH 3+",
+            "what": "<strong>All four mechanisms fully active.</strong> Deepening structural benefit from UC-II. Cumulative anti-inflammatory action. This is the long game — the benefit keeps building."
+          }
+        }
       },
-      "block_order": ["ms1", "ms2", "ms3", "ms4", "ms5"],
+      "block_order": [
+        "ms1",
+        "ms2",
+        "ms3",
+        "ms4",
+        "ms5"
+      ],
       "settings": {
         "eyebrow": "What to expect",
         "headline": "REAL TIMELINES.<br>NOT MIRACLE PROMISES.",
@@ -121,13 +415,54 @@
     "sitg_trust": {
       "type": "sitg-trust",
       "blocks": {
-        "b1": { "type": "badge", "settings": { "icon": "🏭", "label": "GMP Certified", "sublabel": "Facility" } },
-        "b2": { "type": "badge", "settings": { "icon": "🔬", "label": "3rd Party Tested", "sublabel": "Purity & potency" } },
-        "b3": { "type": "badge", "settings": { "icon": "📋", "label": "Fully Transparent", "sublabel": "Every dose on the label" } },
-        "b4": { "type": "badge", "settings": { "icon": "🛡️", "label": "4 Branded Ingredients", "sublabel": "Meriva · AprèsFlex · UC-II · Levagen+" } },
-        "b5": { "type": "badge", "settings": { "icon": "↩️", "label": "90-Day Guarantee", "sublabel": "Full money-back" } }
+        "b1": {
+          "type": "badge",
+          "settings": {
+            "icon": "🏭",
+            "label": "GMP Certified",
+            "sublabel": "Facility"
+          }
+        },
+        "b2": {
+          "type": "badge",
+          "settings": {
+            "icon": "🔬",
+            "label": "3rd Party Tested",
+            "sublabel": "Purity & potency"
+          }
+        },
+        "b3": {
+          "type": "badge",
+          "settings": {
+            "icon": "📋",
+            "label": "Fully Transparent",
+            "sublabel": "Every dose on the label"
+          }
+        },
+        "b4": {
+          "type": "badge",
+          "settings": {
+            "icon": "🛡️",
+            "label": "4 Branded Ingredients",
+            "sublabel": "Meriva · AprèsFlex · UC-II · Levagen+"
+          }
+        },
+        "b5": {
+          "type": "badge",
+          "settings": {
+            "icon": "↩️",
+            "label": "90-Day Guarantee",
+            "sublabel": "Full money-back"
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
       "settings": {}
     },
     "sitg_founder": {
@@ -144,29 +479,116 @@
     "sitg_testimonials": {
       "type": "sitg-testimonials",
       "blocks": {
-        "t1": { "type": "testimonial", "settings": { "quote": "Absolute game changer. I'm back on the pickleball court four days a week. My partner says I'm moving like I did five years ago.", "name": "Robert K.", "detail": "58, avid pickleball player" } },
-        "t2": { "type": "testimonial", "settings": { "quote": "I've tried everything. Glucosamine, turmeric capsules from the drugstore, prescription stuff. This is the first time something actually worked. I can get on the floor with my grandkids again.", "name": "Linda M.", "detail": "62, retired teacher & hiker" } },
-        "t3": { "type": "testimonial", "settings": { "quote": "I was skeptical — I've been burned by supplements before. But week two I noticed the morning stiffness was fading. By month two I added a second hike day to my week. I'm 54 and I'm not done.", "name": "David T.", "detail": "54, weekend trail hiker" } }
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Absolute game changer. I'm back on the pickleball court four days a week. My partner says I'm moving like I did five years ago.",
+            "name": "Robert K.",
+            "detail": "58, avid pickleball player"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "I've tried everything. Glucosamine, turmeric capsules from the drugstore, prescription stuff. This is the first time something actually worked. I can get on the floor with my grandkids again.",
+            "name": "Linda M.",
+            "detail": "62, retired teacher & hiker"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "I was skeptical — I've been burned by supplements before. But week two I noticed the morning stiffness was fading. By month two I added a second hike day to my week. I'm 54 and I'm not done.",
+            "name": "David T.",
+            "detail": "54, weekend trail hiker"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
       "settings": {}
     },
     "sitg_purchase": {
       "type": "sitg-purchase",
       "blocks": {
-        "ben1": { "type": "benefit", "settings": { "text": "All four branded ingredients at clinically studied doses" } },
-        "ben2": { "type": "benefit", "settings": { "text": "Four distinct biological mechanisms in one formula" } },
-        "ben3": { "type": "benefit", "settings": { "text": "Benefits as early as day 5 (Boswellia onset)" } },
-        "ben4": { "type": "benefit", "settings": { "text": "Minimal drug interaction risk for adults 45+" } },
-        "ben5": { "type": "benefit", "settings": { "text": "90-day money-back guarantee — no questions asked" } },
-        "ben6": { "type": "benefit", "settings": { "text": "Free shipping on every order" } },
-        "inc1": { "type": "include", "settings": { "text": "90 capsules (30-day supply)" } },
-        "inc2": { "type": "include", "settings": { "text": "Free shipping, always" } },
-        "inc3": { "type": "include", "settings": { "text": "Cancel or pause anytime" } },
-        "inc4": { "type": "include", "settings": { "text": "90-day money-back guarantee" } }
+        "ben1": {
+          "type": "benefit",
+          "settings": {
+            "text": "All four branded ingredients at clinically studied doses"
+          }
+        },
+        "ben2": {
+          "type": "benefit",
+          "settings": {
+            "text": "Four distinct biological mechanisms in one formula"
+          }
+        },
+        "ben3": {
+          "type": "benefit",
+          "settings": {
+            "text": "Benefits as early as day 5 (Boswellia onset)"
+          }
+        },
+        "ben4": {
+          "type": "benefit",
+          "settings": {
+            "text": "Minimal drug interaction risk for adults 45+"
+          }
+        },
+        "ben5": {
+          "type": "benefit",
+          "settings": {
+            "text": "90-day money-back guarantee — no questions asked"
+          }
+        },
+        "ben6": {
+          "type": "benefit",
+          "settings": {
+            "text": "Free shipping on every order"
+          }
+        },
+        "inc1": {
+          "type": "include",
+          "settings": {
+            "text": "90 capsules (30-day supply)"
+          }
+        },
+        "inc2": {
+          "type": "include",
+          "settings": {
+            "text": "Free shipping, always"
+          }
+        },
+        "inc3": {
+          "type": "include",
+          "settings": {
+            "text": "Cancel or pause anytime"
+          }
+        },
+        "inc4": {
+          "type": "include",
+          "settings": {
+            "text": "90-day money-back guarantee"
+          }
+        }
       },
-      "block_order": ["ben1", "ben2", "ben3", "ben4", "ben5", "ben6", "inc1", "inc2", "inc3", "inc4"],
+      "block_order": [
+        "ben1",
+        "ben2",
+        "ben3",
+        "ben4",
+        "ben5",
+        "ben6",
+        "inc1",
+        "inc2",
+        "inc3",
+        "inc4"
+      ],
       "settings": {
+        "product": "",
         "product_display_name": "STILL IN THE GAME",
         "product_subtitle": "Joint Performance Fuel · 90 capsules · 30 Day Supply",
         "eyebrow": "Your daily ritual",
@@ -184,14 +606,57 @@
     "sitg_faq": {
       "type": "sitg-faq",
       "blocks": {
-        "faq1": { "type": "faq", "settings": { "question": "How is this different from glucosamine and chondroitin?", "answer": "Glucosamine and chondroitin target one pathway — structural cartilage support. Still In The Game covers four distinct mechanisms: two anti-inflammatory pathways (COX-2 and 5-LOX), immune-mediated cartilage protection (oral tolerance), and endocannabinoid pain modulation. In fact, one of our ingredients — UC-II collagen — outperformed the glucosamine + chondroitin combination in a head-to-head clinical trial of 191 patients." } },
-        "faq2": { "type": "faq", "settings": { "question": "Will this interact with my medications?", "answer": "Three of our four ingredients — Boswellia, UC-II, and PEA — have minimal drug interaction risk, making them well-suited for adults taking blood thinners, statins, or diabetes medications. Curcumin has a moderate interaction profile, particularly with warfarin and certain statins. We always recommend discussing any new supplement with your healthcare provider, especially if you're taking prescription medications." } },
-        "faq3": { "type": "faq", "settings": { "question": "How long until I notice a difference?", "answer": "Based on clinical research: Boswellia (AprèsFlex) can begin working as early as day 5. Curcumin and PEA typically show effects in weeks 2–4. UC-II takes 60–90 days to fully establish oral immune tolerance. We designed this formula so you get fast-acting relief from Boswellia while the longer-building ingredients establish deeper, structural benefits over time. Give it the full 90 days — that's why our guarantee covers the entire period." } },
-        "faq4": { "type": "faq", "settings": { "question": "Why should I trust this over the big brands?", "answer": "Read the labels. Our formula uses four branded, clinically studied ingredient forms (Meriva®, AprèsFlex®, UC-II®, Levagen+®) at their validated clinical doses, with every milligram disclosed. The top-selling DTC joint supplement uses zero branded ingredients, hides behind generic formulations, and charges $80–94/month. We compete on what's inside the capsule, not what's on the TV." } },
-        "faq5": { "type": "faq", "settings": { "question": "What if it doesn't work for me?", "answer": "We offer a full 90-day money-back guarantee. Not 30 days — 90. Because UC-II takes 60–90 days to fully establish its mechanism, and we want you to experience the complete formula working together before making a judgment. If you're not satisfied for any reason, we'll refund your purchase in full. No hoops, no hassle." } },
-        "faq6": { "type": "faq", "settings": { "question": "Can I take this alongside my current joint supplement?", "answer": "Still In The Game is designed to be a complete joint formula — no stacking required. Most people replace their existing supplements with this single product. If you're currently taking a standalone omega-3, you can continue that alongside our formula for additional benefit. As always, check with your healthcare provider about your specific supplement stack." } }
+        "faq1": {
+          "type": "faq",
+          "settings": {
+            "question": "How is this different from glucosamine and chondroitin?",
+            "answer": "Glucosamine and chondroitin target one pathway — structural cartilage support. Still In The Game covers four distinct mechanisms: two anti-inflammatory pathways (COX-2 and 5-LOX), immune-mediated cartilage protection (oral tolerance), and endocannabinoid pain modulation. In fact, one of our ingredients — UC-II collagen — outperformed the glucosamine + chondroitin combination in a head-to-head clinical trial of 191 patients."
+          }
+        },
+        "faq2": {
+          "type": "faq",
+          "settings": {
+            "question": "Will this interact with my medications?",
+            "answer": "Three of our four ingredients — Boswellia, UC-II, and PEA — have minimal drug interaction risk, making them well-suited for adults taking blood thinners, statins, or diabetes medications. Curcumin has a moderate interaction profile, particularly with warfarin and certain statins. We always recommend discussing any new supplement with your healthcare provider, especially if you're taking prescription medications."
+          }
+        },
+        "faq3": {
+          "type": "faq",
+          "settings": {
+            "question": "How long until I notice a difference?",
+            "answer": "Based on clinical research: Boswellia (AprèsFlex) can begin working as early as day 5. Curcumin and PEA typically show effects in weeks 2–4. UC-II takes 60–90 days to fully establish oral immune tolerance. We designed this formula so you get fast-acting relief from Boswellia while the longer-building ingredients establish deeper, structural benefits over time. Give it the full 90 days — that's why our guarantee covers the entire period."
+          }
+        },
+        "faq4": {
+          "type": "faq",
+          "settings": {
+            "question": "Why should I trust this over the big brands?",
+            "answer": "Read the labels. Our formula uses four branded, clinically studied ingredient forms (Meriva®, AprèsFlex®, UC-II®, Levagen+®) at their validated clinical doses, with every milligram disclosed. The top-selling DTC joint supplement uses zero branded ingredients, hides behind generic formulations, and charges $80–94/month. We compete on what's inside the capsule, not what's on the TV."
+          }
+        },
+        "faq5": {
+          "type": "faq",
+          "settings": {
+            "question": "What if it doesn't work for me?",
+            "answer": "We offer a full 90-day money-back guarantee. Not 30 days — 90. Because UC-II takes 60–90 days to fully establish its mechanism, and we want you to experience the complete formula working together before making a judgment. If you're not satisfied for any reason, we'll refund your purchase in full. No hoops, no hassle."
+          }
+        },
+        "faq6": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I take this alongside my current joint supplement?",
+            "answer": "Still In The Game is designed to be a complete joint formula — no stacking required. Most people replace their existing supplements with this single product. If you're currently taking a standalone omega-3, you can continue that alongside our formula for additional benefit. As always, check with your healthcare provider about your specific supplement stack."
+          }
+        }
       },
-      "block_order": ["faq1", "faq2", "faq3", "faq4", "faq5", "faq6"],
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5",
+        "faq6"
+      ],
       "settings": {
         "eyebrow": "Questions",
         "headline": "STRAIGHT ANSWERS.<br>NO BS."
@@ -200,15 +665,31 @@
     "sitg_final_cta": {
       "type": "sitg-final-cta",
       "blocks": {
-        "pp1": { "type": "proof_point", "settings": { "number": "50+", "label": "Clinical trials" } },
-        "pp2": { "type": "proof_point", "settings": { "number": "90 Days", "label": "Money-back guarantee" } }
+        "pp1": {
+          "type": "proof_point",
+          "settings": {
+            "number": "50+",
+            "label": "Clinical trials"
+          }
+        },
+        "pp2": {
+          "type": "proof_point",
+          "settings": {
+            "number": "90 Days",
+            "label": "Money-back guarantee"
+          }
+        }
       },
-      "block_order": ["pp1", "pp2"],
+      "block_order": [
+        "pp1",
+        "pp2"
+      ],
       "settings": {
         "handwritten": "Motion is lotion",
         "headline": "YOU'RE STILL IN THE GAME.<br>WE'RE HERE TO <span style=\"color:var(--sitg-amber)\">KEEP YOU THERE.</span>",
         "body": "Your body was built to move. To hike, to play, to lift, to live. Three capsules a day. Four mechanisms working together. One daily reminder of who you've always been.",
-        "cta_text": "Start My Ritual"
+        "cta_text": "Start My Ritual",
+        "cta_link": ""
       }
     }
   },
