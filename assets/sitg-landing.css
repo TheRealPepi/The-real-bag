@@ -37,8 +37,8 @@
 .sitg .btn-primary:hover { background: var(--sitg-amber-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgb(from var(--sitg-amber) r g b /0.3); }
 .sitg .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
-  color: var(--sitg-cream); padding: 16px 24px; font-weight: 500;
-  font-size: 15px; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;
+  color: var(--sitg-charcoal); padding: 16px 24px; font-weight: 500;
+  font-size: 15px; text-decoration: none; opacity: 0.7; transition: opacity 0.3s;
 }
 .sitg .btn-secondary:hover { opacity: 1; }
 
@@ -74,7 +74,7 @@
    HERO
    ============================================ */
 .sitg-hero {
-  min-height: 100vh; background: var(--sitg-green-deep);
+  min-height: 100vh; background: var(--sitg-cream);
   display: flex; align-items: center; position: relative; overflow: hidden;
 }
 .sitg-hero::before {
@@ -94,14 +94,14 @@
   gap: 60px; align-items: center; padding: 100px 0 80px;
   position: relative; z-index: 2;
 }
-.sitg-hero-content { color: var(--sitg-cream); }
+.sitg-hero-content { color: var(--sitg-charcoal); }
 
 .sitg-hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgb(from var(--sitg-amber) r g b /0.15); border: 1px solid rgb(from var(--sitg-amber) r g b /0.3);
+  background: rgb(from var(--sitg-amber) r g b /0.12); border: 1px solid rgb(from var(--sitg-amber) r g b /0.25);
   padding: 8px 16px; border-radius: 100px;
   font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--sitg-amber-light);
+  text-transform: uppercase; color: var(--sitg-amber);
   margin-bottom: 28px; animation: sitg-fadeInUp 0.8s ease both;
 }
 .sitg-hero-badge .dot {
@@ -118,7 +118,7 @@
 .sitg-hero h1 .highlight { color: var(--sitg-amber); }
 
 .sitg-hero-sub {
-  font-size: 18px; line-height: 1.65; color: rgb(from var(--sitg-cream) r g b /0.7);
+  font-size: 18px; line-height: 1.65; color: var(--sitg-warm-gray);
   max-width: 480px; margin-bottom: 36px;
   animation: sitg-fadeInUp 0.8s ease 0.3s both;
 }
@@ -132,9 +132,9 @@
 }
 .sitg-hero-stars { display: flex; gap: 3px; }
 .sitg-hero-stars svg { width: 18px; height: 18px; fill: var(--sitg-gold); }
-.sitg-hero-proof-text { font-size: 13px; color: rgb(from var(--sitg-cream) r g b /0.6); line-height: 1.5; }
-.sitg-hero-proof-text strong { color: var(--sitg-cream); font-weight: 600; }
-.sitg-hero-proof .divider { width: 1px; height: 36px; background: rgb(from var(--sitg-cream) r g b /0.15); }
+.sitg-hero-proof-text { font-size: 13px; color: var(--sitg-warm-gray); line-height: 1.5; }
+.sitg-hero-proof-text strong { color: var(--sitg-charcoal); font-weight: 600; }
+.sitg-hero-proof .divider { width: 1px; height: 36px; background: rgb(from var(--sitg-charcoal) r g b /0.15); }
 
 .sitg-hero-visual {
   position: relative; display: flex; align-items: center;
@@ -143,7 +143,7 @@
 .sitg-hero-product { position: relative; z-index: 2; }
 .sitg-hero-product img {
   max-width: 400px; width: 100%; height: auto;
-  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.18));
   border-radius: 12px;
 }
 
@@ -170,12 +170,12 @@
   .sitg-hero-sub { margin-left: auto; margin-right: auto; }
   .sitg-hero-ctas { justify-content: center; flex-direction: column; align-items: center; }
   .sitg-hero-ctas .btn-secondary {
-    border: 1.5px solid rgb(from var(--sitg-cream) r g b /0.5);
+    border: 1.5px solid rgb(from var(--sitg-charcoal) r g b /0.4);
     border-radius: 100px;
     padding: 14px 32px;
     opacity: 1;
   }
-  .sitg-hero-ctas .btn-secondary:hover { border-color: var(--sitg-cream); }
+  .sitg-hero-ctas .btn-secondary:hover { border-color: var(--sitg-charcoal); }
   .sitg-hero-proof { justify-content: center; }
   .sitg-hero-visual { margin-top: 20px; }
   .sitg-hero-product img { max-width: 300px; }
@@ -307,29 +307,30 @@
    TESTIMONIALS
    ============================================ */
 .sitg-testimonials {
-  padding: 80px 0; background: var(--sitg-green-deep);
+  padding: 80px 0; background: var(--sitg-cream);
   position: relative; overflow: hidden;
 }
 .sitg-testimonials::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgb(from var(--sitg-amber) r g b /0.06) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 50%, rgb(from var(--sitg-amber) r g b /0.05) 0%, transparent 60%);
 }
 .sitg-ts-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
   position: relative; z-index: 1;
 }
 .sitg-ts-card {
-  padding: 28px; border: 1px solid rgb(from var(--sitg-cream) r g b /0.08);
-  border-radius: 16px; background: rgb(from var(--sitg-cream) r g b /0.03);
+  padding: 28px; border: 1px solid rgb(from var(--sitg-charcoal) r g b /0.06);
+  border-radius: 16px; background: var(--sitg-white);
+  box-shadow: 0 4px 20px rgb(from var(--sitg-charcoal) r g b /0.04);
 }
 .sitg-ts-stars { display: flex; gap: 3px; margin-bottom: 16px; }
 .sitg-ts-stars svg { width: 14px; height: 14px; fill: var(--sitg-gold); }
 .sitg-ts-quote {
-  font-size: 15px; line-height: 1.7; color: rgb(from var(--sitg-cream) r g b /0.8);
+  font-size: 15px; line-height: 1.7; color: rgb(from var(--sitg-charcoal) r g b /0.85);
   margin-bottom: 18px; font-style: italic;
 }
-.sitg-ts-author { font-size: 13px; color: var(--sitg-amber-light); font-weight: 600; }
-.sitg-ts-author span { color: rgb(from var(--sitg-cream) r g b /0.4); font-weight: 400; margin-left: 4px; }
+.sitg-ts-author { font-size: 13px; color: var(--sitg-amber); font-weight: 600; }
+.sitg-ts-author span { color: var(--sitg-warm-gray); font-weight: 400; margin-left: 4px; }
 
 @media (max-width: 768px) { .sitg-ts-grid { grid-template-columns: 1fr; } }
 
@@ -420,48 +421,48 @@
    SCIENCE
    ============================================ */
 .sitg-science {
-  padding: 120px 0; background: var(--sitg-green-deep);
-  color: var(--sitg-cream); position: relative; overflow: hidden;
+  padding: 120px 0; background: var(--sitg-cream);
+  color: var(--sitg-charcoal); position: relative; overflow: hidden;
 }
 .sitg-science::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(ellipse at 80% 20%, rgb(from var(--sitg-amber) r g b /0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 80%, rgb(from var(--sitg-green-light) r g b /0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 80% 20%, rgb(from var(--sitg-amber) r g b /0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgb(from var(--sitg-green-light) r g b /0.06) 0%, transparent 50%);
 }
 .sitg-science-inner { position: relative; z-index: 1; }
 .sitg-science-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 80px; }
 .sitg-science-stat {
   text-align: center; padding: 32px 20px;
-  border: 1px solid rgb(from var(--sitg-cream) r g b /0.08); border-radius: 16px;
-  background: rgb(from var(--sitg-cream) r g b /0.02);
+  border: 1px solid rgb(from var(--sitg-charcoal) r g b /0.06); border-radius: 16px;
+  background: var(--sitg-white);
 }
 .sitg-science-stat .ss-num {
   font-family: 'Bebas Neue', sans-serif; font-size: 56px;
   color: var(--sitg-amber); line-height: 1; margin-bottom: 8px;
 }
-.sitg-science-stat .ss-label { font-size: 13px; color: rgb(from var(--sitg-cream) r g b /0.6); line-height: 1.5; }
+.sitg-science-stat .ss-label { font-size: 13px; color: var(--sitg-warm-gray); line-height: 1.5; }
 
 .sitg-nsaid-block {
-  background: rgb(from var(--sitg-cream) r g b /0.04); border: 1px solid rgb(from var(--sitg-cream) r g b /0.08);
+  background: var(--sitg-white); border: 1px solid rgb(from var(--sitg-charcoal) r g b /0.06);
   border-radius: 20px; padding: 48px;
 }
 .sitg-nsaid-block h3 {
   font-family: 'Bebas Neue', sans-serif; font-size: 32px;
-  margin-bottom: 12px; letter-spacing: 0.5px; color: var(--sitg-cream);
+  margin-bottom: 12px; letter-spacing: 0.5px; color: var(--sitg-green-deep);
 }
 .sitg-nsaid-block > p {
-  font-size: 15px; line-height: 1.7; color: rgb(from var(--sitg-cream) r g b /0.65);
+  font-size: 15px; line-height: 1.7; color: var(--sitg-warm-gray);
   margin-bottom: 32px; max-width: 640px;
 }
 .sitg-nsaid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .sitg-nsaid-card {
-  background: rgb(from var(--sitg-cream) r g b /0.04); border-radius: 12px; padding: 24px;
-  border: 1px solid rgb(from var(--sitg-cream) r g b /0.05);
+  background: var(--sitg-cream); border-radius: 12px; padding: 24px;
+  border: 1px solid rgb(from var(--sitg-charcoal) r g b /0.06);
 }
-.sitg-nsaid-card .nc-ingredient { font-weight: 600; font-size: 14px; color: var(--sitg-cream); margin-bottom: 4px; }
-.sitg-nsaid-card .nc-vs { font-size: 12px; color: rgb(from var(--sitg-cream) r g b /0.4); margin-bottom: 12px; }
-.sitg-nsaid-card .nc-result { font-size: 13px; color: var(--sitg-amber-light); font-weight: 600; line-height: 1.5; }
+.sitg-nsaid-card .nc-ingredient { font-weight: 600; font-size: 14px; color: var(--sitg-green-deep); margin-bottom: 4px; }
+.sitg-nsaid-card .nc-vs { font-size: 12px; color: var(--sitg-warm-gray); margin-bottom: 12px; }
+.sitg-nsaid-card .nc-result { font-size: 13px; color: var(--sitg-amber); font-weight: 600; line-height: 1.5; }
 
 @media (max-width: 768px) {
   .sitg-science-stats { grid-template-columns: repeat(2, 1fr); }
@@ -726,29 +727,29 @@
    FINAL CTA
    ============================================ */
 .sitg-final-cta {
-  padding: 120px 0; background: var(--sitg-green-deep);
+  padding: 120px 0; background: var(--sitg-cream);
   text-align: center; position: relative; overflow: hidden;
 }
 .sitg-final-cta::before {
   content: ''; position: absolute; top: -50%; left: -50%;
   width: 200%; height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgb(from var(--sitg-amber) r g b /0.06) 0%, transparent 40%);
+  background: radial-gradient(circle at 50% 50%, rgb(from var(--sitg-amber) r g b /0.05) 0%, transparent 40%);
 }
 .sitg-final-cta .sitg-container { position: relative; z-index: 1; }
-.sitg-final-cta .fc-handwritten { font-family: 'Caveat', cursive; font-size: 24px; color: var(--sitg-amber-light); margin-bottom: 20px; }
+.sitg-final-cta .fc-handwritten { font-family: 'Caveat', cursive; font-size: 24px; color: var(--sitg-amber); margin-bottom: 20px; }
 .sitg-final-cta h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(44px, 5.5vw, 72px); color: var(--sitg-cream);
+  font-size: clamp(44px, 5.5vw, 72px); color: var(--sitg-green-deep);
   line-height: 1; margin-bottom: 20px; letter-spacing: 1px;
 }
 .sitg-final-cta p {
-  font-size: 17px; color: rgb(from var(--sitg-cream) r g b /0.6); max-width: 520px;
+  font-size: 17px; color: var(--sitg-warm-gray); max-width: 520px;
   margin: 0 auto 40px; line-height: 1.65;
 }
 .sitg-final-proof { display: flex; justify-content: center; gap: 40px; margin-top: 48px; }
 .sitg-final-proof-item { text-align: center; }
 .sitg-final-proof-item .fp-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--sitg-amber); }
-.sitg-final-proof-item .fp-label { font-size: 12px; color: rgb(from var(--sitg-cream) r g b /0.4); letter-spacing: 0.5px; }
+.sitg-final-proof-item .fp-label { font-size: 12px; color: var(--sitg-warm-gray); letter-spacing: 0.5px; }
 
 /* ============================================
    IMAGE ENHANCEMENTS
@@ -783,7 +784,7 @@
 .sitg-ts-avatar {
   width: 48px; height: 48px; border-radius: 50%;
   object-fit: cover; margin-bottom: 14px;
-  border: 2px solid rgb(from var(--sitg-cream) r g b /0.12);
+  border: 2px solid rgb(from var(--sitg-charcoal) r g b /0.08);
 }
 .sitg-ts-initials {
   width: 48px; height: 48px; border-radius: 50%;
@@ -815,7 +816,7 @@
 .sitg-final-cta-img {
   max-width: 400px; width: 100%; border-radius: 20px;
   display: block; margin: 0 auto 40px;
-  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.12));
 }
 
 /* --- Trust: product image above badges --- */
