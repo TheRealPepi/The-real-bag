@@ -1,0 +1,89 @@
+<div class="sitg">
+<section class="sitg-reframe">
+  <div class="sitg-container">
+    {%- if section.settings.section_image != blank -%}
+      <div class="sitg-reframe-header reveal">
+        <div class="sitg-reframe-header-text">
+          <div class="sitg-reframe-eyebrow">{{ section.settings.eyebrow }}</div>
+          <h2>{{ section.settings.headline }}</h2>
+          <p class="sitg-reframe-body">{{ section.settings.body }}</p>
+        </div>
+        <div class="sitg-reframe-header-img">
+          <img
+            src="{{ section.settings.section_image | image_url: width: 800 }}"
+            alt="{{ section.settings.section_image.alt | default: 'Active lifestyle' }}"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    {%- else -%}
+      <div class="sitg-reframe-inner reveal">
+        <div class="sitg-reframe-eyebrow">{{ section.settings.eyebrow }}</div>
+        <h2>{{ section.settings.headline }}</h2>
+        <p class="sitg-reframe-body">{{ section.settings.body }}</p>
+      </div>
+    {%- endif -%}
+    <div class="sitg-reframe-cards reveal">
+      {%- for block in section.blocks -%}
+        <div class="sitg-reframe-card" {{ block.shopify_attributes }}>
+          <div class="rc-icon rc-icon-{{ forloop.index }}">{{ block.settings.icon }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Problem Reframe",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Lifestyle image (displays beside headline)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Let's be honest"
+    },
+    {
+      "type": "textarea",
+      "id": "headline",
+      "label": "Headline (HTML allowed)",
+      "default": "EVERY JOINT SUPPLEMENT TELLS YOU<br>YOU'RE BROKEN. YOU'RE NOT."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body text (HTML allowed)",
+      "default": "You feel 45 inside. You hike, you play, you lift, you move. <strong>That's who you are.</strong> Joint discomfort doesn't change that — it just means your body needs better fuel to keep up with who you've always been. The problem isn't you. It's that no supplement has ever combined the science that actually works."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Reframe card",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji icon", "default": "🎯" },
+        { "type": "text", "id": "title", "label": "Title", "default": "THE \"SLOW DOWN\" LIE" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "People who internalize \"you're declining\" narratives are 32% more likely to develop chronic pain (Yale, 7-year longitudinal study). The framing isn't just wrong — it makes things worse." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Problem Reframe",
+      "blocks": [
+        { "type": "card", "settings": { "icon": "🎯", "title": "THE \"SLOW DOWN\" LIE", "description": "People who internalize \"you're declining\" narratives are 32% more likely to develop chronic pain (Yale, 7-year longitudinal study). The framing isn't just wrong — it makes things worse." } },
+        { "type": "card", "settings": { "icon": "🧩", "title": "THE ONE-TRICK PROBLEM", "description": "Most supplements hit a single inflammatory pathway. Your body has four pathways involved in joint discomfort. Covering one while ignoring three is like fixing one tire on a car that needs four." } },
+        { "type": "card", "settings": { "icon": "🔍", "title": "THE HIDDEN-DOSE GAME", "description": "Proprietary blends. \"Proprietary matrices.\" Generic ingredients marketed as premium. 60+ SKUs researched and most can't even tell you how much of each ingredient you're actually getting." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

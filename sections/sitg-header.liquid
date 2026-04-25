@@ -1,0 +1,507 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================
+     SITG HEADER
+     ============================================ */
+  :root { --sitg-header-height: 64px; }
+
+  .sitg-header-wrap {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(43, 74, 62, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(245, 240, 232, 0.06);
+    height: var(--sitg-header-height);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sitg-header {
+    max-width: 1400px; margin: 0 auto;
+    padding: 0 24px; height: 100%;
+    display: flex; align-items: center;
+    justify-content: space-between;
+  }
+
+  /* --- Logo --- */
+  .sitg-header-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; flex-shrink: 0;
+  }
+  .sitg-header-logo .logo-mark {
+    width: 32px; height: 32px;
+    background: #D4763C;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: #FEFCF9; font-weight: 700;
+    transition: transform 0.3s;
+  }
+  .sitg-header-logo:hover .logo-mark { transform: scale(1.08); }
+  .sitg-header-logo-mark-img {
+    height: 32px; width: auto;
+    transition: transform 0.3s;
+  }
+  .sitg-header-logo:hover .sitg-header-logo-mark-img { transform: scale(1.08); }
+  .sitg-header-logo-img {
+    height: 28px; width: auto;
+  }
+  .sitg-header-logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; color: #F5F0E8;
+    letter-spacing: 2px; line-height: 1;
+  }
+
+  /* --- Desktop nav --- */
+  .sitg-header-nav {
+    display: flex; align-items: center; gap: 8px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .sitg-header-nav a {
+    color: rgba(245, 240, 232, 0.7);
+    text-decoration: none;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.3s, background 0.3s;
+  }
+  .sitg-header-nav a:hover {
+    color: #F5F0E8;
+    background: rgba(245, 240, 232, 0.06);
+  }
+
+  /* --- Header right actions --- */
+  .sitg-header-actions {
+    display: flex; align-items: center; gap: 10px;
+    flex-shrink: 0;
+  }
+
+  /* Account button (outline/secondary) */
+  .sitg-header-account {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 20px;
+    border: 1.5px solid rgba(245, 240, 232, 0.35);
+    border-radius: 100px;
+    color: #F5F0E8;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.3s;
+    background: transparent;
+  }
+  .sitg-header-account svg {
+    width: 16px; height: 16px;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.8;
+  }
+  .sitg-header-account:hover {
+    border-color: rgba(245, 240, 232, 0.65);
+    background: rgba(245, 240, 232, 0.06);
+  }
+
+  /* Cart button (filled, like Primal Queen bag icon) */
+  .sitg-header-cart {
+    display: inline-flex; align-items: center; justify-content: center;
+    position: relative;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(212, 118, 60, 0.15);
+    border: 1.5px solid rgba(212, 118, 60, 0.3);
+    color: #E8945A;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .sitg-header-cart svg {
+    width: 20px; height: 20px;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .sitg-header-cart:hover {
+    background: rgba(212, 118, 60, 0.25);
+    border-color: rgba(212, 118, 60, 0.5);
+    transform: scale(1.05);
+  }
+  .sitg-cart-count {
+    position: absolute; bottom: -2px; right: -2px;
+    width: 18px; height: 18px;
+    background: #D4763C;
+    color: #FEFCF9;
+    font-size: 10px; font-weight: 700;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .sitg-cart-count:empty { display: none; }
+
+  /* --- Mobile burger --- */
+  .sitg-header-burger {
+    display: none;
+    width: 44px; height: 44px;
+    align-items: center; justify-content: center;
+    background: none; border: none;
+    cursor: pointer; padding: 0;
+    color: #F5F0E8;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  .sitg-header-burger:hover {
+    background: rgba(245, 240, 232, 0.06);
+  }
+  .sitg-header-burger svg {
+    width: 24px; height: 24px;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+
+  /* --- Mobile drawer --- */
+  .sitg-drawer-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s;
+  }
+  .sitg-drawer-overlay.open { opacity: 1; pointer-events: auto; }
+
+  .sitg-drawer {
+    position: fixed; top: 0; left: 0;
+    width: 320px; max-width: 85vw;
+    height: 100vh; height: 100dvh;
+    background: #2B4A3E;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sitg-drawer.open { transform: translateX(0); }
+
+  .sitg-drawer-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.06);
+  }
+  .sitg-drawer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; color: #F5F0E8;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sitg-drawer-logo .logo-mark {
+    width: 28px; height: 28px;
+    background: #D4763C; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #FEFCF9; font-weight: 700;
+  }
+  .sitg-drawer-close {
+    width: 36px; height: 36px;
+    background: rgba(245, 240, 232, 0.06);
+    border: none; border-radius: 10px;
+    color: #F5F0E8; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s;
+  }
+  .sitg-drawer-close:hover { background: rgba(245, 240, 232, 0.12); }
+  .sitg-drawer-close svg {
+    width: 18px; height: 18px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2; stroke-linecap: round;
+  }
+
+  .sitg-drawer-nav {
+    padding: 24px; flex: 1;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .sitg-drawer-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.35);
+    padding: 12px 16px 8px;
+    margin-top: 12px;
+  }
+  .sitg-drawer-label:first-child { margin-top: 0; }
+
+  .sitg-drawer-nav a {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px;
+    color: rgba(245, 240, 232, 0.8);
+    text-decoration: none;
+    font-size: 15px; font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  .sitg-drawer-nav a:hover {
+    color: #F5F0E8;
+    background: rgba(245, 240, 232, 0.06);
+  }
+  .sitg-drawer-nav a svg {
+    width: 20px; height: 20px;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round; stroke-linejoin: round;
+    opacity: 0.5; flex-shrink: 0;
+  }
+
+  .sitg-drawer-footer {
+    padding: 20px 24px;
+    border-top: 1px solid rgba(245, 240, 232, 0.06);
+  }
+  .sitg-drawer-cta {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 14px;
+    background: #D4763C; color: #FEFCF9;
+    border: none; border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .sitg-drawer-cta:hover { background: #E8945A; }
+
+  /* --- Responsive --- */
+  @media (max-width: 900px) {
+    .sitg-header-nav { display: none; }
+    .sitg-header-account { display: none; }
+    .sitg-header-burger { display: flex; }
+    .sitg-header-logo-text { font-size: 17px; }
+  }
+  @media (min-width: 901px) {
+    .sitg-drawer, .sitg-drawer-overlay { display: none !important; }
+  }
+
+  /* Spacer so page content isn't hidden behind fixed header */
+  .sitg-header-spacer { height: var(--sitg-header-height); }
+</style>
+
+<!-- ===== HEADER BAR ===== -->
+<div class="sitg-header-wrap">
+  <header class="sitg-header">
+    <!-- Mobile burger -->
+    <button class="sitg-header-burger" onclick="document.getElementById('sitg-drawer').classList.add('open');document.getElementById('sitg-drawer-overlay').classList.add('open');document.body.style.overflow='hidden';" aria-label="Open menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+
+    <!-- Logo -->
+    <a href="{{ routes.root_url }}" class="sitg-header-logo">
+      {%- if section.settings.logo != blank -%}
+        <img
+          class="sitg-header-logo-img"
+          src="{{ section.settings.logo | image_url: height: 56 }}"
+          alt="{{ shop.name }}"
+          height="28"
+          width="auto"
+          loading="eager"
+        >
+      {%- else -%}
+        <img class="sitg-header-logo-mark-img" src="{{ 'StillInTheGameLogo_WhiteTransparent.webp' | asset_url }}" alt="{{ shop.name }}" height="32" loading="eager">
+        <span class="sitg-header-logo-text">STILL IN THE GAME</span>
+      {%- endif -%}
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="sitg-header-nav" role="navigation">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'nav_link' -%}
+          <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+
+    <!-- Right actions -->
+    <div class="sitg-header-actions">
+      <!-- Account (outline, desktop only) -->
+      <a href="https://stillinthegame.co/a/loop_subscriptions/customer" class="sitg-header-account">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        {{ section.settings.account_label }}
+      </a>
+
+      <!-- Cart (bag icon with count badge) -->
+      <a href="{{ routes.cart_url }}" class="sitg-header-cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="sitg-cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </a>
+    </div>
+  </header>
+</div>
+
+<!-- ===== MOBILE DRAWER ===== -->
+<div id="sitg-drawer-overlay" class="sitg-drawer-overlay" onclick="document.getElementById('sitg-drawer').classList.remove('open');this.classList.remove('open');document.body.style.overflow='';"></div>
+
+<aside id="sitg-drawer" class="sitg-drawer" aria-label="Navigation menu">
+  <div class="sitg-drawer-header">
+    <a href="{{ routes.root_url }}" class="sitg-drawer-logo">
+      <img class="sitg-header-logo-mark-img" src="{{ 'StillInTheGameLogo_WhiteTransparent.webp' | asset_url }}" alt="{{ shop.name }}" height="28" loading="eager">
+      STILL IN THE GAME
+    </a>
+    <button class="sitg-drawer-close" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';" aria-label="Close menu">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="sitg-drawer-nav">
+    <div class="sitg-drawer-label">Navigate</div>
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'nav_link' -%}
+        <a href="{{ block.settings.link }}" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';">
+          {%- case block.settings.icon -%}
+            {%- when 'beaker' -%}
+              <svg viewBox="0 0 24 24"><path d="M9 3h6M12 3v7l-5.5 8.5a2 2 0 001.7 3h7.6a2 2 0 001.7-3L12 10V3"/></svg>
+            {%- when 'flask' -%}
+              <svg viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 01-.211.896L4.72 20.55a1 1 0 00.9 1.45h12.76a1 1 0 00.9-1.45l-5.069-10.127A2 2 0 0114 9.527V2"/><path d="M8.5 2h7"/></svg>
+            {%- when 'book' -%}
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            {%- when 'help' -%}
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            {%- when 'user' -%}
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            {%- when 'refresh' -%}
+              <svg viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0115-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 01-15 6.7L3 16"/></svg>
+            {%- else -%}
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/></svg>
+          {%- endcase -%}
+          {{ block.settings.label }}
+        </a>
+      {%- endif -%}
+
+      {%- if block.type == 'drawer_divider' -%}
+        <div class="sitg-drawer-label">{{ block.settings.label }}</div>
+      {%- endif -%}
+
+      {%- if block.type == 'drawer_link' -%}
+        <a href="{{ block.settings.link }}" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';">
+          {%- case block.settings.icon -%}
+            {%- when 'user' -%}
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            {%- when 'refresh' -%}
+              <svg viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0115-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 01-15 6.7L3 16"/></svg>
+            {%- when 'package' -%}
+              <svg viewBox="0 0 24 24"><path d="M16.5 9.4l-9-5.19"/><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            {%- when 'mail' -%}
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {%- else -%}
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/></svg>
+          {%- endcase -%}
+          {{ block.settings.label }}
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="sitg-drawer-footer">
+    <a href="{{ section.settings.drawer_cta_link | default: '#sitg-buy' }}" class="sitg-drawer-cta" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';">
+      {{ section.settings.drawer_cta_text }}
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</aside>
+
+<div class="sitg-header-spacer"></div>
+
+{% schema %}
+{
+  "name": "SITG Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image (optional, falls back to text logo)"
+    },
+    {
+      "type": "text",
+      "id": "account_label",
+      "label": "Account button label",
+      "default": "Account"
+    },
+    {
+      "type": "text",
+      "id": "drawer_cta_text",
+      "label": "Mobile drawer CTA text",
+      "default": "Start My Ritual →"
+    },
+    {
+      "type": "url",
+      "id": "drawer_cta_link",
+      "label": "Mobile drawer CTA link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Nav link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Ingredients" },
+        { "type": "url", "id": "link", "label": "Link" },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Mobile drawer icon",
+          "options": [
+            { "value": "beaker", "label": "Beaker (Ingredients)" },
+            { "value": "flask", "label": "Flask (Science)" },
+            { "value": "book", "label": "Book (Story)" },
+            { "value": "help", "label": "Help circle (FAQ)" },
+            { "value": "user", "label": "User" },
+            { "value": "refresh", "label": "Refresh (Subscription)" },
+            { "value": "none", "label": "Dot" }
+          ],
+          "default": "beaker"
+        }
+      ]
+    },
+    {
+      "type": "drawer_divider",
+      "name": "Drawer section label",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Account" }
+      ]
+    },
+    {
+      "type": "drawer_link",
+      "name": "Drawer-only link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Manage Subscription" },
+        { "type": "url", "id": "link", "label": "Link" },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "user", "label": "User" },
+            { "value": "refresh", "label": "Refresh (Subscription)" },
+            { "value": "package", "label": "Package (Orders)" },
+            { "value": "mail", "label": "Mail (Contact)" },
+            { "value": "none", "label": "Dot" }
+          ],
+          "default": "refresh"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Header",
+      "blocks": [
+        { "type": "nav_link", "settings": { "label": "Ingredients", "icon": "beaker" } },
+        { "type": "nav_link", "settings": { "label": "Science", "icon": "flask" } },
+        { "type": "nav_link", "settings": { "label": "Our Story", "icon": "book" } },
+        { "type": "nav_link", "settings": { "label": "FAQ", "icon": "help" } },
+        { "type": "drawer_divider", "settings": { "label": "Account" } },
+        { "type": "drawer_link", "settings": { "label": "Manage Subscription", "icon": "refresh" } },
+        { "type": "drawer_link", "settings": { "label": "My Account", "icon": "user" } },
+        { "type": "drawer_link", "settings": { "label": "Order History", "icon": "package" } },
+        { "type": "drawer_link", "settings": { "label": "Contact Us", "icon": "mail" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

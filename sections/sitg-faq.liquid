@@ -1,0 +1,56 @@
+<div class="sitg">
+<section class="sitg-faq" id="sitg-faq">
+  <div class="sitg-container">
+    <div class="sitg-faq-header reveal">
+      <div class="section-eyebrow">{{ section.settings.eyebrow }}</div>
+      <div class="section-title">{{ section.settings.headline }}</div>
+    </div>
+    <div class="sitg-faq-list reveal">
+      {%- for block in section.blocks -%}
+        <div class="sitg-faq-item" {{ block.shopify_attributes }}>
+          <button class="sitg-faq-question">
+            {{ block.settings.question }}
+            <span class="fq-icon">+</span>
+          </button>
+          <div class="sitg-faq-answer">
+            <p>{{ block.settings.answer }}</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG FAQ",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Questions" },
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "STRAIGHT ANSWERS.<br>NO BS." }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "How is this different from glucosamine and chondroitin?" },
+        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Glucosamine and chondroitin target one pathway — structural cartilage support. Still In The Game covers four distinct mechanisms: two anti-inflammatory pathways (COX-2 and 5-LOX), immune-mediated cartilage protection (oral tolerance), and endocannabinoid pain modulation. In fact, one of our ingredients — UC-II collagen — outperformed the glucosamine + chondroitin combination in a head-to-head clinical trial of 191 patients." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG FAQ",
+      "blocks": [
+        { "type": "faq", "settings": { "question": "How is this different from glucosamine and chondroitin?", "answer": "Glucosamine and chondroitin target one pathway — structural cartilage support. Still In The Game covers four distinct mechanisms: two anti-inflammatory pathways (COX-2 and 5-LOX), immune-mediated cartilage protection (oral tolerance), and endocannabinoid pain modulation. In fact, one of our ingredients — UC-II collagen — outperformed the glucosamine + chondroitin combination in a head-to-head clinical trial of 191 patients." } },
+        { "type": "faq", "settings": { "question": "Will this interact with my medications?", "answer": "Three of our four ingredients — Boswellia, UC-II, and PEA — have minimal drug interaction risk, making them well-suited for adults taking blood thinners, statins, or diabetes medications. Curcumin has a moderate interaction profile, particularly with warfarin and certain statins. We always recommend discussing any new supplement with your healthcare provider, especially if you're taking prescription medications." } },
+        { "type": "faq", "settings": { "question": "How long until I notice a difference?", "answer": "Based on clinical research: Boswellia (AprèsFlex) can begin working as early as day 5. Curcumin and PEA typically show effects in weeks 2–4. UC-II takes 60–90 days to fully establish oral immune tolerance. We designed this formula so you get fast-acting relief from Boswellia while the longer-building ingredients establish deeper, structural benefits over time. Give it the full 90 days — that's why our guarantee covers the entire period." } },
+        { "type": "faq", "settings": { "question": "Why should I trust this over the big brands?", "answer": "Read the labels. Our formula uses four branded, clinically studied ingredient forms (Meriva®, AprèsFlex®, UC-II®, Levagen+®) at their validated clinical doses, with every milligram disclosed. The top-selling DTC joint supplement uses zero branded ingredients, hides behind generic formulations, and charges $80–94/month. We compete on what's inside the capsule, not what's on the TV." } },
+        { "type": "faq", "settings": { "question": "What if it doesn't work for me?", "answer": "We offer a full 90-day money-back guarantee. Not 30 days — 90. Because UC-II takes 60–90 days to fully establish its mechanism, and we want you to experience the complete formula working together before making a judgment. If you're not satisfied for any reason, we'll refund your purchase in full. No hoops, no hassle." } },
+        { "type": "faq", "settings": { "question": "Can I take this alongside my current joint supplement?", "answer": "Still In The Game is designed to be a complete joint formula — no stacking required. Most people replace their existing supplements with this single product. If you're currently taking a standalone omega-3, you can continue that alongside our formula for additional benefit. As always, check with your healthcare provider about your specific supplement stack." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

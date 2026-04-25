@@ -1,0 +1,99 @@
+<div class="sitg">
+<section class="sitg-science" id="sitg-science">
+  <div class="sitg-container sitg-science-inner">
+    {%- if section.settings.section_image != blank -%}
+      <div class="sitg-science-header reveal">
+        <div class="sitg-science-header-text">
+          <div class="section-eyebrow" style="color:var(--sitg-amber-light);">{{ section.settings.eyebrow }}</div>
+          <div class="section-title" style="color:var(--sitg-cream);">{{ section.settings.headline }}</div>
+        </div>
+        <div class="sitg-science-header-img">
+          <img
+            src="{{ section.settings.section_image | image_url: width: 800 }}"
+            alt="{{ section.settings.section_image.alt | default: 'Clinical science' }}"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    {%- else -%}
+      <div style="text-align:center;margin-bottom:64px;" class="reveal">
+        <div class="section-eyebrow" style="color:var(--sitg-amber-light);">{{ section.settings.eyebrow }}</div>
+        <div class="section-title" style="color:var(--sitg-cream);">{{ section.settings.headline }}</div>
+      </div>
+    {%- endif -%}
+
+    <div class="sitg-science-stats reveal">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'stat' -%}
+          <div class="sitg-science-stat" {{ block.shopify_attributes }}>
+            <div class="ss-num">{{ block.settings.number }}</div>
+            <div class="ss-label">{{ block.settings.label }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="sitg-nsaid-block reveal">
+      <h3>{{ section.settings.nsaid_headline }}</h3>
+      <p>{{ section.settings.nsaid_body }}</p>
+      <div class="sitg-nsaid-grid">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'nsaid_trial' -%}
+            <div class="sitg-nsaid-card" {{ block.shopify_attributes }}>
+              <div class="nc-ingredient">{{ block.settings.ingredient }}</div>
+              <div class="nc-vs">{{ block.settings.vs }}</div>
+              <div class="nc-result">{{ block.settings.result }}</div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Science",
+  "settings": [
+    { "type": "image_picker", "id": "section_image", "label": "Lifestyle image (displays beside headline)" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The evidence" },
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "BACKED BY 50+ CLINICAL TRIALS.<br>NOT BACKED BY MARKETING BUDGETS." },
+    { "type": "text", "id": "nsaid_headline", "label": "NSAID section headline", "default": "AS EFFECTIVE AS NSAIDS. WITHOUT THE GI SIDE EFFECTS." },
+    { "type": "textarea", "id": "nsaid_body", "label": "NSAID section body", "default": "Multiple head-to-head clinical trials have shown supplement ingredients performing comparably to prescription-strength anti-inflammatories — with significantly fewer side effects. Here are three from our ingredient stack:" }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Evidence stat",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "50+" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Randomized controlled trials supporting these ingredients" }
+      ]
+    },
+    {
+      "type": "nsaid_trial",
+      "name": "NSAID comparison",
+      "settings": [
+        { "type": "text", "id": "ingredient", "label": "Ingredient", "default": "Curcumin (BCM-95, 1,500mg)" },
+        { "type": "text", "id": "vs", "label": "Vs. comparator", "default": "vs. Diclofenac 100mg/day" },
+        { "type": "textarea", "id": "result", "label": "Result", "default": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Science",
+      "blocks": [
+        { "type": "stat", "settings": { "number": "50+", "label": "Randomized controlled trials supporting these ingredients" } },
+        { "type": "stat", "settings": { "number": "15+", "label": "Meta-analyses — the gold standard of clinical evidence" } },
+        { "type": "stat", "settings": { "number": "4", "label": "Distinct biological mechanisms in one formula" } },
+        { "type": "stat", "settings": { "number": "6", "label": "Ingredients in this category proven comparable to NSAIDs" } },
+        { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (BCM-95, 1,500mg)", "vs": "vs. Diclofenac 100mg/day", "result": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)" } },
+        { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (C. domestica, 1,500mg)", "vs": "vs. Ibuprofen 1,200mg/day", "result": "Non-inferior; fewer GI complaints at p=0.046 (Kuptniratsaikul 2014, n=367)" } },
+        { "type": "nsaid_trial", "settings": { "ingredient": "Boswellia 1,000mg", "vs": "vs. Valdecoxib 10mg/day", "result": "Non-inferior; benefit persisted 1 month after stopping therapy (Sontakke 2007, n=66)" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

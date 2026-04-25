@@ -1,0 +1,360 @@
+<style>
+  /* ============================================
+     SITG FOOTER
+     ============================================ */
+  .sitg-footer {
+    background: #162A23;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(245, 240, 232, 0.4);
+    font-size: 13px;
+  }
+  .sitg-footer a { color: rgba(245, 240, 232, 0.4); text-decoration: none; transition: color 0.3s; }
+  .sitg-footer a:hover { color: #F5F0E8; }
+
+  .sitg-footer-main {
+    max-width: 1200px; margin: 0 auto;
+    padding: 64px 24px 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 48px;
+  }
+
+  /* Brand column */
+  .sitg-footer-brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; color: #F5F0E8;
+    letter-spacing: 2px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .sitg-footer-logo-mark-img {
+    height: 28px; width: auto;
+  }
+  .sitg-footer-tagline {
+    font-size: 14px; color: rgba(245, 240, 232, 0.35);
+    line-height: 1.6; max-width: 280px; margin-bottom: 24px;
+  }
+
+  .sitg-footer-social {
+    display: flex; gap: 12px;
+  }
+  .sitg-footer-social a {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(245, 240, 232, 0.04);
+    border: 1px solid rgba(245, 240, 232, 0.06);
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+  }
+  .sitg-footer-social a:hover {
+    background: rgba(245, 240, 232, 0.08);
+    border-color: rgba(245, 240, 232, 0.12);
+  }
+  .sitg-footer-social svg {
+    width: 16px; height: 16px;
+    stroke: rgba(245, 240, 232, 0.5); fill: none;
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* Link columns */
+  .sitg-footer-col h4 {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.55);
+    margin-bottom: 16px;
+  }
+  .sitg-footer-col a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: rgba(245, 240, 232, 0.35);
+  }
+
+  /* Bottom bar */
+  .sitg-footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 24px 24px;
+  }
+  .sitg-footer-bottom-inner {
+    border-top: 1px solid rgba(245, 240, 232, 0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .sitg-footer-copy { font-size: 12px; }
+  .sitg-footer-made { font-size: 12px; color: rgba(245, 240, 232, 0.25); }
+
+  /* Disclaimer */
+  .sitg-footer-disclaimer {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 24px 32px;
+    font-size: 10px;
+    line-height: 1.7;
+    color: rgba(245, 240, 232, 0.18);
+  }
+
+  /* Email capture */
+  .sitg-footer-email-form {
+    display: flex; gap: 8px; margin-top: 16px;
+  }
+  .sitg-footer-email-input {
+    flex: 1; padding: 10px 14px;
+    background: rgba(245, 240, 232, 0.04);
+    border: 1px solid rgba(245, 240, 232, 0.1);
+    border-radius: 10px;
+    color: #F5F0E8; font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .sitg-footer-email-input::placeholder { color: rgba(245, 240, 232, 0.3); }
+  .sitg-footer-email-input:focus { border-color: rgba(212, 118, 60, 0.5); }
+  .sitg-footer-email-btn {
+    padding: 10px 18px;
+    background: #D4763C; color: #FEFCF9;
+    border: none; border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: background 0.3s;
+    white-space: nowrap;
+  }
+  .sitg-footer-email-btn:hover { background: #E8945A; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sitg-footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 24px;
+    }
+    .sitg-footer-brand-col { grid-column: 1 / -1; }
+    .sitg-footer-bottom-inner { flex-direction: column; gap: 8px; }
+  }
+  @media (max-width: 480px) {
+    .sitg-footer-main { grid-template-columns: 1fr; }
+  }
+</style>
+
+<footer class="sitg-footer">
+  <div class="sitg-footer-main">
+    <!-- Brand column -->
+    <div class="sitg-footer-brand-col">
+      <div class="sitg-footer-brand-name">
+        <img class="sitg-footer-logo-mark-img" src="{{ 'StillInTheGameLogo_WhiteTransparent.webp' | asset_url }}" alt="{{ shop.name }}" height="28" loading="eager">
+        {{ section.settings.brand_name }}
+      </div>
+      <div class="sitg-footer-tagline">{{ section.settings.tagline }}</div>
+
+      {%- if section.settings.show_email_capture -%}
+        {%- form 'customer', id: 'sitg-footer-newsletter' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="sitg-footer-email-form">
+            <input
+              class="sitg-footer-email-input"
+              type="email"
+              name="contact[email]"
+              placeholder="{{ section.settings.email_placeholder }}"
+              required
+              autocomplete="email"
+            >
+            <button type="submit" class="sitg-footer-email-btn">{{ section.settings.email_button }}</button>
+          </div>
+        {%- endform -%}
+      {%- endif -%}
+
+      <div class="sitg-footer-social" style="margin-top: 20px;">
+        {%- if section.settings.social_instagram != blank -%}
+          <a href="{{ section.settings.social_instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.social_facebook != blank -%}
+          <a href="{{ section.settings.social_facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.social_youtube != blank -%}
+          <a href="{{ section.settings.social_youtube }}" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="rgba(245,240,232,0.5)" stroke="none"/></svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.social_tiktok != blank -%}
+          <a href="{{ section.settings.social_tiktok }}" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Link columns -->
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'link_column' -%}
+        <div class="sitg-footer-col" {{ block.shopify_attributes }}>
+          <h4>{{ block.settings.heading }}</h4>
+          {%- if block.settings.menu != blank -%}
+            {%- for link in block.settings.menu.links -%}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {%- endfor -%}
+          {%- endif -%}
+          {%- for i in (1..6) -%}
+            {%- assign link_label = 'link_' | append: i | append: '_label' -%}
+            {%- assign link_url = 'link_' | append: i | append: '_url' -%}
+            {%- if block.settings[link_label] != blank -%}
+              <a href="{{ block.settings[link_url] }}">{{ block.settings[link_label] }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="sitg-footer-bottom">
+    <div class="sitg-footer-bottom-inner">
+      <span class="sitg-footer-copy">© {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</span>
+      <span class="sitg-footer-made">{{ section.settings.made_with }}</span>
+    </div>
+  </div>
+
+  {%- if section.settings.disclaimer != blank -%}
+    <div class="sitg-footer-disclaimer">{{ section.settings.disclaimer }}</div>
+  {%- endif -%}
+</footer>
+
+{% schema %}
+{
+  "name": "SITG Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Brand name",
+      "default": "STILL IN THE GAME"
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Performance fuel for active adults who refuse to sit this one out."
+    },
+    {
+      "type": "text",
+      "id": "made_with",
+      "label": "Made with line",
+      "default": "Made with conviction, not compromise."
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "FDA disclaimer",
+      "default": "*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any supplement regimen, especially if you take prescription medications. Individual results may vary. Meriva® is a registered trademark of Indena S.p.A. AprèsFlex® is a registered trademark of PLT Health Solutions. UC-II® is a registered trademark of Lonza. Levagen+® is a registered trademark of Gencor."
+    },
+    {
+      "type": "header",
+      "content": "Email capture"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_email_capture",
+      "label": "Show email signup",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email placeholder",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "id": "email_button",
+      "label": "Email button text",
+      "default": "Join"
+    },
+    {
+      "type": "header",
+      "content": "Social links"
+    },
+    {
+      "type": "url",
+      "id": "social_instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "social_youtube",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "url",
+      "id": "social_tiktok",
+      "label": "TikTok URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_column",
+      "name": "Link column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Column heading", "default": "Product" },
+        { "type": "link_list", "id": "menu", "label": "Menu (optional — use this OR manual links below)" },
+        { "type": "text", "id": "link_1_label", "label": "Link 1 label" },
+        { "type": "url", "id": "link_1_url", "label": "Link 1 URL" },
+        { "type": "text", "id": "link_2_label", "label": "Link 2 label" },
+        { "type": "url", "id": "link_2_url", "label": "Link 2 URL" },
+        { "type": "text", "id": "link_3_label", "label": "Link 3 label" },
+        { "type": "url", "id": "link_3_url", "label": "Link 3 URL" },
+        { "type": "text", "id": "link_4_label", "label": "Link 4 label" },
+        { "type": "url", "id": "link_4_url", "label": "Link 4 URL" },
+        { "type": "text", "id": "link_5_label", "label": "Link 5 label" },
+        { "type": "url", "id": "link_5_url", "label": "Link 5 URL" },
+        { "type": "text", "id": "link_6_label", "label": "Link 6 label" },
+        { "type": "url", "id": "link_6_url", "label": "Link 6 URL" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Footer",
+      "blocks": [
+        {
+          "type": "link_column",
+          "settings": {
+            "heading": "Product",
+            "link_1_label": "Ingredients",
+            "link_2_label": "Clinical Evidence",
+            "link_3_label": "Compare",
+            "link_4_label": "FAQ"
+          }
+        },
+        {
+          "type": "link_column",
+          "settings": {
+            "heading": "Company",
+            "link_1_label": "Our Story",
+            "link_2_label": "Blog",
+            "link_3_label": "Contact",
+            "link_4_label": "Careers"
+          }
+        },
+        {
+          "type": "link_column",
+          "settings": {
+            "heading": "Support",
+            "link_1_label": "Shipping & Returns",
+            "link_2_label": "Privacy Policy",
+            "link_3_label": "Terms of Service",
+            "link_4_label": "Manage Subscription"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

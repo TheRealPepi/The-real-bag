@@ -1,0 +1,394 @@
+{%- assign check_yes = '<span class="sitg-comp-icon yes"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.15"/><path d="M7 12.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' -%}
+{%- assign check_no = '<span class="sitg-comp-icon no"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.12"/><path d="M8 8l8 8M16 8l-8 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>' -%}
+
+<div class="sitg">
+<section class="sitg-comparison-v2" id="sitg-compare">
+  <div class="sitg-container">
+
+    <div class="sitg-comp-v2-header reveal">
+      <div class="section-eyebrow">{{ section.settings.eyebrow }}</div>
+      <div class="section-title">{{ section.settings.headline }}</div>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="sitg-comp-v2-card reveal">
+      <table class="sitg-comp-v2-table">
+        <thead>
+          <tr>
+            <th class="sitg-comp-v2-label-col"></th>
+            <th class="sitg-comp-v2-col-us">
+              <span class="sitg-comp-v2-brand-badge">
+                <img
+                  src="{{ section.settings.logo | image_url: width: 200 }}"
+                  alt="Still In The Game"
+                  class="sitg-comp-v2-logo"
+                  width="120"
+                  height="auto"
+                  loading="lazy"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+                >
+                <span class="sitg-comp-v2-logo-fallback" style="display:none;">Still In<br>The Game</span>
+              </span>
+            </th>
+            <th class="sitg-comp-v2-col-them">
+              <span class="sitg-comp-v2-them-icon">💊</span>
+              <span class="sitg-comp-v2-them-label">{{ section.settings.comp_1_label }}</span>
+            </th>
+            <th class="sitg-comp-v2-col-them">
+              <span class="sitg-comp-v2-them-icon">💰</span>
+              <span class="sitg-comp-v2-them-label">{{ section.settings.comp_2_label }}</span>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}>
+              <td class="sitg-comp-v2-row-label">{{ block.settings.row_label }}</td>
+
+              {%- comment -%} — OUR column — {%- endcomment -%}
+              <td class="sitg-comp-v2-col-us">
+                {%- case block.settings.us_type -%}
+                  {%- when 'check' -%}{{ check_yes }}
+                  {%- when 'x'     -%}{{ check_no }}
+                  {%- when 'text'  -%}<strong class="sitg-comp-v2-val-us">{{ block.settings.us_value }}</strong>
+                {%- endcase -%}
+              </td>
+
+              {%- comment -%} — COMP 1 column — {%- endcomment -%}
+              <td class="sitg-comp-v2-col-them">
+                {%- case block.settings.comp1_type -%}
+                  {%- when 'check' -%}{{ check_yes }}
+                  {%- when 'x'     -%}{{ check_no }}
+                  {%- when 'text'  -%}<span class="sitg-comp-v2-val-them">{{ block.settings.comp1_value }}</span>
+                {%- endcase -%}
+              </td>
+
+              {%- comment -%} — COMP 2 column — {%- endcomment -%}
+              <td class="sitg-comp-v2-col-them">
+                {%- case block.settings.comp2_type -%}
+                  {%- when 'check' -%}{{ check_yes }}
+                  {%- when 'x'     -%}{{ check_no }}
+                  {%- when 'text'  -%}<span class="sitg-comp-v2-val-them">{{ block.settings.comp2_value }}</span>
+                {%- endcase -%}
+              </td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<style>
+/* ———————————————————————————————
+   SITG Comparison v2 — Grüns-style "Us vs. Them"
+   Mobile-first, 3-column, anonymous competitors
+   ——————————————————————————————— */
+.sitg-comparison-v2 {
+  padding: 60px 0 72px;
+}
+.sitg-comp-v2-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* ── Card container ── */
+.sitg-comp-v2-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,.06);
+}
+
+/* ── Table reset ── */
+.sitg-comp-v2-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sitg-comp-v2-table th,
+.sitg-comp-v2-table td {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+/* ── Column widths ── */
+.sitg-comp-v2-label-col {
+  width: 34%;
+}
+.sitg-comp-v2-col-us {
+  width: 28%;
+}
+.sitg-comp-v2-col-them {
+  width: 19%;
+}
+
+/* ── Header row ── */
+.sitg-comp-v2-table thead th {
+  padding: 24px 8px 20px;
+  background: transparent;
+  border-bottom: 2px solid rgba(0,0,0,.06);
+}
+.sitg-comp-v2-table thead .sitg-comp-v2-col-us {
+  background: var(--sitg-green-deep, #2D5A27);
+  border-radius: 16px 16px 0 0;
+  position: relative;
+}
+
+/* ── Brand badge ── */
+.sitg-comp-v2-brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sitg-comp-v2-logo {
+  max-width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+.sitg-comp-v2-logo-fallback {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: .04em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ── Competitor header ── */
+.sitg-comp-v2-them-icon {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.sitg-comp-v2-them-label {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #888;
+  letter-spacing: .01em;
+}
+
+/* ── Body rows ── */
+.sitg-comp-v2-table tbody tr {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.sitg-comp-v2-table tbody tr:last-child {
+  border-bottom: none;
+}
+.sitg-comp-v2-table tbody td {
+  padding: 18px 8px;
+}
+.sitg-comp-v2-table tbody .sitg-comp-v2-col-us {
+  background: var(--sitg-green-deep, #2D5A27);
+}
+/* Bottom-round the "us" column on last row */
+.sitg-comp-v2-table tbody tr:last-child .sitg-comp-v2-col-us {
+  border-radius: 0 0 16px 16px;
+}
+
+/* ── Row labels ── */
+.sitg-comp-v2-row-label {
+  text-align: left !important;
+  padding-left: 20px !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.35;
+}
+
+/* ── Values ── */
+.sitg-comp-v2-val-us {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: .02em;
+}
+.sitg-comp-v2-val-them {
+  font-size: 14px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* ── Check / X icons ── */
+.sitg-comp-icon {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+}
+.sitg-comp-icon.yes { color: var(--sitg-green-deep, #2D5A27); }
+.sitg-comp-icon.no  { color: #c4c4c4; }
+
+/* Inside the green "us" column, override check colour to white */
+.sitg-comp-v2-col-us .sitg-comp-icon.yes { color: #fff; }
+.sitg-comp-v2-col-us .sitg-comp-icon.yes svg circle { opacity: 0; }
+.sitg-comp-v2-col-us .sitg-comp-icon.no  { color: rgba(255,255,255,.45); }
+
+/* ── Mobile adjustments ── */
+@media (max-width: 600px) {
+  .sitg-comparison-v2 {
+    padding: 40px 0 52px;
+  }
+  .sitg-comp-v2-card {
+    margin: 0 12px;
+    border-radius: 14px;
+  }
+  .sitg-comp-v2-table thead .sitg-comp-v2-col-us {
+    border-radius: 14px 14px 0 0;
+  }
+  .sitg-comp-v2-table tbody tr:last-child .sitg-comp-v2-col-us {
+    border-radius: 0 0 14px 14px;
+  }
+  .sitg-comp-v2-label-col { width: 30%; }
+  .sitg-comp-v2-col-us    { width: 24%; }
+  .sitg-comp-v2-col-them  { width: 23%; }
+
+  .sitg-comp-v2-row-label {
+    font-size: 12.5px;
+    padding-left: 14px !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .sitg-comp-v2-table thead th { padding: 18px 4px 16px; }
+  .sitg-comp-v2-table tbody td { padding: 14px 4px; }
+  .sitg-comp-v2-logo { max-width: 72px; }
+  .sitg-comp-v2-logo-fallback { font-size: 14px; }
+  .sitg-comp-v2-them-icon { font-size: 20px; }
+  .sitg-comp-v2-them-label { font-size: 10px; }
+  .sitg-comp-v2-val-us { font-size: 18px; }
+  .sitg-comp-v2-val-them { font-size: 12.5px; }
+  .sitg-comp-icon { width: 24px; height: 24px; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "SITG Comparison v2",
+  "settings": [
+    { "type": "text",     "id": "eyebrow",       "label": "Eyebrow",               "default": "The honest comparison" },
+    { "type": "text",     "id": "headline",       "label": "Headline",              "default": "US VS. THEM" },
+    { "type": "textarea", "id": "subtitle",       "label": "Subtitle",              "default": "Not over-hyped or overpriced. Just the most complete joint formula on the market." },
+    { "type": "image_picker", "id": "logo",       "label": "Brand logo (optional)" },
+    { "type": "text",     "id": "comp_1_label",   "label": "Competitor 1 label",    "default": "Generic joint pill" },
+    { "type": "text",     "id": "comp_2_label",   "label": "Competitor 2 label",    "default": "Overpriced joint supplement" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison row",
+      "settings": [
+        { "type": "text", "id": "row_label",    "label": "Row label",           "default": "Feature" },
+        {
+          "type": "select", "id": "us_type",   "label": "Our value type",
+          "options": [
+            { "value": "check", "label": "✓ Check" },
+            { "value": "x",     "label": "✗ X" },
+            { "value": "text",  "label": "Custom text" }
+          ],
+          "default": "check"
+        },
+        { "type": "text", "id": "us_value",     "label": "Our value (if text)",  "default": "—" },
+        {
+          "type": "select", "id": "comp1_type", "label": "Comp 1 value type",
+          "options": [
+            { "value": "check", "label": "✓ Check" },
+            { "value": "x",     "label": "✗ X" },
+            { "value": "text",  "label": "Custom text" }
+          ],
+          "default": "x"
+        },
+        { "type": "text", "id": "comp1_value",  "label": "Comp 1 value (if text)", "default": "—" },
+        {
+          "type": "select", "id": "comp2_type", "label": "Comp 2 value type",
+          "options": [
+            { "value": "check", "label": "✓ Check" },
+            { "value": "x",     "label": "✗ X" },
+            { "value": "text",  "label": "Custom text" }
+          ],
+          "default": "x"
+        },
+        { "type": "text", "id": "comp2_value",  "label": "Comp 2 value (if text)", "default": "—" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Comparison v2",
+      "blocks": [
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "Pain pathways covered",
+            "us_type":      "text",
+            "us_value":     "4",
+            "comp1_type":   "text",
+            "comp1_value":  "1",
+            "comp2_type":   "text",
+            "comp2_value":  "1–2"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "Clinically dosed ingredients",
+            "us_type":      "check",
+            "comp1_type":   "x",
+            "comp2_type":   "x"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "All doses disclosed",
+            "us_type":      "check",
+            "comp1_type":   "check",
+            "comp2_type":   "x"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "Endocannabinoid support (PEA)",
+            "us_type":      "check",
+            "comp1_type":   "x",
+            "comp2_type":   "x"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "Daily pills",
+            "us_type":      "text",
+            "us_value":     "2",
+            "comp1_type":   "text",
+            "comp1_value":  "2–3",
+            "comp2_type":   "text",
+            "comp2_value":  "8–12"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "row_label":    "Monthly price",
+            "us_type":      "text",
+            "us_value":     "$49",
+            "comp1_type":   "text",
+            "comp1_value":  "🤷",
+            "comp2_type":   "text",
+            "comp2_value":  "$80+"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

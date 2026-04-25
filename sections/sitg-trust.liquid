@@ -1,0 +1,57 @@
+<div class="sitg">
+<section class="sitg-trust">
+  <div class="sitg-container">
+    {%- if section.settings.section_image != blank -%}
+      <div class="sitg-trust-img-wrap reveal">
+        <img
+          class="sitg-trust-img"
+          src="{{ section.settings.section_image | image_url: width: 960 }}"
+          alt="{{ section.settings.section_image.alt | default: 'Product quality' }}"
+          loading="lazy"
+        >
+      </div>
+    {%- endif -%}
+    <div class="sitg-trust-grid reveal">
+      {%- for block in section.blocks -%}
+        <div class="sitg-trust-item" {{ block.shopify_attributes }}>
+          <div class="sitg-trust-icon">{{ block.settings.icon }}</div>
+          <div class="sitg-trust-label">{{ block.settings.label }}</div>
+          <div class="sitg-trust-sublabel">{{ block.settings.sublabel }}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Trust Badges",
+  "settings": [
+    { "type": "image_picker", "id": "section_image", "label": "Product image (displays above badges)" }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Trust badge",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji icon", "default": "🏭" },
+        { "type": "text", "id": "label", "label": "Label", "default": "GMP Certified" },
+        { "type": "text", "id": "sublabel", "label": "Sublabel", "default": "Facility" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Trust Badges",
+      "blocks": [
+        { "type": "badge", "settings": { "icon": "🏭", "label": "GMP Certified", "sublabel": "Facility" } },
+        { "type": "badge", "settings": { "icon": "🔬", "label": "3rd Party Tested", "sublabel": "Purity & potency" } },
+        { "type": "badge", "settings": { "icon": "📋", "label": "Fully Transparent", "sublabel": "Every dose on the label" } },
+        { "type": "badge", "settings": { "icon": "🛡️", "label": "4 Branded Ingredients", "sublabel": "Meriva · AprèsFlex · UC-II · Levagen+" } },
+        { "type": "badge", "settings": { "icon": "↩️", "label": "90-Day Guarantee", "sublabel": "Full money-back" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

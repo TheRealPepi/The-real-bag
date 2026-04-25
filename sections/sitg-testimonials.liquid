@@ -1,0 +1,57 @@
+{%- assign star_svg = '<svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78z"/></svg>' -%}
+
+<div class="sitg">
+<section class="sitg-testimonials">
+  <div class="sitg-container">
+    <div class="sitg-ts-grid reveal">
+      {%- for block in section.blocks -%}
+        <div class="sitg-ts-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <img
+              class="sitg-ts-avatar"
+              src="{{ block.settings.image | image_url: width: 120 }}"
+              alt="{{ block.settings.name }}"
+              loading="lazy"
+            >
+          {%- else -%}
+            {%- assign initials = block.settings.name | split: ' ' | first | slice: 0, 1 -%}
+            <div class="sitg-ts-initials">{{ initials }}</div>
+          {%- endif -%}
+          <div class="sitg-ts-stars">{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}{{ star_svg }}</div>
+          <p class="sitg-ts-quote">"{{ block.settings.quote }}"</p>
+          <div class="sitg-ts-author">{{ block.settings.name }} <span>· {{ block.settings.detail }}</span></div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Testimonials",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Customer photo (optional)" },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "Absolute game changer. I'm back on the pickleball court four days a week." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Robert K." },
+        { "type": "text", "id": "detail", "label": "Detail", "default": "58, avid pickleball player" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Testimonials",
+      "blocks": [
+        { "type": "testimonial", "settings": { "quote": "Absolute game changer. I'm back on the pickleball court four days a week. My partner says I'm moving like I did five years ago.", "name": "Robert K.", "detail": "58, avid pickleball player" } },
+        { "type": "testimonial", "settings": { "quote": "I've tried everything. Glucosamine, turmeric capsules from the drugstore, prescription stuff. This is the first time something actually worked. I can get on the floor with my grandkids again.", "name": "Linda M.", "detail": "62, retired teacher & hiker" } },
+        { "type": "testimonial", "settings": { "quote": "I was skeptical — I've been burned by supplements before. But week two I noticed the morning stiffness was fading. By month two I added a second hike day to my week. I'm 54 and I'm not done.", "name": "David T.", "detail": "54, weekend trail hiker" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,55 @@
+<div class="sitg">
+<section class="sitg-founder" id="sitg-story">
+  <div class="sitg-container">
+    <div class="sitg-founder-inner reveal">
+      <div class="sitg-founder-image-area">
+        {%- if section.settings.founder_image != blank -%}
+          <img
+            class="sitg-founder-img"
+            src="{{ section.settings.founder_image | image_url: width: 800 }}"
+            alt="{{ section.settings.founder_image.alt | default: 'Founder' }}"
+            loading="lazy"
+          >
+        {%- else -%}
+          <div class="sitg-founder-img-placeholder">
+            <div class="fip-icon">▶</div>
+            <div class="fip-text">FOUNDER PHOTO</div>
+          </div>
+        {%- endif -%}
+        <div class="sitg-founder-quote-card">
+          <div class="fqc-quote">"{{ section.settings.pullquote }}"</div>
+          <div class="fqc-name">{{ section.settings.pullquote_attribution }}</div>
+        </div>
+      </div>
+
+      <div class="sitg-founder-content">
+        <div class="section-eyebrow">{{ section.settings.eyebrow }}</div>
+        <div class="section-title" style="font-size:clamp(32px,3.5vw,44px);margin-bottom:24px;">{{ section.settings.headline }}</div>
+        <div class="sitg-founder-text">{{ section.settings.story }}</div>
+        <div class="sitg-founder-sig">{{ section.settings.signature }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Founder Story",
+  "settings": [
+    { "type": "image_picker", "id": "founder_image", "label": "Founder photo" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why I built this" },
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "I WASN'T READY<br>TO SIT THIS OUT." },
+    {
+      "type": "richtext",
+      "id": "story",
+      "label": "Founder story",
+      "default": "<p>At 52, I could still outpace most people on a trail. I played pickleball three mornings a week. I lifted. I moved. <strong>That's who I was.</strong></p><p>Then my knees started disagreeing with me. The morning stiffness turned into afternoon aches that turned into skipped workouts. My doctor's advice? \"Well, at your age…\" I stopped listening at \"at your age.\"</p><p>I tried everything. Glucosamine from the drugstore. Generic turmeric capsules. That subscription everyone sees on TV — twelve pills a day and nothing to show for it. <strong>I became obsessed with finding what the clinical research actually said worked.</strong></p><p>What I found shocked me. There were four distinct biological pathways involved in joint discomfort — and not a single product on the market covered all four. The best ingredients existed, proven in rigorous clinical trials. But they were scattered across different products, different brands, different categories. Nobody had put them together.</p><p>So I did. Four branded, clinically studied ingredients. Every dose transparent. Every mechanism covered. <strong>Not because I wanted to start a supplement company — but because I wanted to keep hiking.</strong></p>"
+    },
+    { "type": "text", "id": "pullquote", "label": "Pull quote", "default": "I was told to slow down. I decided to find better fuel instead." },
+    { "type": "text", "id": "pullquote_attribution", "label": "Pull quote attribution", "default": "— Founder, Still In The Game" },
+    { "type": "text", "id": "signature", "label": "Signature line", "default": "— Still moving. Still playing. Still in the game." }
+  ],
+  "presets": [{ "name": "SITG Founder Story" }]
+}
+{% endschema %}

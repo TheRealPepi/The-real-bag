@@ -1,0 +1,242 @@
+{%- assign product = section.settings.product -%}
+{%- assign check_svg = '<svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>' -%}
+
+<div class="sitg">
+<section class="sitg-purchase" id="sitg-buy">
+  <div class="sitg-container">
+    <div class="sitg-purchase-inner">
+      <!-- ===== LEFT: Product Image + Ingredients ===== -->
+      <div class="sitg-purchase-left reveal">
+        <div class="sitg-purchase-img-wrap">
+          {%- if section.settings.product_image != blank -%}
+            <img
+              src="{{ section.settings.product_image | image_url: width: 800 }}"
+              alt="{{ section.settings.product_image.alt | default: 'Still In The Game — Joint Performance Fuel' }}"
+              loading="lazy"
+            >
+          {%- elsif product != blank and product.featured_image != blank -%}
+            <img
+              src="{{ product.featured_image | image_url: width: 800 }}"
+              alt="{{ product.featured_image.alt | default: product.title }}"
+              loading="lazy"
+            >
+          {%- else -%}
+            <div class="sitg-purchase-img-placeholder">PRODUCT PHOTO</div>
+          {%- endif -%}
+
+          <div class="sitg-purchase-product-name">{{ section.settings.product_display_name }}</div>
+          <div class="sitg-purchase-product-sub">{{ section.settings.product_subtitle }}</div>
+
+          <div class="sitg-purchase-ingredient-pills">
+            <span class="sitg-pip sitg-pip-1"><span class="pip-dot"></span> Meriva® Curcumin</span>
+            <span class="sitg-pip sitg-pip-2"><span class="pip-dot"></span> AprèsFlex® Boswellia</span>
+            <span class="sitg-pip sitg-pip-3"><span class="pip-dot"></span> UC-II® Collagen</span>
+            <span class="sitg-pip sitg-pip-4"><span class="pip-dot"></span> Levagen+® PEA</span>
+          </div>
+
+          <div class="sitg-purchase-benefits-strip">
+            <ul class="sitg-purchase-benefits">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'benefit' -%}
+                  <li {{ block.shopify_attributes }}>
+                    <span class="pb-check">{{ check_svg }}</span>
+                    {{ block.settings.text }}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== RIGHT: Purchase Card ===== -->
+      <div id="sitg-buy-price-card" class="sitg-purchase-card reveal">
+        <div class="sitg-pc-eyebrow">{{ section.settings.eyebrow }}</div>
+        <div class="sitg-pc-headline">{{ section.settings.headline }}</div>
+        <p class="sitg-pc-body">{{ section.settings.body }}</p>
+        <div class="sitg-pc-divider"></div>
+
+        <div class="sitg-pc-toggle">
+          <button class="sitg-pc-toggle-btn active" data-plan="subscribe">
+            Subscribe & Save
+            <span class="pc-save">SAVE 30%</span>
+          </button>
+          <button class="sitg-pc-toggle-btn" data-plan="onetime">
+            One-Time Purchase
+          </button>
+        </div>
+
+        <div class="sitg-pc-price-display">
+          <div class="sitg-pc-price">
+            <span class="price-original">{{ section.settings.price_original }}</span>
+            <span class="price-main">{{ section.settings.price_subscribe }}</span>
+            <span class="price-period">/month</span>
+          </div>
+          <div class="sitg-pc-per-day">That's <strong>{{ section.settings.price_per_day_subscribe }}</strong> — less than a coffee</div>
+        </div>
+
+        <div class="sitg-pc-includes">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'include' -%}
+              <p {{ block.shopify_attributes }}><span class="pci-icon">✓</span> {{ block.settings.text }}</p>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        {%- comment -%}
+          SHOPIFY PRODUCT FORM
+          If a product is selected, renders a real add-to-cart form.
+          Subscription apps (Recharge, Skio, Loop) auto-inject selling plan
+          selectors into this form.
+        {%- endcomment -%}
+
+        {%- if product != blank -%}
+          {%- assign first_selling_plan_id = product.selected_or_first_available_variant.selling_plan_allocations[0].selling_plan.id -%}
+          {%- form 'product', product, id: 'sitg-product-form' -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <input type="hidden" name="selling_plan" id="sitg-selling-plan-input" value="{{ first_selling_plan_id }}" data-selling-plan-id="{{ first_selling_plan_id }}">
+
+            <button type="submit" class="sitg-pc-buy-btn" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {%- if product.selected_or_first_available_variant.available -%}
+                {{ section.settings.button_text }} →
+              {%- else -%}
+                Sold Out
+              {%- endif -%}
+            </button>
+          {%- endform -%}
+        {%- else -%}
+          <button class="sitg-pc-buy-btn">{{ section.settings.button_text }} →</button>
+        {%- endif -%}
+
+        <div class="sitg-pc-guarantee">
+          🛡️ {{ section.settings.guarantee_text }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Purchase",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product image (overrides product featured image)"
+    },
+    {
+      "type": "text",
+      "id": "product_display_name",
+      "label": "Product display name",
+      "default": "STILL IN THE GAME"
+    },
+    {
+      "type": "text",
+      "id": "product_subtitle",
+      "label": "Product subtitle",
+      "default": "Joint Performance Fuel · 90 capsules · 30 Day Supply"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Card eyebrow",
+      "default": "Your daily ritual"
+    },
+    {
+      "type": "textarea",
+      "id": "headline",
+      "label": "Card headline (HTML allowed)",
+      "default": "START YOUR DAILY DOSE OF FREEDOM."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Card body text",
+      "default": "Two capsules every morning. That's it. Your daily reminder that you're still in the game — and you're not going anywhere."
+    },
+    {
+      "type": "text",
+      "id": "price_original",
+      "label": "Original price",
+      "default": "$59"
+    },
+    {
+      "type": "text",
+      "id": "price_subscribe",
+      "label": "Subscription price",
+      "default": "$39.99"
+    },
+    {
+      "type": "text",
+      "id": "price_per_day_subscribe",
+      "label": "Per-day subscribe",
+      "default": "$1.57/day"
+    },
+    {
+      "type": "text",
+      "id": "price_onetime",
+      "label": "One-time price",
+      "default": "$59"
+    },
+    {
+      "type": "text",
+      "id": "price_per_day_onetime",
+      "label": "Per-day one-time",
+      "default": "$1.97/day"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Start My Ritual"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee text",
+      "default": "90-Day Money-Back Guarantee · No questions asked"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit bullet (left)",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Benefit text", "default": "All four branded ingredients at clinically studied doses" }
+      ]
+    },
+    {
+      "type": "include",
+      "name": "Included (right card)",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Included text", "default": "90 capsules (30-day supply)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Purchase",
+      "blocks": [
+        { "type": "benefit", "settings": { "text": "All four branded ingredients at clinically studied doses" } },
+        { "type": "benefit", "settings": { "text": "Four distinct biological mechanisms in one formula" } },
+        { "type": "benefit", "settings": { "text": "Benefits as early as day 5 (Boswellia onset)" } },
+        { "type": "benefit", "settings": { "text": "Minimal drug interaction risk for adults 45+" } },
+        { "type": "benefit", "settings": { "text": "90-day money-back guarantee — no questions asked" } },
+        { "type": "benefit", "settings": { "text": "Free shipping on every order" } },
+        { "type": "include", "settings": { "text": "90 capsules (30-day supply)" } },
+        { "type": "include", "settings": { "text": "Free shipping, always" } },
+        { "type": "include", "settings": { "text": "Cancel or pause anytime" } },
+        { "type": "include", "settings": { "text": "90-day money-back guarantee" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

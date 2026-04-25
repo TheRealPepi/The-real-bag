@@ -1,0 +1,195 @@
+{{ 'sitg-landing.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+<div class="sitg">
+<section class="sitg-hero">
+  <div class="sitg-container-wide">
+    <div class="sitg-hero-inner">
+      <div class="sitg-hero-content">
+        <div class="sitg-hero-badge">
+          <span class="dot"></span>
+          {{ section.settings.badge_text }}
+        </div>
+        <h1 style="color: #F5F0E8;">
+          {{ section.settings.headline_line1 }}<br>
+          <span class="highlight">{{ section.settings.headline_line2 }}</span><br>
+          {{ section.settings.headline_line3 }}
+        </h1>
+        <p class="sitg-hero-sub">{{ section.settings.subheadline }}</p>
+        <div class="sitg-hero-ctas">
+          <a href="#sitg-buy-price-card" class="btn-primary">
+            {{ section.settings.cta_text }}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#sitg-ingredients" class="btn-secondary">
+            See the science
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="sitg-hero-proof">
+          <div>
+            <div class="sitg-hero-proof-text"><strong>{{ section.settings.rating }}</strong> {{ section.settings.review_count }}</div>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <div class="sitg-hero-proof-text" style="margin-bottom:2px;"><strong>{{ section.settings.guarantee_title }}</strong></div>
+            <div class="sitg-hero-proof-text">{{ section.settings.guarantee_subtitle }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sitg-hero-visual">
+        <div class="sitg-hero-product">
+          {%- if section.settings.product_image != blank -%}
+            <img
+              src="{{ section.settings.product_image | image_url: width: 800 }}"
+              alt="{{ section.settings.product_image.alt | default: 'Still In The Game joint supplement' }}"
+              width="400"
+              height="auto"
+              loading="eager"
+            >
+          {%- else -%}
+            <img
+              src="{{ 'sitg-product.png' | asset_url }}"
+              alt="Still In The Game joint supplement"
+              width="400"
+              height="auto"
+              loading="eager"
+            >
+          {%- endif -%}
+
+          <div class="sitg-float-card sitg-float-card-1">
+            <div class="fc-label">{{ section.settings.float_card_1_label }}</div>
+            <div class="fc-value">{{ section.settings.float_card_1_value }}<span class="fc-unit">{{ section.settings.float_card_1_unit }}</span></div>
+          </div>
+          <div class="sitg-float-card sitg-float-card-2">
+            <div class="fc-label">{{ section.settings.float_card_2_label }}</div>
+            <div class="fc-value">{{ section.settings.float_card_2_value }}<span class="fc-unit">{{ section.settings.float_card_2_unit }}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "The first 4-mechanism joint formula"
+    },
+    {
+      "type": "text",
+      "id": "headline_line1",
+      "label": "Headline line 1",
+      "default": "YOUR BODY WAS"
+    },
+    {
+      "type": "text",
+      "id": "headline_line2",
+      "label": "Headline line 2 (highlighted)",
+      "default": "BUILT FOR THIS."
+    },
+    {
+      "type": "text",
+      "id": "headline_line3",
+      "label": "Headline line 3",
+      "default": "WE KEEP IT THAT WAY."
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Not a joint supplement for aging bodies. Performance fuel for active adults who refuse to sit this one out. Four clinically studied branded ingredients. One daily ritual."
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA button text",
+      "default": "Start Your Ritual"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA button link",
+    },
+    {
+      "type": "text",
+      "id": "rating",
+      "label": "Proof headline",
+      "default": "50+ Clinical Trials"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Proof subtext",
+      "default": "supporting these ingredients"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_title",
+      "label": "Guarantee title",
+      "default": "90-Day"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_subtitle",
+      "label": "Guarantee subtitle",
+      "default": "Money-back guarantee"
+    },
+    {
+      "type": "text",
+      "id": "float_card_1_label",
+      "label": "Float card 1 label",
+      "default": "Onset"
+    },
+    {
+      "type": "text",
+      "id": "float_card_1_value",
+      "label": "Float card 1 value",
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "float_card_1_unit",
+      "label": "Float card 1 unit",
+      "default": "DAYS"
+    },
+    {
+      "type": "text",
+      "id": "float_card_2_label",
+      "label": "Float card 2 label",
+      "default": "Mechanisms"
+    },
+    {
+      "type": "text",
+      "id": "float_card_2_value",
+      "label": "Float card 2 value",
+      "default": "4"
+    },
+    {
+      "type": "text",
+      "id": "float_card_2_unit",
+      "label": "Float card 2 unit",
+      "default": "PATHWAYS"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Hero"
+    }
+  ]
+}
+{% endschema %}

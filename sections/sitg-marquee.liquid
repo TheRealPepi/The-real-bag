@@ -1,0 +1,48 @@
+<div class="sitg">
+<div class="sitg-marquee">
+  <div class="sitg-marquee-track">
+    {%- for i in (1..2) -%}
+      {%- for block in section.blocks -%}
+        <div class="sitg-marquee-item" {{ block.shopify_attributes }}>
+          {{ block.settings.text }} <span class="m-dot"></span>
+        </div>
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "SITG Marquee",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Marquee message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "CLINICALLY STUDIED DOSES"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SITG Marquee",
+      "blocks": [
+        { "type": "message", "settings": { "text": "CLINICALLY STUDIED DOSES" } },
+        { "type": "message", "settings": { "text": "4 BRANDED INGREDIENTS" } },
+        { "type": "message", "settings": { "text": "ZERO PROPRIETARY BLENDS" } },
+        { "type": "message", "settings": { "text": "BUILT FOR ACTIVE ADULTS" } },
+        { "type": "message", "settings": { "text": "NSAID-COMPARABLE RESULTS" } },
+        { "type": "message", "settings": { "text": "90-DAY MONEY-BACK GUARANTEE" } },
+        { "type": "message", "settings": { "text": "SHIPS TODAY" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
