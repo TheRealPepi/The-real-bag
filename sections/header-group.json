@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -5,22 +14,97 @@
     "sitg_header": {
       "type": "sitg-header",
       "blocks": {
-        "nav1": { "type": "nav_link", "settings": { "label": "Ingredients", "icon": "beaker" } },
-        "nav2": { "type": "nav_link", "settings": { "label": "Science", "icon": "flask" } },
-        "nav3": { "type": "nav_link", "settings": { "label": "Our Story", "icon": "book" } },
-        "nav4": { "type": "nav_link", "settings": { "label": "FAQ", "icon": "help" } },
-        "div1": { "type": "drawer_divider", "settings": { "label": "Account" } },
-        "drawer1": { "type": "drawer_link", "settings": { "label": "Manage Subscription", "icon": "refresh" } },
-        "drawer2": { "type": "drawer_link", "settings": { "label": "My Account", "icon": "user" } },
-        "drawer3": { "type": "drawer_link", "settings": { "label": "Order History", "icon": "package" } },
-        "drawer4": { "type": "drawer_link", "settings": { "label": "Contact Us", "icon": "mail" } }
+        "nav1": {
+          "type": "nav_link",
+          "settings": {
+            "label": "THE BAG",
+            "link": "",
+            "icon": "beaker"
+          }
+        },
+        "nav2": {
+          "type": "nav_link",
+          "settings": {
+            "label": "THE STORY",
+            "link": "",
+            "icon": "flask"
+          }
+        },
+        "nav3": {
+          "type": "nav_link",
+          "settings": {
+            "label": "REVIEWS",
+            "link": "",
+            "icon": "book"
+          }
+        },
+        "nav4": {
+          "type": "nav_link",
+          "settings": {
+            "label": "FAQ",
+            "link": "",
+            "icon": "help"
+          }
+        },
+        "div1": {
+          "type": "drawer_divider",
+          "settings": {
+            "label": "Account"
+          }
+        },
+        "drawer1": {
+          "type": "drawer_link",
+          "settings": {
+            "label": "Manage Subscription",
+            "link": "",
+            "icon": "refresh"
+          }
+        },
+        "drawer2": {
+          "type": "drawer_link",
+          "settings": {
+            "label": "My Account",
+            "link": "",
+            "icon": "user"
+          }
+        },
+        "drawer3": {
+          "type": "drawer_link",
+          "settings": {
+            "label": "Order History",
+            "link": "",
+            "icon": "package"
+          }
+        },
+        "drawer4": {
+          "type": "drawer_link",
+          "settings": {
+            "label": "Contact Us",
+            "link": "",
+            "icon": "mail"
+          }
+        }
       },
-      "block_order": ["nav1", "nav2", "nav3", "nav4", "div1", "drawer1", "drawer2", "drawer3", "drawer4"],
+      "block_order": [
+        "nav1",
+        "nav2",
+        "nav3",
+        "nav4",
+        "div1",
+        "drawer1",
+        "drawer2",
+        "drawer3",
+        "drawer4"
+      ],
       "settings": {
+        "logo": "shopify://shop_images/HERVOYAGE_LOGO.png",
         "account_label": "Account",
-        "drawer_cta_text": "Start My Ritual →"
+        "drawer_cta_text": "Start My Ritual →",
+        "drawer_cta_link": ""
       }
     }
   },
-  "order": ["sitg_header"]
+  "order": [
+    "sitg_header"
+  ]
 }
