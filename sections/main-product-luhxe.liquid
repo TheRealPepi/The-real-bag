@@ -46,8 +46,8 @@
   {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
 
   <div class="page-width">
-    <div class="luhxe-product__grid">
-      <div class="luhxe-product__media-wrapper">
+    <div class="luhxe-product__grid product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col{% if product.media.size > 0 %} grid--2-col-tablet{% else %} product--no-media{% endif %}">
+      <div class="luhxe-product__media-wrapper product__media-wrapper grid__item">
         {%- if section.settings.featured_in_image != blank -%}
           <div class="luhxe-product__featured-in" aria-hidden="true">
             <img
@@ -63,7 +63,7 @@
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
 
-      <div class="luhxe-product__info-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="luhxe-product__info-wrapper product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
           id="ProductInfo-{{ section.id }}"
           class="luhxe-product__info{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
@@ -448,7 +448,7 @@
       "step": 4,
       "unit": "px",
       "label": "Top padding",
-      "default": 36
+      "default": 60
     },
     {
       "type": "range",
@@ -458,7 +458,7 @@
       "step": 4,
       "unit": "px",
       "label": "Bottom padding",
-      "default": 24
+      "default": 40
     }
   ],
   "blocks": [

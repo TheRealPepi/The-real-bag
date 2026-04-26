@@ -1,25 +1,25 @@
 /* ==========================================================================
    Luhxe-style product hero
+   Defers media/grid layout to section-main-product.css (.product .product--*)
+   and only restyles the right-column chrome.
    ========================================================================== */
 
+.luhxe-product { position: relative; }
+
+/* Add breathing room from the sticky header. */
 .luhxe-product .luhxe-product__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: start;
+  padding-top: 1.5rem;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .luhxe-product .luhxe-product__grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 4rem;
+    padding-top: 2rem;
   }
 }
 
-.luhxe-product__media-wrapper {
-  position: relative;
-  min-width: 0;
-}
+/* Media column ----------------------------------------------------------- */
+
+.luhxe-product__media-wrapper { position: relative; }
 
 .luhxe-product__featured-in {
   position: absolute;
@@ -36,11 +36,7 @@
   display: block;
 }
 
-/* Info column ------------------------------------------------------------- */
-
-.luhxe-product__info-wrapper {
-  min-width: 0;
-}
+/* Info column ------------------------------------------------------------ */
 
 .luhxe-product__info {
   display: flex;
@@ -48,14 +44,7 @@
   gap: 1.25rem;
 }
 
-@media screen and (min-width: 990px) {
-  .luhxe-product__info.product__column-sticky {
-    position: sticky;
-    top: 8rem;
-  }
-}
-
-/* Trust badges ------------------------------------------------------------ */
+/* Trust badges ----------------------------------------------------------- */
 
 .luhxe-trust-badges {
   list-style: none;
@@ -93,7 +82,7 @@
   line-height: 1;
 }
 
-/* Reviews ----------------------------------------------------------------- */
+/* Reviews ---------------------------------------------------------------- */
 
 .luhxe-reviews {
   display: flex;
@@ -114,7 +103,7 @@
   text-underline-offset: 2px;
 }
 
-/* Title & subtitle -------------------------------------------------------- */
+/* Title & subtitle ------------------------------------------------------- */
 
 .luhxe-product__title {
   margin: 0;
@@ -135,13 +124,11 @@
 
 .luhxe-product__subtitle p { margin: 0; }
 
-/* Price ------------------------------------------------------------------- */
+/* Price ------------------------------------------------------------------ */
 
-.luhxe-product__price {
-  margin-top: 0.25rem;
-}
+.luhxe-product__price { margin-top: 0.25rem; }
 
-/* Variant picker header --------------------------------------------------- */
+/* Variant picker header ------------------------------------------------- */
 
 .luhxe-product__variant-header {
   display: flex;
@@ -153,7 +140,6 @@
 .luhxe-product__variant-heading {
   font-size: 1.4rem;
   font-weight: 700;
-  text-transform: none;
   color: rgb(var(--color-foreground));
 }
 
@@ -187,23 +173,12 @@ a.luhxe-product__which-one:hover { background: rgba(var(--color-foreground), 0.0
   font-weight: 600;
 }
 
-/* Override variant picker visual to match Luhxe (image-card style) -------- */
+/* Kaching placeholder --------------------------------------------------- */
 
-.luhxe-product .product-form__input--pill input[type='radio'] + label,
-.luhxe-product .product-form__input--swatch input[type='radio'] + label {
-  border-radius: 0.5rem;
-}
-
-/* Kaching placeholder ----------------------------------------------------- */
-
-.luhxe-product__kaching-placeholder {
-  margin: 0.5rem 0;
-  min-height: 0;
-}
-
+.luhxe-product__kaching-placeholder { margin: 0.5rem 0; min-height: 0; }
 .luhxe-product__kaching-placeholder:empty { display: none; }
 
-/* Add-to-cart button ------------------------------------------------------ */
+/* Add-to-cart button ---------------------------------------------------- */
 
 .luhxe-product__form { margin-top: 0.5rem; }
 
@@ -217,11 +192,74 @@ a.luhxe-product__which-one:hover { background: rgba(var(--color-foreground), 0.0
   border-radius: 0.4rem;
 }
 
-/* Description ------------------------------------------------------------- */
+/* Description ----------------------------------------------------------- */
 
 .luhxe-product__description {
   margin-top: 1rem;
   font-size: 1.4rem;
   line-height: 1.6;
   color: rgba(var(--color-foreground), 0.85);
+}
+
+/* Vertical thumbnails on the left (Luhxe-style) ------------------------- */
+/* When gallery_layout = thumbnail, render thumbnails as a vertical strip
+   beside the main image instead of below. */
+
+@media screen and (min-width: 990px) {
+  .luhxe-product .product--thumbnail media-gallery {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .luhxe-product .product--thumbnail.product--right media-gallery {
+    grid-template-columns: minmax(0, 1fr) 8rem;
+  }
+
+  /* Main viewer takes the wide column. */
+  .luhxe-product .product--thumbnail media-gallery > slider-component:not(.thumbnail-slider) {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  .luhxe-product .product--thumbnail.product--right media-gallery > slider-component:not(.thumbnail-slider) {
+    grid-column: 1;
+  }
+
+  /* Thumbnail strip becomes a vertical column. */
+  .luhxe-product .product--thumbnail .thumbnail-slider {
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 0;
+    margin: 0;
+    width: 8rem;
+  }
+  .luhxe-product .product--thumbnail.product--right .thumbnail-slider {
+    grid-column: 2;
+  }
+
+  .luhxe-product .product--thumbnail .thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+  }
+
+  .luhxe-product .product--thumbnail .thumbnail-list .thumbnail-list__item {
+    width: 100% !important;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .luhxe-product .product--thumbnail .thumbnail-list .thumbnail {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .luhxe-product .product--thumbnail .thumbnail-slider .slider-button {
+    display: none;
+  }
 }
