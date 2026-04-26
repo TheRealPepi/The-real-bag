@@ -295,19 +295,8 @@
 
     <!-- Logo -->
     <a href="{{ routes.root_url }}" class="sitg-header-logo">
-      {%- if section.settings.logo != blank -%}
-        <img
-          class="sitg-header-logo-img"
-          src="{{ section.settings.logo | image_url: height: 56 }}"
-          alt="{{ shop.name }}"
-          height="28"
-          width="auto"
-          loading="eager"
-        >
-      {%- else -%}
-        <img class="sitg-header-logo-mark-img" src="{{ 'Logo no background.png' | asset_url }}" alt="{{ shop.name }}" height="32" loading="eager">
-        <span class="sitg-header-logo-text">HerVoyage</span>
-      {%- endif -%}
+      <img class="sitg-header-logo-mark-img" src="{{ 'Logo no background.png' | asset_url }}" alt="{{ shop.name }}" height="32" loading="eager">
+      <span class="sitg-header-logo-text">HerVoyage</span>
     </a>
 
     <!-- Desktop nav -->
