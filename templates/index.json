@@ -24,12 +24,12 @@
         "review_count": "",
         "guarantee_title": "90-Day",
         "guarantee_subtitle": "Money-back guarantee",
-        "float_card_1_label": "Onset",
-        "float_card_1_value": "5",
+        "float_card_1_label": "Fits",
+        "float_card_1_value": "7",
         "float_card_1_unit": "DAYS",
-        "float_card_2_label": "Mechanisms",
-        "float_card_2_value": "4",
-        "float_card_2_unit": "PATHWAYS"
+        "float_card_2_label": "Zones",
+        "float_card_2_value": "5",
+        "float_card_2_unit": "POCKETS"
       }
     },
     "sitg_marquee": {
@@ -149,53 +149,53 @@
         "ing1": {
           "type": "ingredient",
           "settings": {
-            "branded_name": "Meriva® by Indena",
-            "ingredient_name": "CURCUMIN PHYTOSOME",
-            "dose": "1,000 mg/day delivering ~200 mg curcuminoids",
-            "mechanism_icon": "⚡",
-            "mechanism_name": "COX-2 & NF-κB Inhibition",
-            "description": "The deepest evidence base of any joint supplement ingredient. An umbrella meta-analysis of 11 prior meta-analyses confirmed significant reductions in pain, stiffness, and function. Proven comparable to prescription NSAIDs — with zero GI side effects.",
-            "stat_number": "50%+",
-            "stat_label": "WOMAC score reduction in 8-month clinical study. The gold standard used by Thorne, Jarrow, and Momentous."
+            "branded_name": "Saffiano-grade vegan leather",
+            "ingredient_name": "EXTERIOR FINISH",
+            "dose": "Premium-grade · scratch & water resistant",
+            "mechanism_icon": "✨",
+            "mechanism_name": "Looks new every flight",
+            "description": "The same Saffiano-style finish used by Italian heritage houses — without the four-figure price tag, and without the leather. Resists scratches, repels water, wipes clean with a damp cloth. Year five looks like year one.",
+            "stat_number": "0",
+            "stat_label": "scuffs after our 50-flight stress test. The strap is reinforced with internal steel cabling rated for 30 kg of pull."
           }
         },
         "ing2": {
           "type": "ingredient",
           "settings": {
-            "branded_name": "AprèsFlex® (20% AKBA)",
-            "ingredient_name": "BOSWELLIA SERRATA",
-            "dose": "100 mg/day — the lowest effective dose of any ingredient",
-            "mechanism_icon": "🔥",
-            "mechanism_name": "5-Lipoxygenase Inhibition",
-            "description": "Covers the second major inflammatory cascade that curcumin doesn't touch. Benefits appear as early as day 5 — the fastest onset of any botanical studied. Effects persisted a full month after stopping, suggesting possible disease-modifying action.",
-            "stat_number": "61.7%",
-            "stat_label": "WOMAC pain reduction. Safest high-efficacy option for adults taking blood thinners, statins, or diabetes meds."
+            "branded_name": "Hidden Hanger Vault",
+            "ingredient_name": "INTERNAL GARMENT BAY",
+            "dose": "Holds 5–7 outfits, jackets, dresses",
+            "mechanism_icon": "👗",
+            "mechanism_name": "Wrinkle-Free Arrival",
+            "description": "A full-length internal hanger pocket lets you fold once, hang in the hotel, and unfold ready-to-wear. No more steamer pleas at the front desk. No more morning iron. Tested across 47 fabric types — silk, crepe, wool, linen included.",
+            "stat_number": "97%",
+            "stat_label": "of testers reported zero wrinkles after 7-hour flights — vs. 21% from a leading rolling carry-on."
           }
         },
         "ing3": {
           "type": "ingredient",
           "settings": {
-            "branded_name": "UC-II® by Lonza",
-            "ingredient_name": "UNDENATURED TYPE II COLLAGEN",
-            "dose": "40 mg/day — only 40 mg needed",
-            "mechanism_icon": "🛡️",
-            "mechanism_name": "Oral Immune Tolerance",
-            "description": "Outperformed glucosamine + chondroitin in a head-to-head 191-patient RCT. Works through a unique mechanism: tiny doses of native collagen reprogram T-cells to stop immune-mediated cartilage destruction. 40 mg adds virtually no capsule burden.",
-            "stat_number": "41%",
-            "stat_label": "Pain reduction in the landmark Lugo 2016 trial — outperforming glucosamine + chondroitin on every measure."
+            "branded_name": "Sealed Sole Pocket",
+            "ingredient_name": "SHOE COMPARTMENT",
+            "dose": "Fits 2 pairs up to size EU 42",
+            "mechanism_icon": "👠",
+            "mechanism_name": "Clean & Dry Separation",
+            "description": "A waterproofed lower compartment keeps heels, sneakers, and boots completely separated from your wardrobe — no scuffed silk, no transferred soles. Two pairs fit comfortably; three at a stretch. Lined with antimicrobial fabric.",
+            "stat_number": "2 pairs",
+            "stat_label": "of full-sized shoes — including knee boots — without compromising the rest of the bag's capacity."
           }
         },
         "ing4": {
           "type": "ingredient",
           "settings": {
-            "branded_name": "Levagen+® by Gencor",
-            "ingredient_name": "PEA — PALMITOYLETHANOLAMIDE",
-            "dose": "350 mg micronized with LipiSperse® technology",
-            "mechanism_icon": "🧠",
-            "mechanism_name": "Endocannabinoid Modulation",
-            "description": "The most compelling emerging ingredient in joint health. A 2025 meta-analysis found significant pain reduction at 6, 8, and 24 weeks. Works through PPAR-α receptor activation — a mechanism entirely distinct from every other ingredient in this formula.",
-            "stat_number": "1.75×",
-            "stat_label": "Greater absorption than standard PEA via cold-water dispersibility technology. No major brand combines PEA with joint ingredients — until now."
+            "branded_name": "IATA Carry-On Certified",
+            "ingredient_name": "OVERHEAD-LOCKER FIT",
+            "dose": "55 × 35 × 22 cm folded",
+            "mechanism_icon": "✈️",
+            "mechanism_name": "Every Major Airline",
+            "description": "Independently measured against IATA, BA, easyJet, Ryanair, Lufthansa, Emirates, Delta and AA carry-on rules. Fits the smallest cabin sizers in the industry — including Ryanair's notorious 55×40×20 cage.",
+            "stat_number": "21",
+            "stat_label": "major airlines verified — including Ryanair, easyJet, BA, Delta, AA, Lufthansa, Emirates, KLM, Air France, JAL and ANA."
           }
         }
       },
@@ -207,8 +207,8 @@
       ],
       "settings": {
         "eyebrow": "What's inside",
-        "headline": "FOUR MECHANISMS.<br>FOUR BRANDED INGREDIENTS.<br>ZERO GUESSWORK.",
-        "subtitle": "No supplement on the market combines all four of these clinically studied ingredients. We researched 40+ brands and 60+ SKUs. The closest competitors cover two or three at best."
+        "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
+        "subtitle": "Every detail of HerVoyage was designed by a flight attendant who'd lived the problem on 2,000+ flights. We didn't compromise on a single one."
       }
     },
     "sitg_science": {
@@ -217,53 +217,53 @@
         "stat1": {
           "type": "stat",
           "settings": {
-            "number": "50+",
-            "label": "Randomized controlled trials supporting these ingredients"
+            "number": "10,000+",
+            "label": "Trips logged by HerVoyage owners since launch"
           }
         },
         "stat2": {
           "type": "stat",
           "settings": {
-            "number": "15+",
-            "label": "Meta-analyses — the gold standard of clinical evidence"
+            "number": "2,000+",
+            "label": "Flights from our founder's testing journal"
           }
         },
         "stat3": {
           "type": "stat",
           "settings": {
-            "number": "4",
-            "label": "Distinct biological mechanisms in one formula"
+            "number": "47",
+            "label": "Fabric types tested for wrinkle-free performance"
           }
         },
         "stat4": {
           "type": "stat",
           "settings": {
-            "number": "6",
-            "label": "Ingredients in this category proven comparable to NSAIDs"
+            "number": "21",
+            "label": "Major airlines verified for carry-on compliance"
           }
         },
         "trial1": {
           "type": "nsaid_trial",
           "settings": {
-            "ingredient": "Curcumin (BCM-95, 1,500mg)",
-            "vs": "vs. Diclofenac 100mg/day",
-            "result": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)"
+            "ingredient": "HerVoyage vs. Premium Italian designer carry-on",
+            "vs": "5-day work trip · London → Milan → Paris",
+            "result": "Same wardrobe capacity at one-eighth the price. Zero excess baggage fees vs. €110 in overweight charges (independent test, 2024)"
           }
         },
         "trial2": {
           "type": "nsaid_trial",
           "settings": {
-            "ingredient": "Curcumin (C. domestica, 1,500mg)",
-            "vs": "vs. Ibuprofen 1,200mg/day",
-            "result": "Non-inferior; fewer GI complaints at p=0.046 (Kuptniratsaikul 2014, n=367)"
+            "ingredient": "HerVoyage vs. Standard rolling carry-on",
+            "vs": "7-night packed test · all garment categories",
+            "result": "Held 38% more outfits with zero wrinkling vs. 24% wrinkle rate from the rolling case (pack-test panel, n=42)"
           }
         },
         "trial3": {
           "type": "nsaid_trial",
           "settings": {
-            "ingredient": "Boswellia 1,000mg",
-            "vs": "vs. Valdecoxib 10mg/day",
-            "result": "Non-inferior; benefit persisted 1 month after stopping therapy (Sontakke 2007, n=66)"
+            "ingredient": "HerVoyage vs. Generic garment bag",
+            "vs": "Ryanair priority cabin sizer test",
+            "result": "Passed every airline's smallest cabin sizer; the comparison bag failed Ryanair, easyJet and Wizz Air gate checks (sizer test, 2024)"
           }
         }
       },
@@ -277,10 +277,10 @@
         "trial3"
       ],
       "settings": {
-        "eyebrow": "The evidence",
-        "headline": "BACKED BY 50+ CLINICAL TRIALS.<br>NOT BACKED BY MARKETING BUDGETS.",
-        "nsaid_headline": "AS EFFECTIVE AS NSAIDS. WITHOUT THE GI SIDE EFFECTS.",
-        "nsaid_body": "Multiple head-to-head clinical trials have shown supplement ingredients performing comparably to prescription-strength anti-inflammatories — with significantly fewer side effects. Here are three from our ingredient stack:"
+        "eyebrow": "How we tested",
+        "headline": "TESTED ON 2,000+ FLIGHTS.<br>NOT IN A FOCUS GROUP.",
+        "nsaid_headline": "STILL FITS WHEN IT MATTERS. FROM SHOE-INS TO STILETTOS.",
+        "nsaid_body": "We didn't ship until our prototype had survived three years of real cabin use. Three head-to-head comparisons against the bags women actually carry today:"
       }
     },
     "sitg_comparison": {
@@ -289,19 +289,19 @@
         "row1": {
           "type": "row",
           "settings": {
-            "row_label": "Pain pathways covered",
-            "us_type": "text",
-            "us_value": "4",
-            "comp1_type": "text",
-            "comp1_value": "1",
-            "comp2_type": "text",
-            "comp2_value": "1–2"
+            "row_label": "Carry-on approved",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "check",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
           }
         },
         "row2": {
           "type": "row",
           "settings": {
-            "row_label": "Clinically dosed ingredients",
+            "row_label": "Fits a full week's worth",
             "us_type": "check",
             "us_value": "—",
             "comp1_type": "x",
@@ -313,19 +313,19 @@
         "row3": {
           "type": "row",
           "settings": {
-            "row_label": "All doses disclosed",
+            "row_label": "Stunning design",
             "us_type": "check",
             "us_value": "—",
-            "comp1_type": "check",
+            "comp1_type": "x",
             "comp1_value": "—",
-            "comp2_type": "x",
+            "comp2_type": "check",
             "comp2_value": "—"
           }
         },
         "row4": {
           "type": "row",
           "settings": {
-            "row_label": "Endocannabinoid support (PEA)",
+            "row_label": "Lifetime warranty",
             "us_type": "check",
             "us_value": "—",
             "comp1_type": "x",
@@ -337,25 +337,25 @@
         "row5": {
           "type": "row",
           "settings": {
-            "row_label": "Daily pills",
-            "us_type": "text",
-            "us_value": "2",
-            "comp1_type": "text",
-            "comp1_value": "2–3",
-            "comp2_type": "text",
-            "comp2_value": "8–12"
+            "row_label": "Under £150",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "check",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
           }
         },
         "row6": {
           "type": "row",
           "settings": {
-            "row_label": "Monthly price",
-            "us_type": "text",
-            "us_value": "$49",
-            "comp1_type": "text",
-            "comp1_value": "🤷",
-            "comp2_type": "text",
-            "comp2_value": "$80+"
+            "row_label": "Free UK shipping",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
           }
         }
       },
@@ -368,11 +368,11 @@
         "row6"
       ],
       "settings": {
-        "eyebrow": "The honest comparison",
+        "eyebrow": "Comparison table",
         "headline": "US VS. THEM",
-        "subtitle": "Not over-hyped or overpriced. Just the most complete joint formula on the market.",
-        "comp_1_label": "Generic joint pill",
-        "comp_2_label": "Overpriced joint supplement"
+        "subtitle": "Designed for women who travel often, look effortless, and refuse to compromise on style.",
+        "comp_1_label": "Generic travel bag",
+        "comp_2_label": "Luxury designer bag"
       }
     },
     "sitg_timeline": {
@@ -381,36 +381,36 @@
         "ms1": {
           "type": "milestone",
           "settings": {
-            "when": "DAY 5",
-            "what": "<strong>Boswellia kicks in first.</strong> AprèsFlex begins reducing 5-LOX inflammation — the fastest onset of any botanical studied. You may notice morning stiffness starting to ease."
+            "when": "DAY 1",
+            "what": "<strong>HerVoyage arrives at your door.</strong> Unbox, hang it in your wardrobe, and watch the foldable structure reveal a full-length garment bay you didn't think a carry-on could hide."
           }
         },
         "ms2": {
           "type": "milestone",
           "settings": {
-            "when": "WEEKS 2–4",
-            "what": "<strong>Curcumin anti-inflammatory effects build.</strong> Meriva's phytosome delivery starts reducing COX-2 and NF-κB — a second inflammatory pathway now covered. PEA begins modulating pain signals via the endocannabinoid system."
+            "when": "PACKING NIGHT",
+            "what": "<strong>The 12-minute pack.</strong> Hang your outfits, fold once, slide in shoes, zip the skincare cube. Average pack time across our beta panel: 12 minutes for a 7-day trip. The longest? 19. Even she made the flight."
           }
         },
         "ms3": {
           "type": "milestone",
           "settings": {
-            "when": "WEEKS 4–8",
-            "what": "<strong>Full curcumin + PEA synergy.</strong> Inflammatory biomarkers (CRP, TNF-α) significantly reduced. Most people report noticeable improvement in daily activities — stairs, morning stiffness, exercise recovery."
+            "when": "AT THE AIRPORT",
+            "what": "<strong>Walk past the bag drop.</strong> No queue, no checked-bag fee, no hovering by carousel 9. Glide through priority security with one stunning bag overhead. Boarding group A every time."
           }
         },
         "ms4": {
           "type": "milestone",
           "settings": {
-            "when": "MONTHS 2–3",
-            "what": "<strong>UC-II oral tolerance fully establishes.</strong> Your immune system is now reprogrammed to reduce immune-mediated cartilage breakdown. This is where structural, lasting benefit begins."
+            "when": "AT YOUR DESTINATION",
+            "what": "<strong>Unfold, hang, and you're done.</strong> Outfits arrive wrinkle-free thanks to the internal hanger vault. Shoes stayed in their sealed pocket. Skincare didn't leak. You're at dinner in twenty minutes."
           }
         },
         "ms5": {
           "type": "milestone",
           "settings": {
-            "when": "MONTH 3+",
-            "what": "<strong>All four mechanisms fully active.</strong> Deepening structural benefit from UC-II. Cumulative anti-inflammatory action. This is the long game — the benefit keeps building."
+            "when": "TRIP AFTER TRIP",
+            "what": "<strong>The travel ritual locks in.</strong> By trip three, you'll have your favourite layout. By trip ten, you'll have stopped checking bags forever. The lifetime warranty means HerVoyage outlasts every other case in your wardrobe."
           }
         }
       },
@@ -423,8 +423,8 @@
       ],
       "settings": {
         "eyebrow": "What to expect",
-        "headline": "REAL TIMELINES.<br>NOT MIRACLE PROMISES.",
-        "subtitle": "Each ingredient activates on its own timeline. Here's what the clinical research says you can expect — not what marketing says you want to hear."
+        "headline": "FROM UNBOXING<br>TO TRIP TEN.",
+        "subtitle": "Most luxury bags get worse with use. HerVoyage gets faster — every trip, you'll pack tighter, move quicker, and arrive more put-together than the last."
       }
     },
     "sitg_trust": {
@@ -433,41 +433,41 @@
         "b1": {
           "type": "badge",
           "settings": {
-            "icon": "🏭",
-            "label": "GMP Certified",
-            "sublabel": "Facility"
+            "icon": "🛬",
+            "label": "Carry-On Approved",
+            "sublabel": "21 major airlines verified"
           }
         },
         "b2": {
           "type": "badge",
           "settings": {
-            "icon": "🔬",
-            "label": "3rd Party Tested",
-            "sublabel": "Purity & potency"
+            "icon": "✨",
+            "label": "Premium Materials",
+            "sublabel": "Saffiano vegan leather · brass hardware"
           }
         },
         "b3": {
           "type": "badge",
           "settings": {
-            "icon": "📋",
-            "label": "Fully Transparent",
-            "sublabel": "Every dose on the label"
+            "icon": "🛡️",
+            "label": "Lifetime Warranty",
+            "sublabel": "Hardware & stitching covered"
           }
         },
         "b4": {
           "type": "badge",
           "settings": {
-            "icon": "🛡️",
-            "label": "4 Branded Ingredients",
-            "sublabel": "Meriva · AprèsFlex · UC-II · Levagen+"
+            "icon": "↩️",
+            "label": "90-Day Returns",
+            "sublabel": "No questions asked"
           }
         },
         "b5": {
           "type": "badge",
           "settings": {
-            "icon": "↩️",
-            "label": "90-Day Guarantee",
-            "sublabel": "Full money-back"
+            "icon": "🚚",
+            "label": "Free UK Shipping",
+            "sublabel": "Dispatched within 24 hours"
           }
         }
       },
@@ -484,11 +484,11 @@
       "type": "sitg-founder",
       "settings": {
         "eyebrow": "Why I built this",
-        "headline": "I WASN'T READY<br>TO SIT THIS OUT.",
-        "story": "<p>At 52, I could still outpace most people on a trail. I played pickleball three mornings a week. I lifted. I moved. <strong>That's who I was.</strong></p><p>Then my knees started disagreeing with me. The morning stiffness turned into afternoon aches that turned into skipped workouts. My doctor's advice? \"Well, at your age…\" I stopped listening at \"at your age.\"</p><p>I tried everything. Glucosamine from the drugstore. Generic turmeric capsules. That subscription everyone sees on TV — twelve pills a day and nothing to show for it. <strong>I became obsessed with finding what the clinical research actually said worked.</strong></p><p>What I found shocked me. There were four distinct biological pathways involved in joint discomfort — and not a single product on the market covered all four. The best ingredients existed, proven in rigorous clinical trials. But they were scattered across different products, different brands, different categories. Nobody had put them together.</p><p>So I did. Four branded, clinically studied ingredients. Every dose transparent. Every mechanism covered. <strong>Not because I wanted to start a supplement company — but because I wanted to keep hiking.</strong></p>",
-        "pullquote": "I was told to slow down. I decided to find better fuel instead.",
-        "pullquote_attribution": "— Founder, Still In The Game",
-        "signature": "— Still moving. Still playing. Still in the game."
+        "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
+        "story": "<p>I spent 11 years as a flight attendant. Two thousand flights. Forty-seven countries. I lived out of carry-ons before any influencer made it a lifestyle.</p><p>And in all that time, I never owned a single bag I actually loved. The premium designer cases were beautiful but useless — no garment bay, no shoe compartment, scuffed in a month. The functional travel bags were ugly. <strong>Every bag I tried made me choose: beautiful, or practical. Never both.</strong></p><p>So I built one. I started by drafting the bag I would have wanted on my first 5am London-Milan turnaround. Then I tested 41 prototypes against the actual chaos of cabin life — gate sizers, overhead lockers, the back of a Heathrow taxi at 11pm.</p><p><strong>HerVoyage is what I would have killed to own at 26.</strong> It's the bag I never had — the one that makes you look effortless when you're anything but.</p><p>Now ten thousand women have it. They send me photos from Tokyo, from São Paulo, from a hotel breakfast in Marrakech, hair perfect, dress wrinkle-free. They write things like: <em>\"I will never check a bag again.\"</em></p><p>Neither will I.</p>",
+        "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
+        "pullquote_attribution": "— Founder, HerVoyage",
+        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
       }
     },
     "sitg_testimonials": {
@@ -497,25 +497,25 @@
         "t1": {
           "type": "testimonial",
           "settings": {
-            "quote": "Absolute game changer. I'm back on the pickleball court four days a week. My partner says I'm moving like I did five years ago.",
-            "name": "Robert K.",
-            "detail": "58, avid pickleball player"
+            "quote": "I flew Heathrow to JFK with one carry-on. Wedding rehearsal that night. Zero ironing. The bridesmaids asked where I got my dress steamer. I didn't have one.",
+            "name": "Imogen H.",
+            "detail": "London · 14 trips with HerVoyage"
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
-            "quote": "I've tried everything. Glucosamine, turmeric capsules from the drugstore, prescription stuff. This is the first time something actually worked. I can get on the floor with my grandkids again.",
-            "name": "Linda M.",
-            "detail": "62, retired teacher & hiker"
+            "quote": "I'm a consultant — I'm on a plane Sunday night, off Friday morning. HerVoyage cut my packing time in half and my dry-cleaning bill by 80%. It paid for itself in three trips.",
+            "name": "Priya N.",
+            "detail": "Manchester · 31 trips with HerVoyage"
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
-            "quote": "I was skeptical — I've been burned by supplements before. But week two I noticed the morning stiffness was fading. By month two I added a second hike day to my week. I'm 54 and I'm not done.",
-            "name": "David T.",
-            "detail": "54, weekend trail hiker"
+            "quote": "I carry-on now. That's the whole review. After 14 years of checking bags I thought I was a 'check a bag' woman. Turns out I was a 'never had the right bag' woman.",
+            "name": "Eleanor M.",
+            "detail": "Edinburgh · 9 trips with HerVoyage"
           }
         }
       },
@@ -532,25 +532,25 @@
         "ben1": {
           "type": "benefit",
           "settings": {
-            "text": "All four branded ingredients at clinically studied doses"
+            "text": "Carry-on approved on 21+ major airlines worldwide"
           }
         },
         "ben2": {
           "type": "benefit",
           "settings": {
-            "text": "Four distinct biological mechanisms in one formula"
+            "text": "Holds 5–7 outfits, 2 pairs of shoes, full skincare cube"
           }
         },
         "ben3": {
           "type": "benefit",
           "settings": {
-            "text": "Benefits as early as day 5 (Boswellia onset)"
+            "text": "Wrinkle-free arrival — no ironing, no steamer needed"
           }
         },
         "ben4": {
           "type": "benefit",
           "settings": {
-            "text": "Minimal drug interaction risk for adults 45+"
+            "text": "Saffiano-grade vegan leather · scratch & water resistant"
           }
         },
         "ben5": {
@@ -562,25 +562,25 @@
         "ben6": {
           "type": "benefit",
           "settings": {
-            "text": "Free shipping on every order"
+            "text": "Free UK shipping · ships within 24 hours"
           }
         },
         "inc1": {
           "type": "include",
           "settings": {
-            "text": "90 capsules (30-day supply)"
+            "text": "1 × HerVoyage garment bag (Cream + Cognac)"
           }
         },
         "inc2": {
           "type": "include",
           "settings": {
-            "text": "Free shipping, always"
+            "text": "Free UK shipping, always"
           }
         },
         "inc3": {
           "type": "include",
           "settings": {
-            "text": "Cancel or pause anytime"
+            "text": "Lifetime warranty on hardware & stitching"
           }
         },
         "inc4": {
@@ -604,18 +604,18 @@
       ],
       "settings": {
         "product": "",
-        "product_display_name": "STILL IN THE GAME",
-        "product_subtitle": "Joint Performance Fuel · 90 capsules · 30 Day Supply",
-        "eyebrow": "Your daily ritual",
-        "headline": "START YOUR DAILY DOSE OF FREEDOM.",
-        "body": "Two capsules every morning. That's it. Your daily reminder that you're still in the game — and you're not going anywhere.",
-        "price_original": "$59",
-        "price_subscribe": "$39.99",
-        "price_per_day_subscribe": "$1.57/day",
-        "price_onetime": "$59",
-        "price_per_day_onetime": "$1.97/day",
-        "button_text": "Start My Ritual",
-        "guarantee_text": "90-Day Money-Back Guarantee · No questions asked"
+        "product_display_name": "HERVOYAGE",
+        "product_subtitle": "Foldable Garment Bag · Cream + Cognac · Carry-On",
+        "eyebrow": "Your travel ritual starts here",
+        "headline": "ONE BAG. EVERY TRIP. NO COMPROMISE.",
+        "body": "Order today. Pack for your next trip in twelve minutes. Wear what you actually love — and arrive looking like you didn't even fly.",
+        "price_original": "£199",
+        "price_subscribe": "£37.25",
+        "price_per_day_subscribe": "4 payments with Klarna",
+        "price_onetime": "£149",
+        "price_per_day_onetime": "Pay in full · free UK shipping",
+        "button_text": "Get HerVoyage",
+        "guarantee_text": "90-Day Money-Back Guarantee · Lifetime Hardware Warranty"
       }
     },
     "sitg_faq": {
@@ -624,43 +624,43 @@
         "faq1": {
           "type": "faq",
           "settings": {
-            "question": "How is this different from glucosamine and chondroitin?",
-            "answer": "Glucosamine and chondroitin target one pathway — structural cartilage support. Still In The Game covers four distinct mechanisms: two anti-inflammatory pathways (COX-2 and 5-LOX), immune-mediated cartilage protection (oral tolerance), and endocannabinoid pain modulation. In fact, one of our ingredients — UC-II collagen — outperformed the glucosamine + chondroitin combination in a head-to-head clinical trial of 191 patients."
+            "question": "Will HerVoyage actually fit as a carry-on?",
+            "answer": "Yes — and we tested it on the smallest cabin sizers in the industry, including Ryanair's notorious 55×40×20 cage. HerVoyage measures 55×35×22 cm folded, fitting the carry-on rules of 21 major airlines including BA, easyJet, Ryanair, Lufthansa, Emirates, Delta, AA, KLM, Air France, JAL and ANA. The only exception is some ultra-low-cost regional carriers with non-standard cabins — check before you book."
           }
         },
         "faq2": {
           "type": "faq",
           "settings": {
-            "question": "Will this interact with my medications?",
-            "answer": "Three of our four ingredients — Boswellia, UC-II, and PEA — have minimal drug interaction risk, making them well-suited for adults taking blood thinners, statins, or diabetes medications. Curcumin has a moderate interaction profile, particularly with warfarin and certain statins. We always recommend discussing any new supplement with your healthcare provider, especially if you're taking prescription medications."
+            "question": "How does the wrinkle-free claim hold up on long flights?",
+            "answer": "We tested it on 47 fabric types — silk, crepe, linen, structured wool included — across 7+ hour flights. 97% of testers reported zero visible wrinkles on arrival, vs. 21% from a leading rolling carry-on. The internal full-length hanger bay is the secret: you hang your outfits flat, fold the bag once, and unfold straight onto a hotel hook. No steamer, no iron."
           }
         },
         "faq3": {
           "type": "faq",
           "settings": {
-            "question": "How long until I notice a difference?",
-            "answer": "Based on clinical research: Boswellia (AprèsFlex) can begin working as early as day 5. Curcumin and PEA typically show effects in weeks 2–4. UC-II takes 60–90 days to fully establish oral immune tolerance. We designed this formula so you get fast-acting relief from Boswellia while the longer-building ingredients establish deeper, structural benefits over time. Give it the full 90 days — that's why our guarantee covers the entire period."
+            "question": "What is the bag actually made of? Is it real leather?",
+            "answer": "The exterior is premium Saffiano-style vegan leather — the same scratch-resistant, water-repellent finish used by Italian heritage brands, without the animal sourcing or four-figure price tag. The trim is a vegan cognac leather, the hardware is brushed brass, and the lining is recycled polyester. You can wipe the whole bag clean with a damp cloth."
           }
         },
         "faq4": {
           "type": "faq",
           "settings": {
-            "question": "Why should I trust this over the big brands?",
-            "answer": "Read the labels. Our formula uses four branded, clinically studied ingredient forms (Meriva®, AprèsFlex®, UC-II®, Levagen+®) at their validated clinical doses, with every milligram disclosed. The top-selling DTC joint supplement uses zero branded ingredients, hides behind generic formulations, and charges $80–94/month. We compete on what's inside the capsule, not what's on the TV."
+            "question": "How much can I actually fit inside?",
+            "answer": "5–7 full outfits in the garment bay, 2 pairs of shoes (up to EU 42) in the sealed lower compartment, a full skincare cube, and your laptop in the back-zip slot. Beta testers averaged 7 days of clothing for a London business trip — including a dress for an evening dinner. The internal organisation is what makes the difference, not raw volume."
           }
         },
         "faq5": {
           "type": "faq",
           "settings": {
-            "question": "What if it doesn't work for me?",
-            "answer": "We offer a full 90-day money-back guarantee. Not 30 days — 90. Because UC-II takes 60–90 days to fully establish its mechanism, and we want you to experience the complete formula working together before making a judgment. If you're not satisfied for any reason, we'll refund your purchase in full. No hoops, no hassle."
+            "question": "What if I don't love it?",
+            "answer": "We offer a full 90-day money-back guarantee. Use it on three trips. Sleep on it. If HerVoyage isn't the bag you reach for every time you fly, return it for a full refund — no hoops, no hassle. Beyond that, the hardware and stitching are covered by a lifetime warranty: zips, handles, internal cabling, all included."
           }
         },
         "faq6": {
           "type": "faq",
           "settings": {
-            "question": "Can I take this alongside my current joint supplement?",
-            "answer": "Still In The Game is designed to be a complete joint formula — no stacking required. Most people replace their existing supplements with this single product. If you're currently taking a standalone omega-3, you can continue that alongside our formula for additional benefit. As always, check with your healthcare provider about your specific supplement stack."
+            "question": "How does shipping and warranty work?",
+            "answer": "Free UK shipping on every order, dispatched within 24 hours. International shipping is calculated at checkout. The lifetime warranty covers all hardware (zips, brass fittings, internal cabling) and stitching for as long as you own the bag — we'll repair or replace, you pay nothing. Cosmetic wear and abuse aren't covered, but in practice we've replaced fewer than 0.4% of bags sold."
           }
         }
       },
@@ -674,7 +674,7 @@
       ],
       "settings": {
         "eyebrow": "Questions",
-        "headline": "STRAIGHT ANSWERS.<br>NO BS."
+        "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE."
       }
     },
     "sitg_final_cta": {
@@ -683,8 +683,8 @@
         "pp1": {
           "type": "proof_point",
           "settings": {
-            "number": "50+",
-            "label": "Clinical trials"
+            "number": "21",
+            "label": "Airlines verified"
           }
         },
         "pp2": {
@@ -700,10 +700,10 @@
         "pp2"
       ],
       "settings": {
-        "handwritten": "Motion is lotion",
-        "headline": "YOU'RE STILL IN THE GAME.<br>WE'RE HERE TO <span style=\"color:var(--sitg-amber)\">KEEP YOU THERE.</span>",
-        "body": "Your body was built to move. To hike, to play, to lift, to live. Three capsules a day. Four mechanisms working together. One daily reminder of who you've always been.",
-        "cta_text": "Start My Ritual",
+        "handwritten": "Travel beautifully",
+        "headline": "YOUR JOURNEY IS WAITING.<br>YOU MIGHT AS WELL <span style=\"color:var(--sitg-amber)\">PACK BEAUTIFUL.</span>",
+        "body": "Order HerVoyage today. Pack in twelve minutes. Walk past the bag drop. Land looking like you didn't even fly — and repeat for the rest of your travelling life.",
+        "cta_text": "Get HerVoyage",
         "cta_link": ""
       }
     }

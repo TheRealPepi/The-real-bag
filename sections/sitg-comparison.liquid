@@ -27,7 +27,7 @@
                   loading="lazy"
                   onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
                 >
-                <span class="sitg-comp-v2-logo-fallback" style="display:none;">Still In<br>The Game</span>
+                <span class="sitg-comp-v2-logo-fallback" style="display:none;">HerVoyage</span>
               </span>
             </th>
             <th class="sitg-comp-v2-col-them">
@@ -137,7 +137,7 @@
   border-bottom: 2px solid rgba(0,0,0,.06);
 }
 .sitg-comp-v2-table thead .sitg-comp-v2-col-us {
-  background: var(--sitg-green-deep, #2C1A0E);
+  background: var(--sitg-cream);
   border-radius: 16px 16px 0 0;
   position: relative;
 }
@@ -151,14 +151,13 @@
 .sitg-comp-v2-logo {
   max-width: 100px;
   height: auto;
-  filter: brightness(0) invert(1);
 }
 .sitg-comp-v2-logo-fallback {
   font-family: 'Bebas Neue', Impact, sans-serif;
   font-size: 18px;
   line-height: 1.1;
   letter-spacing: .04em;
-  color: #fff;
+  color: var(--sitg-amber);
   text-transform: uppercase;
   text-align: center;
 }
@@ -188,7 +187,7 @@
   padding: 18px 8px;
 }
 .sitg-comp-v2-table tbody .sitg-comp-v2-col-us {
-  background: var(--sitg-green-deep, #2C1A0E);
+  background: var(--sitg-cream);
 }
 /* Bottom-round the "us" column on last row */
 .sitg-comp-v2-table tbody tr:last-child .sitg-comp-v2-col-us {
@@ -209,7 +208,7 @@
 .sitg-comp-v2-val-us {
   font-family: 'Bebas Neue', Impact, sans-serif;
   font-size: 22px;
-  color: #fff;
+  color: var(--sitg-amber);
   letter-spacing: .02em;
 }
 .sitg-comp-v2-val-them {
@@ -224,13 +223,12 @@
   width: 28px;
   height: 28px;
 }
-.sitg-comp-icon.yes { color: var(--sitg-green-deep, #2C1A0E); }
-.sitg-comp-icon.no  { color: #c4c4c4; }
-
-/* Inside the green "us" column, override check colour to white */
-.sitg-comp-v2-col-us .sitg-comp-icon.yes { color: #fff; }
-.sitg-comp-v2-col-us .sitg-comp-icon.yes svg circle { opacity: 0; }
-.sitg-comp-v2-col-us .sitg-comp-icon.no  { color: rgba(255,255,255,.45); }
+.sitg-comp-icon.yes { color: #22C55E; }
+.sitg-comp-icon.no  { color: #EF4444; }
+.sitg-comp-icon.yes svg circle { fill: currentColor; opacity: 1; }
+.sitg-comp-icon.yes svg path { stroke: #fff; }
+.sitg-comp-icon.no svg circle { fill: currentColor; opacity: 1; }
+.sitg-comp-icon.no svg path { stroke: #fff; }
 
 /* ── Mobile adjustments ── */
 @media (max-width: 600px) {
