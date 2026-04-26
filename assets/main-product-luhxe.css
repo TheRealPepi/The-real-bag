@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Luhxe-style product hero
+   ========================================================================== */
+
+.luhxe-product .luhxe-product__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media screen and (min-width: 990px) {
+  .luhxe-product .luhxe-product__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
+}
+
+.luhxe-product__media-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.luhxe-product__featured-in {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+  width: clamp(80px, 12vw, 140px);
+  pointer-events: none;
+}
+
+.luhxe-product__featured-in img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Info column ------------------------------------------------------------- */
+
+.luhxe-product__info-wrapper {
+  min-width: 0;
+}
+
+.luhxe-product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (min-width: 990px) {
+  .luhxe-product__info.product__column-sticky {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+/* Trust badges ------------------------------------------------------------ */
+
+.luhxe-trust-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.luhxe-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  background: rgba(var(--color-foreground), 0.04);
+  border: 1px solid rgba(var(--color-foreground), 0.08);
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground));
+  line-height: 1.2;
+}
+
+.luhxe-trust-badge:first-child {
+  flex-basis: 100%;
+  justify-content: center;
+  background: rgba(var(--color-foreground), 0.06);
+}
+
+.luhxe-trust-badge__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Reviews ----------------------------------------------------------------- */
+
+.luhxe-reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.luhxe-reviews__stars {
+  color: var(--sitg-amber, #b91c1c);
+  letter-spacing: 0.15em;
+  font-size: 1.4rem;
+}
+
+.luhxe-reviews__count {
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Title & subtitle -------------------------------------------------------- */
+
+.luhxe-product__title {
+  margin: 0;
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: rgb(var(--color-foreground));
+}
+
+.luhxe-product__subtitle {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.luhxe-product__subtitle p { margin: 0; }
+
+/* Price ------------------------------------------------------------------- */
+
+.luhxe-product__price {
+  margin-top: 0.25rem;
+}
+
+/* Variant picker header --------------------------------------------------- */
+
+.luhxe-product__variant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.luhxe-product__variant-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: none;
+  color: rgb(var(--color-foreground));
+}
+
+.luhxe-product__which-one {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 999px;
+  font-size: 1.2rem;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  cursor: default;
+}
+
+a.luhxe-product__which-one { cursor: pointer; }
+a.luhxe-product__which-one:hover { background: rgba(var(--color-foreground), 0.08); }
+
+.luhxe-product__which-one-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--color-foreground), 0.4);
+  font-size: 1rem;
+  font-style: italic;
+  font-family: serif;
+  font-weight: 600;
+}
+
+/* Override variant picker visual to match Luhxe (image-card style) -------- */
+
+.luhxe-product .product-form__input--pill input[type='radio'] + label,
+.luhxe-product .product-form__input--swatch input[type='radio'] + label {
+  border-radius: 0.5rem;
+}
+
+/* Kaching placeholder ----------------------------------------------------- */
+
+.luhxe-product__kaching-placeholder {
+  margin: 0.5rem 0;
+  min-height: 0;
+}
+
+.luhxe-product__kaching-placeholder:empty { display: none; }
+
+/* Add-to-cart button ------------------------------------------------------ */
+
+.luhxe-product__form { margin-top: 0.5rem; }
+
+.luhxe-product__add-to-cart {
+  width: 100%;
+  min-height: 5.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+}
+
+/* Description ------------------------------------------------------------- */
+
+.luhxe-product__description {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.85);
+}
