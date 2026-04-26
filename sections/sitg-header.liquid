@@ -1,6 +1,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
   /* ============================================
@@ -48,9 +48,10 @@
     height: 28px; width: auto;
   }
   .sitg-header-logo-text {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px; color: #F5F0E8;
-    letter-spacing: 2px; line-height: 1;
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 24px; color: var(--sitg-cream);
+    font-weight: 500;
+    letter-spacing: 0.3px; line-height: 1;
   }
 
   /* --- Desktop nav --- */
@@ -190,9 +191,10 @@
     border-bottom: 1px solid rgba(245, 240, 232, 0.06);
   }
   .sitg-drawer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px; color: #F5F0E8;
-    letter-spacing: 2px;
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 22px; color: var(--sitg-cream);
+    font-weight: 500;
+    letter-spacing: 0.3px;
     text-decoration: none;
     display: flex; align-items: center; gap: 8px;
   }
@@ -273,7 +275,7 @@
     .sitg-header-nav { display: none; }
     .sitg-header-account { display: none; }
     .sitg-header-burger { display: flex; }
-    .sitg-header-logo-text { font-size: 17px; }
+    .sitg-header-logo-text { font-size: 20px; }
   }
   @media (min-width: 901px) {
     .sitg-drawer, .sitg-drawer-overlay { display: none !important; }
@@ -303,8 +305,8 @@
           loading="eager"
         >
       {%- else -%}
-        <img class="sitg-header-logo-mark-img" src="{{ 'StillInTheGameLogo_WhiteTransparent.webp' | asset_url }}" alt="{{ shop.name }}" height="32" loading="eager">
-        <span class="sitg-header-logo-text">STILL IN THE GAME</span>
+        <img class="sitg-header-logo-mark-img" src="{{ 'Logo no background.png' | asset_url }}" alt="{{ shop.name }}" height="32" loading="eager">
+        <span class="sitg-header-logo-text">HerVoyage</span>
       {%- endif -%}
     </a>
 
@@ -340,8 +342,8 @@
 <aside id="sitg-drawer" class="sitg-drawer" aria-label="Navigation menu">
   <div class="sitg-drawer-header">
     <a href="{{ routes.root_url }}" class="sitg-drawer-logo">
-      <img class="sitg-header-logo-mark-img" src="{{ 'StillInTheGameLogo_WhiteTransparent.webp' | asset_url }}" alt="{{ shop.name }}" height="28" loading="eager">
-      STILL IN THE GAME
+      <img class="sitg-header-logo-mark-img" src="{{ 'Logo no background.png' | asset_url }}" alt="{{ shop.name }}" height="28" loading="eager">
+      HerVoyage
     </a>
     <button class="sitg-drawer-close" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';" aria-label="Close menu">
       <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>

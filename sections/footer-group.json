@@ -8,9 +8,9 @@
         "col1": {
           "type": "link_column",
           "settings": {
-            "heading": "Product",
-            "link_1_label": "Ingredients",
-            "link_2_label": "Clinical Evidence",
+            "heading": "The Bag",
+            "link_1_label": "What's Inside",
+            "link_2_label": "How We Tested",
             "link_3_label": "Compare",
             "link_4_label": "FAQ"
           }
@@ -20,7 +20,7 @@
           "settings": {
             "heading": "Company",
             "link_1_label": "Our Story",
-            "link_2_label": "Blog",
+            "link_2_label": "Press",
             "link_3_label": "Contact",
             "link_4_label": "Careers"
           }
@@ -30,18 +30,18 @@
           "settings": {
             "heading": "Support",
             "link_1_label": "Shipping & Returns",
-            "link_2_label": "Privacy Policy",
-            "link_3_label": "Terms of Service",
-            "link_4_label": "Manage Subscription"
+            "link_2_label": "Lifetime Warranty",
+            "link_3_label": "Privacy Policy",
+            "link_4_label": "Terms of Service"
           }
         }
       },
       "block_order": ["col1", "col2", "col3"],
       "settings": {
-        "brand_name": "STILL IN THE GAME",
-        "tagline": "Performance fuel for active adults who refuse to sit this one out.",
-        "made_with": "Made with conviction, not compromise.",
-        "disclaimer": "*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any supplement regimen, especially if you take prescription medications. Individual results may vary. Meriva® is a registered trademark of Indena S.p.A. AprèsFlex® is a registered trademark of PLT Health Solutions. UC-II® is a registered trademark of Lonza. Levagen+® is a registered trademark of Gencor.",
+        "brand_name": "HerVoyage",
+        "tagline": "The carry-on garment bag for women who refuse to choose between beautiful and practical.",
+        "made_with": "Designed by a flight attendant. Built to outlast every other case.",
+        "disclaimer": "*HerVoyage carry-on dimensions (55×35×22 cm folded) comply with the standard carry-on rules of 21 major airlines as of 2025, including British Airways, easyJet, Ryanair, Lufthansa, Emirates, Delta, American Airlines, KLM, Air France, JAL and ANA. Some ultra-low-cost regional carriers operate non-standard cabins — please verify allowance with your specific airline before travel. Lifetime warranty covers manufacturing defects in hardware (zips, brass fittings, internal cabling) and stitching. Cosmetic wear from normal use is not covered.",
         "show_email_capture": true,
         "email_placeholder": "Your email address",
         "email_button": "Join"
