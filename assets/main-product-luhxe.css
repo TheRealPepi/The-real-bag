@@ -26,12 +26,8 @@
   .luhxe-product .product__media-item:not(.thumbnail-list__item) img {
     max-height: 600px;
     width: auto;
+    max-width: 100%;
     margin-inline: auto;
-  }
-
-  .luhxe-product .product__media-item:not(.thumbnail-list__item) {
-    display: flex;
-    justify-content: center;
   }
 }
 
