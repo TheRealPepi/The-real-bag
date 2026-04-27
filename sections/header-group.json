@@ -18,7 +18,7 @@
           "type": "nav_link",
           "settings": {
             "label": "THE BAG",
-            "link": "",
+            "link": "shopify://products/smart-travel-bag",
             "icon": "beaker"
           }
         },
