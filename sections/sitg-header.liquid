@@ -29,7 +29,9 @@
   .sitg-header-logo {
     display: flex; align-items: center; gap: 10px;
     text-decoration: none; flex-shrink: 0;
+    position: relative; z-index: 1;
   }
+  .sitg-header-logo > * { pointer-events: auto; }
   .sitg-header-logo .logo-mark {
     width: 32px; height: 32px;
     background: var(--sitg-cream);
