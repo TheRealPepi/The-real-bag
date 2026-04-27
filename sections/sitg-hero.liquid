@@ -19,7 +19,7 @@
         </h1>
         <p class="sitg-hero-sub">{{ section.settings.subheadline }}</p>
         <div class="sitg-hero-ctas">
-          <a href="#sitg-buy-price-card" class="btn-primary">
+          <a href="{{ section.settings.cta_link | default: '#sitg-buy-price-card' }}" class="btn-primary">
             {{ section.settings.cta_text }}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
