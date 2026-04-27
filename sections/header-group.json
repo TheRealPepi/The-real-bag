@@ -32,6 +32,7 @@
         },
         "nav3": {
           "type": "nav_link",
+          "disabled": true,
           "settings": {
             "label": "REVIEWS",
             "link": "",
@@ -54,6 +55,7 @@
         },
         "drawer1": {
           "type": "drawer_link",
+          "disabled": true,
           "settings": {
             "label": "Manage Subscription",
             "link": "",
@@ -62,6 +64,7 @@
         },
         "drawer2": {
           "type": "drawer_link",
+          "disabled": true,
           "settings": {
             "label": "My Account",
             "link": "",
@@ -70,6 +73,7 @@
         },
         "drawer3": {
           "type": "drawer_link",
+          "disabled": true,
           "settings": {
             "label": "Order History",
             "link": "",
