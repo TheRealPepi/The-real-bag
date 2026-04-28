@@ -228,12 +228,21 @@
 }
 .sitg-reframe-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgb(from var(--sitg-green-deep) r g b /0.08); }
 .sitg-reframe-card .rc-icon {
-  width: 48px; height: 48px; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 22px;
+  display: inline-flex; align-items: center; gap: 14px;
+  width: auto; height: auto;
+  background: transparent; border-radius: 0; padding: 0;
+  margin-bottom: 22px;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 15px; font-weight: 500; font-style: italic;
+  letter-spacing: 0.08em;
+  color: var(--sitg-amber);
 }
-.rc-icon-1 { background: rgb(from var(--sitg-amber) r g b /0.1); }
-.rc-icon-2 { background: rgb(from var(--sitg-green-deep) r g b /0.08); }
-.rc-icon-3 { background: rgb(from var(--sitg-gold) r g b /0.1); }
+.sitg-reframe-card .rc-icon::before {
+  content: ''; display: inline-block;
+  width: 28px; height: 1px;
+  background: currentColor; opacity: 0.5;
+}
+.rc-icon-1, .rc-icon-2, .rc-icon-3 { background: transparent; }
 .sitg-reframe-card h3 {
   font-family: 'Bebas Neue', sans-serif; font-size: 22px;
   color: var(--sitg-green-deep); margin-bottom: 10px; letter-spacing: 0.5px;

@@ -26,7 +26,7 @@
     <div class="sitg-reframe-cards reveal">
       {%- for block in section.blocks -%}
         <div class="sitg-reframe-card" {{ block.shopify_attributes }}>
-          <div class="rc-icon rc-icon-{{ forloop.index }}">{{ block.settings.icon }}</div>
+          <div class="rc-icon rc-icon-{{ forloop.index }}"><span>0{{ forloop.index }}</span></div>
           <h3>{{ block.settings.title }}</h3>
           <p>{{ block.settings.description }}</p>
         </div>
