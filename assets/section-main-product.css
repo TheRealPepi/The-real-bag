@@ -1492,3 +1492,56 @@ a.product__text {
     border: none;
   }
 }
+
+/* ============================================
+   Thumbnail strip — contain within main image height
+   Prevents the thumbnail column from overflowing past
+   the bottom of the main product image. If there are
+   more thumbnails than fit, the strip becomes scrollable.
+   ============================================ */
+@media screen and (min-width: 750px) {
+  .product__media-wrapper .thumbnail-slider {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+
+  .product__media-wrapper .thumbnail-slider::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .product__media-wrapper .thumbnail-slider::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .product__media-wrapper .thumbnail-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  .product__media-wrapper .thumbnail-slider::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  /* When the gallery uses a vertical/side thumbnail strip,
+     constrain its height to match the main image. The
+     wrapper is laid out as a flex/grid container by the
+     parent — using min-height: 0 lets the flex child shrink
+     so overflow-y can take effect instead of growing the
+     whole row. */
+  .product__media-wrapper {
+    min-height: 0;
+  }
+
+  .product__media-wrapper .thumbnail-list {
+    min-height: 0;
+  }
+}
+
+/* Fallback cap so the strip never extends past a reasonable
+   viewport height even if the parent has no defined height. */
+.product__media-wrapper .thumbnail-slider {
+  max-height: min(100%, 80vh);
+}
