@@ -12,12 +12,12 @@
     "sitg_hero": {
       "type": "sitg-hero",
       "settings": {
-        "product_image": "shopify://shop_images/hnSuYr3FURsyGK-U7LZIO_AHh9KfcF.png",
+        "product_image": "shopify://shop_images/CREME1.png",
         "badge_text": "10,000+ Women already travelling in style",
         "headline_line1": "YOUR BAG SHOULD BE",
         "headline_line2": "AS BEAUTIFUL",
         "headline_line3": "AS YOUR JOURNEY",
-        "subheadline": "The carry-on approved foldable garment bag that holds your whole wardrobe — outfits arrive wrinkle-free, shoes packed, skincare ready. No checked bags. No ironing. Just you, looking perfect from the moment you land.",
+        "subheadline": "One bag. Seven days. Zero checked luggage fees. Just you, looking perfect from the moment you land.",
         "cta_text": "SHOP HERVOYAGE",
         "cta_link": "shopify://products/smart-travel-bag",
         "rating": "SEE WHATS INSIDE",
@@ -35,16 +35,10 @@
     "sitg_marquee": {
       "type": "sitg-marquee",
       "blocks": {
-        "message_BAqBtr": {
+        "message_Hnf6ih": {
           "type": "message",
           "settings": {
-            "text": "90 DAYS FULL WARRANTY"
-          }
-        },
-        "message_iTAtkn": {
-          "type": "message",
-          "settings": {
-            "text": "FREE SHIPPING TODAY"
+            "text": "LIFETIME WARRANTY"
           }
         },
         "message_VVf3Cq": {
@@ -65,12 +59,6 @@
             "text": "AS SEEN IN VOGUE"
           }
         },
-        "message_hyhNmP": {
-          "type": "message",
-          "settings": {
-            "text": "FREE UK SHIPPING"
-          }
-        },
         "message_6qH3dr": {
           "type": "message",
           "settings": {
@@ -82,24 +70,15 @@
           "settings": {
             "text": "CARRY-ON APPROVED"
           }
-        },
-        "m7": {
-          "type": "message",
-          "settings": {
-            "text": "SHIPS TODAY"
-          }
         }
       },
       "block_order": [
-        "message_BAqBtr",
-        "message_iTAtkn",
+        "message_Hnf6ih",
         "message_VVf3Cq",
         "message_zTjCiJ",
         "message_mbnCXw",
-        "message_hyhNmP",
         "message_6qH3dr",
-        "message_BkefWr",
-        "m7"
+        "message_BkefWr"
       ],
       "settings": {}
     },
