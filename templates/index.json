@@ -31,7 +31,7 @@
         "float_card_2_unit": "POCKETS",
         "padding_top": 0,
         "padding_bottom": 0,
-        "padding_top_mobile": 32,
+        "padding_top_mobile": 80,
         "padding_bottom_mobile": 32
       }
     },
