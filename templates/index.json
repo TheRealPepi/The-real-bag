@@ -218,11 +218,11 @@
         "feature_GM9U4R": {
           "type": "feature",
           "settings": {
-            "toggle": "Toggle",
+            "toggle": "ROLL OR CARRY. YOUR CALL.",
             "image": "shopify://shop_images/rj3JTt0ojNMoM22mvVE7u_GGJSlWiF.png",
-            "sub_heading": "<p>Subheading</p>",
-            "heading": "<h3>Heading</h3>",
-            "text": "<p>Pair text with an image to focus on your chosen product. Add details on availability, style, or even provide a review.</p>"
+            "sub_heading": "<p>Wheels when you want them. Gone when you don't</p>",
+            "heading": "<p>ROLL OR CARRY. YOUR CALL</p>",
+            "text": "<p>Glide through Heathrow with the smooth-rolling wheelbase, then click it off in seconds for cobblestone streets, hotel stairs, or that overhead locker. Most travel bags force you to choose between rolling and carrying. HerVoyage doesn't<br/><br/></p>"
           }
         }
       },
