@@ -350,6 +350,13 @@
     "sitg_timeline": {
       "type": "sitg-timeline",
       "blocks": {
+        "milestone_n8jR9w": {
+          "type": "milestone",
+          "settings": {
+            "when": "DAY 5",
+            "what": "<strong>Boswellia kicks in first.</strong> AprèsFlex begins reducing 5-LOX inflammation — the fastest onset of any botanical studied. You may notice morning stiffness starting to ease."
+          }
+        },
         "ms1": {
           "type": "milestone",
           "settings": {
@@ -387,12 +394,14 @@
         }
       },
       "block_order": [
+        "milestone_n8jR9w",
         "ms1",
         "ms2",
         "ms3",
         "ms4",
         "ms5"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "What to expect",
         "headline": "FROM UNBOXING<br>TO TRIP TEN.",
@@ -496,6 +505,7 @@
         "t2",
         "t3"
       ],
+      "disabled": true,
       "settings": {}
     },
     "sitg_purchase": {
