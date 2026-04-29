@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -25,7 +34,11 @@
           }
         }
       },
-      "block_order": ["tb1", "tb2", "tb3"],
+      "block_order": [
+        "tb1",
+        "tb2",
+        "tb3"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "media_size": "large",
@@ -39,11 +52,13 @@
         "enable_sticky_info": true,
         "show_reviews": true,
         "reviews_count_text": "1346 Reviews",
+        "reviews_link": "",
         "subtitle": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>",
         "variant_picker_heading": "Select Model",
         "picker_type": "button",
         "swatch_shape": "circle",
         "which_one_text": "Which one is for me?",
+        "which_one_link": "",
         "button_text": "ADD TO CART",
         "kaching_placeholder": true,
         "show_description": false,
@@ -54,17 +69,72 @@
     "sitg_marquee": {
       "type": "sitg-marquee",
       "blocks": {
-        "m1": { "type": "message", "settings": { "text": "90 DAYS FULL WARRANTY" } },
-        "m2": { "type": "message", "settings": { "text": "FREE SHIPPING TODAY" } },
-        "m3": { "type": "message", "settings": { "text": "10,000+ SOLD" } },
-        "m4": { "type": "message", "settings": { "text": "NO BAGGAGE FEES" } },
-        "m5": { "type": "message", "settings": { "text": "AS SEEN IN VOGUE" } },
-        "m6": { "type": "message", "settings": { "text": "FREE UK SHIPPING" } },
-        "m7": { "type": "message", "settings": { "text": "FITS MORE THAN A SUITCASE" } },
-        "m8": { "type": "message", "settings": { "text": "CARRY-ON APPROVED" } },
-        "m9": { "type": "message", "settings": { "text": "SHIPS TODAY" } }
+        "m1": {
+          "type": "message",
+          "settings": {
+            "text": "90 DAYS FULL WARRANTY"
+          }
+        },
+        "m2": {
+          "type": "message",
+          "settings": {
+            "text": "FREE SHIPPING TODAY"
+          }
+        },
+        "m3": {
+          "type": "message",
+          "settings": {
+            "text": "10,000+ SOLD"
+          }
+        },
+        "m4": {
+          "type": "message",
+          "settings": {
+            "text": "NO BAGGAGE FEES"
+          }
+        },
+        "m5": {
+          "type": "message",
+          "settings": {
+            "text": "AS SEEN IN VOGUE"
+          }
+        },
+        "m6": {
+          "type": "message",
+          "settings": {
+            "text": "FREE UK SHIPPING"
+          }
+        },
+        "m7": {
+          "type": "message",
+          "settings": {
+            "text": "FITS MORE THAN A SUITCASE"
+          }
+        },
+        "m8": {
+          "type": "message",
+          "settings": {
+            "text": "CARRY-ON APPROVED"
+          }
+        },
+        "m9": {
+          "type": "message",
+          "settings": {
+            "text": "SHIPS TODAY"
+          }
+        }
       },
-      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9"],
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9"
+      ],
       "settings": {}
     },
     "sitg_reframe": {
@@ -95,7 +165,11 @@
           }
         }
       },
-      "block_order": ["card1", "card2", "card3"],
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
       "settings": {
         "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
         "headline": "Beautiful or practical Not anymore...",
@@ -158,7 +232,12 @@
           }
         }
       },
-      "block_order": ["ing1", "ing2", "ing3", "ing4"],
+      "block_order": [
+        "ing1",
+        "ing2",
+        "ing3",
+        "ing4"
+      ],
       "settings": {
         "eyebrow": "What's inside",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
@@ -168,10 +247,34 @@
     "sitg_science": {
       "type": "sitg-science",
       "blocks": {
-        "stat1": { "type": "stat", "settings": { "number": "10,000+", "label": "Trips logged by HerVoyage owners since launch" } },
-        "stat2": { "type": "stat", "settings": { "number": "2,000+", "label": "Flights from our founder's testing journal" } },
-        "stat3": { "type": "stat", "settings": { "number": "47", "label": "Fabric types tested for wrinkle-free performance" } },
-        "stat4": { "type": "stat", "settings": { "number": "21", "label": "Major airlines verified for carry-on compliance" } },
+        "stat1": {
+          "type": "stat",
+          "settings": {
+            "number": "10,000+",
+            "label": "Trips logged by HerVoyage owners since launch"
+          }
+        },
+        "stat2": {
+          "type": "stat",
+          "settings": {
+            "number": "2,000+",
+            "label": "Flights from our founder's testing journal"
+          }
+        },
+        "stat3": {
+          "type": "stat",
+          "settings": {
+            "number": "47",
+            "label": "Fabric types tested for wrinkle-free performance"
+          }
+        },
+        "stat4": {
+          "type": "stat",
+          "settings": {
+            "number": "21",
+            "label": "Major airlines verified for carry-on compliance"
+          }
+        },
         "trial1": {
           "type": "nsaid_trial",
           "settings": {
@@ -197,7 +300,15 @@
           }
         }
       },
-      "block_order": ["stat1", "stat2", "stat3", "stat4", "trial1", "trial2", "trial3"],
+      "block_order": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4",
+        "trial1",
+        "trial2",
+        "trial3"
+      ],
       "settings": {
         "eyebrow": "How we tested",
         "headline": "TESTED ON 2,000+ FLIGHTS.<br>NOT IN A FOCUS GROUP.",
@@ -208,14 +319,87 @@
     "sitg_comparison": {
       "type": "sitg-comparison",
       "blocks": {
-        "row1": { "type": "row", "settings": { "row_label": "Carry-on approved", "us_type": "check", "us_value": "—", "comp1_type": "check", "comp1_value": "—", "comp2_type": "x", "comp2_value": "—" } },
-        "row2": { "type": "row", "settings": { "row_label": "Fits a full week's worth", "us_type": "check", "us_value": "—", "comp1_type": "x", "comp1_value": "—", "comp2_type": "x", "comp2_value": "—" } },
-        "row3": { "type": "row", "settings": { "row_label": "Stunning design", "us_type": "check", "us_value": "—", "comp1_type": "x", "comp1_value": "—", "comp2_type": "check", "comp2_value": "—" } },
-        "row4": { "type": "row", "settings": { "row_label": "Lifetime warranty", "us_type": "check", "us_value": "—", "comp1_type": "x", "comp1_value": "—", "comp2_type": "x", "comp2_value": "—" } },
-        "row5": { "type": "row", "settings": { "row_label": "Under £150", "us_type": "check", "us_value": "—", "comp1_type": "check", "comp1_value": "—", "comp2_type": "x", "comp2_value": "—" } },
-        "row6": { "type": "row", "settings": { "row_label": "Free UK shipping", "us_type": "check", "us_value": "—", "comp1_type": "x", "comp1_value": "—", "comp2_type": "x", "comp2_value": "—" } }
+        "row1": {
+          "type": "row",
+          "settings": {
+            "row_label": "Carry-on approved",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "check",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row2": {
+          "type": "row",
+          "settings": {
+            "row_label": "Fits a full week's worth",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row3": {
+          "type": "row",
+          "settings": {
+            "row_label": "Stunning design",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "check",
+            "comp2_value": "—"
+          }
+        },
+        "row4": {
+          "type": "row",
+          "settings": {
+            "row_label": "Lifetime warranty",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row5": {
+          "type": "row",
+          "settings": {
+            "row_label": "Under £150",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "check",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row6": {
+          "type": "row",
+          "settings": {
+            "row_label": "Free UK shipping",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        }
       },
-      "block_order": ["row1", "row2", "row3", "row4", "row5", "row6"],
+      "block_order": [
+        "row1",
+        "row2",
+        "row3",
+        "row4",
+        "row5",
+        "row6"
+      ],
       "settings": {
         "eyebrow": "Comparison table",
         "headline": "US VS. THEM",
@@ -227,13 +411,49 @@
     "sitg_timeline": {
       "type": "sitg-timeline",
       "blocks": {
-        "ms1": { "type": "milestone", "settings": { "when": "DAY 1", "what": "<strong>HerVoyage arrives at your door.</strong> Unbox, hang it in your wardrobe, and watch the foldable structure reveal a full-length garment bay you didn't think a carry-on could hide." } },
-        "ms2": { "type": "milestone", "settings": { "when": "PACKING NIGHT", "what": "<strong>The 12-minute pack.</strong> Hang your outfits, fold once, slide in shoes, zip the skincare cube. Average pack time across our beta panel: 12 minutes for a 7-day trip. The longest? 19. Even she made the flight." } },
-        "ms3": { "type": "milestone", "settings": { "when": "AT THE AIRPORT", "what": "<strong>Walk past the bag drop.</strong> No queue, no checked-bag fee, no hovering by carousel 9. Glide through priority security with one stunning bag overhead. Boarding group A every time." } },
-        "ms4": { "type": "milestone", "settings": { "when": "AT YOUR DESTINATION", "what": "<strong>Unfold, hang, and you're done.</strong> Outfits arrive wrinkle-free thanks to the internal hanger vault. Shoes stayed in their sealed pocket. Skincare didn't leak. You're at dinner in twenty minutes." } },
-        "ms5": { "type": "milestone", "settings": { "when": "TRIP AFTER TRIP", "what": "<strong>The travel ritual locks in.</strong> By trip three, you'll have your favourite layout. By trip ten, you'll have stopped checking bags forever. The lifetime warranty means HerVoyage outlasts every other case in your wardrobe." } }
+        "ms1": {
+          "type": "milestone",
+          "settings": {
+            "when": "DAY 1",
+            "what": "<strong>HerVoyage arrives at your door.</strong> Unbox, hang it in your wardrobe, and watch the foldable structure reveal a full-length garment bay you didn't think a carry-on could hide."
+          }
+        },
+        "ms2": {
+          "type": "milestone",
+          "settings": {
+            "when": "PACKING NIGHT",
+            "what": "<strong>The 12-minute pack.</strong> Hang your outfits, fold once, slide in shoes, zip the skincare cube. Average pack time across our beta panel: 12 minutes for a 7-day trip. The longest? 19. Even she made the flight."
+          }
+        },
+        "ms3": {
+          "type": "milestone",
+          "settings": {
+            "when": "AT THE AIRPORT",
+            "what": "<strong>Walk past the bag drop.</strong> No queue, no checked-bag fee, no hovering by carousel 9. Glide through priority security with one stunning bag overhead. Boarding group A every time."
+          }
+        },
+        "ms4": {
+          "type": "milestone",
+          "settings": {
+            "when": "AT YOUR DESTINATION",
+            "what": "<strong>Unfold, hang, and you're done.</strong> Outfits arrive wrinkle-free thanks to the internal hanger vault. Shoes stayed in their sealed pocket. Skincare didn't leak. You're at dinner in twenty minutes."
+          }
+        },
+        "ms5": {
+          "type": "milestone",
+          "settings": {
+            "when": "TRIP AFTER TRIP",
+            "what": "<strong>The travel ritual locks in.</strong> By trip three, you'll have your favourite layout. By trip ten, you'll have stopped checking bags forever. The lifetime warranty means HerVoyage outlasts every other case in your wardrobe."
+          }
+        }
       },
-      "block_order": ["ms1", "ms2", "ms3", "ms4", "ms5"],
+      "block_order": [
+        "ms1",
+        "ms2",
+        "ms3",
+        "ms4",
+        "ms5"
+      ],
       "settings": {
         "eyebrow": "What to expect",
         "headline": "FROM UNBOXING<br>TO TRIP TEN.",
@@ -243,13 +463,54 @@
     "sitg_trust": {
       "type": "sitg-trust",
       "blocks": {
-        "b1": { "type": "badge", "settings": { "icon": "🛬", "label": "Carry-On Approved", "sublabel": "21 major airlines verified" } },
-        "b2": { "type": "badge", "settings": { "icon": "✨", "label": "Premium Materials", "sublabel": "Saffiano vegan leather · brass hardware" } },
-        "b3": { "type": "badge", "settings": { "icon": "🛡️", "label": "Lifetime Warranty", "sublabel": "Hardware & stitching covered" } },
-        "b4": { "type": "badge", "settings": { "icon": "↩️", "label": "90-Day Returns", "sublabel": "No questions asked" } },
-        "b5": { "type": "badge", "settings": { "icon": "🚚", "label": "Free UK Shipping", "sublabel": "Dispatched within 24 hours" } }
+        "b1": {
+          "type": "badge",
+          "settings": {
+            "icon": "🛬",
+            "label": "Carry-On Approved",
+            "sublabel": "21 major airlines verified"
+          }
+        },
+        "b2": {
+          "type": "badge",
+          "settings": {
+            "icon": "✨",
+            "label": "Premium Materials",
+            "sublabel": "Saffiano vegan leather · brass hardware"
+          }
+        },
+        "b3": {
+          "type": "badge",
+          "settings": {
+            "icon": "🛡️",
+            "label": "Lifetime Warranty",
+            "sublabel": "Hardware & stitching covered"
+          }
+        },
+        "b4": {
+          "type": "badge",
+          "settings": {
+            "icon": "↩️",
+            "label": "90-Day Returns",
+            "sublabel": "No questions asked"
+          }
+        },
+        "b5": {
+          "type": "badge",
+          "settings": {
+            "icon": "🚚",
+            "label": "Free UK Shipping",
+            "sublabel": "Dispatched within 24 hours"
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
       "settings": {}
     },
     "sitg_founder": {
@@ -266,36 +527,139 @@
     "sitg_testimonials": {
       "type": "sitg-testimonials",
       "blocks": {
-        "t1": { "type": "testimonial", "settings": { "quote": "I flew Heathrow to JFK with one carry-on. Wedding rehearsal that night. Zero ironing. The bridesmaids asked where I got my dress steamer. I didn't have one.", "name": "Imogen H.", "detail": "London · 14 trips with HerVoyage" } },
-        "t2": { "type": "testimonial", "settings": { "quote": "I'm a consultant — I'm on a plane Sunday night, off Friday morning. HerVoyage cut my packing time in half and my dry-cleaning bill by 80%. It paid for itself in three trips.", "name": "Priya N.", "detail": "Manchester · 31 trips with HerVoyage" } },
-        "t3": { "type": "testimonial", "settings": { "quote": "I carry-on now. That's the whole review. After 14 years of checking bags I thought I was a 'check a bag' woman. Turns out I was a 'never had the right bag' woman.", "name": "Eleanor M.", "detail": "Edinburgh · 9 trips with HerVoyage" } }
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "I flew Heathrow to JFK with one carry-on. Wedding rehearsal that night. Zero ironing. The bridesmaids asked where I got my dress steamer. I didn't have one.",
+            "name": "Imogen H.",
+            "detail": "London · 14 trips with HerVoyage"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "I'm a consultant — I'm on a plane Sunday night, off Friday morning. HerVoyage cut my packing time in half and my dry-cleaning bill by 80%. It paid for itself in three trips.",
+            "name": "Priya N.",
+            "detail": "Manchester · 31 trips with HerVoyage"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "I carry-on now. That's the whole review. After 14 years of checking bags I thought I was a 'check a bag' woman. Turns out I was a 'never had the right bag' woman.",
+            "name": "Eleanor M.",
+            "detail": "Edinburgh · 9 trips with HerVoyage"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
       "settings": {}
     },
     "sitg_faq": {
       "type": "sitg-faq",
       "blocks": {
-        "faq1": { "type": "faq", "settings": { "question": "Will HerVoyage actually fit as a carry-on?", "answer": "Yes — and we tested it on the smallest cabin sizers in the industry, including Ryanair's notorious 55×40×20 cage. HerVoyage measures 55×35×22 cm folded, fitting the carry-on rules of 21 major airlines including BA, easyJet, Ryanair, Lufthansa, Emirates, Delta, AA, KLM, Air France, JAL and ANA. The only exception is some ultra-low-cost regional carriers with non-standard cabins — check before you book." } },
-        "faq2": { "type": "faq", "settings": { "question": "How does the wrinkle-free claim hold up on long flights?", "answer": "We tested it on 47 fabric types — silk, crepe, linen, structured wool included — across 7+ hour flights. 97% of testers reported zero visible wrinkles on arrival, vs. 21% from a leading rolling carry-on. The internal full-length hanger bay is the secret: you hang your outfits flat, fold the bag once, and unfold straight onto a hotel hook. No steamer, no iron." } },
-        "faq3": { "type": "faq", "settings": { "question": "What is the bag actually made of? Is it real leather?", "answer": "The exterior is premium Saffiano-style vegan leather — the same scratch-resistant, water-repellent finish used by Italian heritage brands, without the animal sourcing or four-figure price tag. The trim is a vegan cognac leather, the hardware is brushed brass, and the lining is recycled polyester. You can wipe the whole bag clean with a damp cloth." } },
-        "faq4": { "type": "faq", "settings": { "question": "How much can I actually fit inside?", "answer": "5–7 full outfits in the garment bay, 2 pairs of shoes (up to EU 42) in the sealed lower compartment, a full skincare cube, and your laptop in the back-zip slot. Beta testers averaged 7 days of clothing for a London business trip — including a dress for an evening dinner. The internal organisation is what makes the difference, not raw volume." } },
-        "faq5": { "type": "faq", "settings": { "question": "What if I don't love it?", "answer": "We offer a full 90-day money-back guarantee. Use it on three trips. Sleep on it. If HerVoyage isn't the bag you reach for every time you fly, return it for a full refund — no hoops, no hassle. Beyond that, the hardware and stitching are covered by a lifetime warranty: zips, handles, internal cabling, all included." } },
-        "faq6": { "type": "faq", "settings": { "question": "How does shipping and warranty work?", "answer": "Free UK shipping on every order, dispatched within 24 hours. International shipping is calculated at checkout. The lifetime warranty covers all hardware (zips, brass fittings, internal cabling) and stitching for as long as you own the bag — we'll repair or replace, you pay nothing. Cosmetic wear and abuse aren't covered, but in practice we've replaced fewer than 0.4% of bags sold." } }
+        "faq1": {
+          "type": "faq",
+          "settings": {
+            "question": "Will HerVoyage actually fit as a carry-on?",
+            "answer": "Yes — and we tested it on the smallest cabin sizers in the industry, including Ryanair's notorious 55×40×20 cage. HerVoyage measures 55×35×22 cm folded, fitting the carry-on rules of 21 major airlines including BA, easyJet, Ryanair, Lufthansa, Emirates, Delta, AA, KLM, Air France, JAL and ANA. The only exception is some ultra-low-cost regional carriers with non-standard cabins — check before you book."
+          }
+        },
+        "faq2": {
+          "type": "faq",
+          "settings": {
+            "question": "How does the wrinkle-free claim hold up on long flights?",
+            "answer": "We tested it on 47 fabric types — silk, crepe, linen, structured wool included — across 7+ hour flights. 97% of testers reported zero visible wrinkles on arrival, vs. 21% from a leading rolling carry-on. The internal full-length hanger bay is the secret: you hang your outfits flat, fold the bag once, and unfold straight onto a hotel hook. No steamer, no iron."
+          }
+        },
+        "faq3": {
+          "type": "faq",
+          "settings": {
+            "question": "What is the bag actually made of? Is it real leather?",
+            "answer": "The exterior is premium Saffiano-style vegan leather — the same scratch-resistant, water-repellent finish used by Italian heritage brands, without the animal sourcing or four-figure price tag. The trim is a vegan cognac leather, the hardware is brushed brass, and the lining is recycled polyester. You can wipe the whole bag clean with a damp cloth."
+          }
+        },
+        "faq4": {
+          "type": "faq",
+          "settings": {
+            "question": "How much can I actually fit inside?",
+            "answer": "5–7 full outfits in the garment bay, 2 pairs of shoes (up to EU 42) in the sealed lower compartment, a full skincare cube, and your laptop in the back-zip slot. Beta testers averaged 7 days of clothing for a London business trip — including a dress for an evening dinner. The internal organisation is what makes the difference, not raw volume."
+          }
+        },
+        "faq5": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I don't love it?",
+            "answer": "We offer a full 90-day money-back guarantee. Use it on three trips. Sleep on it. If HerVoyage isn't the bag you reach for every time you fly, return it for a full refund — no hoops, no hassle. Beyond that, the hardware and stitching are covered by a lifetime warranty: zips, handles, internal cabling, all included."
+          }
+        },
+        "faq6": {
+          "type": "faq",
+          "settings": {
+            "question": "How does shipping and warranty work?",
+            "answer": "Free UK shipping on every order, dispatched within 24 hours. International shipping is calculated at checkout. The lifetime warranty covers all hardware (zips, brass fittings, internal cabling) and stitching for as long as you own the bag — we'll repair or replace, you pay nothing. Cosmetic wear and abuse aren't covered, but in practice we've replaced fewer than 0.4% of bags sold."
+          }
+        }
       },
-      "block_order": ["faq1", "faq2", "faq3", "faq4", "faq5", "faq6"],
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5",
+        "faq6"
+      ],
       "settings": {
         "eyebrow": "Questions",
         "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE."
       }
     },
+    "17774261277925bf3f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_EK7tpF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_EK7tpF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "sitg_final_cta": {
       "type": "sitg-final-cta",
       "blocks": {
-        "pp1": { "type": "proof_point", "settings": { "number": "21", "label": "Airlines verified" } },
-        "pp2": { "type": "proof_point", "settings": { "number": "90 Days", "label": "Money-back guarantee" } }
+        "pp1": {
+          "type": "proof_point",
+          "settings": {
+            "number": "21",
+            "label": "Airlines verified"
+          }
+        },
+        "pp2": {
+          "type": "proof_point",
+          "settings": {
+            "number": "90 Days",
+            "label": "Money-back guarantee"
+          }
+        }
       },
-      "block_order": ["pp1", "pp2"],
+      "block_order": [
+        "pp1",
+        "pp2"
+      ],
       "settings": {
         "handwritten": "Travel beautifully",
         "headline": "YOUR JOURNEY IS WAITING.<br>YOU MIGHT AS WELL <span style=\"color:var(--sitg-amber)\">PACK BEAUTIFUL.</span>",
@@ -317,6 +681,7 @@
     "sitg_founder",
     "sitg_testimonials",
     "sitg_faq",
+    "17774261277925bf3f",
     "sitg_final_cta"
   ]
 }
