@@ -102,6 +102,7 @@
       "blocks": {
         "ing1": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "branded_name": "Saffiano-grade vegan leather",
             "ingredient_name": "EXTERIOR FINISH",
@@ -128,6 +129,7 @@
         },
         "ing3": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "branded_name": "Sealed Sole Pocket",
             "ingredient_name": "SHOE COMPARTMENT",
@@ -141,6 +143,7 @@
         },
         "ing4": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "branded_name": "IATA Carry-On Certified",
             "ingredient_name": "OVERHEAD-LOCKER FIT",
@@ -159,6 +162,7 @@
         "ing3",
         "ing4"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "BUILT DIFFERENTLY. ON PURPOSE",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
