@@ -1,0 +1,320 @@
+{%- liquid
+  assign sid = section.id
+  assign thumbs_pos = section.settings.thumbnails_position | default: 'bottom'
+  assign max_w = section.settings.max_width | default: 640
+  assign show_thumbs = true
+  if thumbs_pos == 'hidden' or product.media.size < 2
+    assign show_thumbs = false
+  endif
+  assign vertical_thumbs = false
+  if thumbs_pos == 'left' or thumbs_pos == 'right'
+    assign vertical_thumbs = true
+  endif
+-%}
+
+<div
+  class="sitg-gallery sitg-gallery--thumbs-{{ thumbs_pos }}{% if vertical_thumbs %} sitg-gallery--vertical{% endif %}{% if product.media.size < 2 %} sitg-gallery--single{% endif %}"
+  data-section-id="{{ sid }}"
+  data-variant-switching="{{ section.settings.enable_variant_switching }}"
+  role="region"
+  aria-roledescription="carousel"
+  aria-label="Product media"
+>
+  {%- if product.media.size > 0 -%}
+    <div class="sitg-gallery__stage" data-sitg-stage>
+      {%- for media in product.media -%}
+        {%- assign is_first = forloop.first -%}
+        {%- assign aspect = media.preview_image.aspect_ratio | default: 1.0 -%}
+        <figure
+          class="sitg-gallery__slide{% if is_first %} is-active{% endif %}"
+          data-media-id="{{ media.id }}"
+          data-media-type="{{ media.media_type }}"
+          style="--sitg-aspect: {{ aspect }};"
+          {% unless is_first %}aria-hidden="true"{% endunless %}
+        >
+          {%- case media.media_type -%}
+            {%- when 'image' -%}
+              <img
+                class="sitg-gallery__img"
+                srcset="
+                  {%- if media.preview_image.width >= 360 %}{{ media.preview_image | image_url: width: 360 }} 360w,{% endif -%}
+                  {%- if media.preview_image.width >= 540 %}{{ media.preview_image | image_url: width: 540 }} 540w,{% endif -%}
+                  {%- if media.preview_image.width >= 720 %}{{ media.preview_image | image_url: width: 720 }} 720w,{% endif -%}
+                  {%- if media.preview_image.width >= 900 %}{{ media.preview_image | image_url: width: 900 }} 900w,{% endif -%}
+                  {%- if media.preview_image.width >= 1080 %}{{ media.preview_image | image_url: width: 1080 }} 1080w,{% endif -%}
+                  {%- if media.preview_image.width >= 1296 %}{{ media.preview_image | image_url: width: 1296 }} 1296w,{% endif -%}
+                  {%- if media.preview_image.width >= 1512 %}{{ media.preview_image | image_url: width: 1512 }} 1512w,{% endif -%}
+                  {%- if media.preview_image.width >= 1728 %}{{ media.preview_image | image_url: width: 1728 }} 1728w,{% endif -%}
+                  {%- if media.preview_image.width >= 2048 %}{{ media.preview_image | image_url: width: 2048 }} 2048w,{% endif -%}
+                  {{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
+                src="{{ media.preview_image | image_url: width: 1080 }}"
+                sizes="(min-width: 750px) min({{ max_w }}px, 50vw), 100vw"
+                alt="{{ media.alt | escape }}"
+                width="1080"
+                height="{{ 1080 | divided_by: aspect | ceil }}"
+                {% if is_first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
+              >
+
+            {%- when 'video' -%}
+              {{ media | media_tag: image_size: '2048x', controls: true, preload: 'metadata', class: 'sitg-gallery__video' }}
+
+            {%- when 'external_video' -%}
+              <div class="sitg-gallery__embed">
+                {%- if media.host == 'youtube' -%}
+                  {{ media | external_video_url: playlist: media.external_id | external_video_tag: class: 'sitg-gallery__iframe', loading: 'lazy' }}
+                {%- else -%}
+                  {{ media | external_video_tag: class: 'sitg-gallery__iframe', loading: 'lazy' }}
+                {%- endif -%}
+              </div>
+
+            {%- when 'model' -%}
+              {{ media | media_tag: image_size: '2048x', toggleable: true, class: 'sitg-gallery__model' }}
+
+            {%- else -%}
+              <img
+                class="sitg-gallery__img"
+                src="{{ media.preview_image | image_url: width: 1080 }}"
+                alt="{{ media.alt | escape }}"
+                loading="lazy"
+              >
+          {%- endcase -%}
+        </figure>
+      {%- endfor -%}
+    </div>
+
+    {%- if show_thumbs -%}
+      <ul class="sitg-gallery__thumbs" data-sitg-thumbs role="list">
+        {%- for media in product.media -%}
+          <li class="sitg-gallery__thumb-item">
+            <button
+              type="button"
+              class="sitg-gallery__thumb{% if forloop.first %} is-active{% endif %}"
+              data-thumb-for="{{ media.id }}"
+              aria-label="View media {{ forloop.index }} of {{ product.media.size }}{% if media.media_type != 'image' %} ({{ media.media_type }}){% endif %}"
+              {% if forloop.first %}aria-current="true"{% endif %}
+            >
+              <img
+                src="{{ media.preview_image | image_url: width: 200 }}"
+                srcset="{{ media.preview_image | image_url: width: 200 }} 1x, {{ media.preview_image | image_url: width: 400 }} 2x"
+                alt=""
+                width="100"
+                height="{{ 100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                loading="lazy"
+              >
+              {%- unless media.media_type == 'image' -%}
+                <span class="sitg-gallery__thumb-badge" aria-hidden="true">
+                  {%- if media.media_type == 'model' -%}3D{%- else -%}▶{%- endif -%}
+                </span>
+              {%- endunless -%}
+            </button>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <div class="visually-hidden" data-sitg-status role="status" aria-live="polite"></div>
+  {%- else -%}
+    <div class="sitg-gallery__placeholder">
+      {{ 'product-1' | placeholder_svg_tag: 'sitg-gallery__placeholder-svg' }}
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  .sitg-gallery[data-section-id="{{ sid }}"] {
+    --sitg-max-w: {{ max_w }}px;
+    --sitg-thumb-size: 76px;
+    --sitg-gap: 12px;
+    --sitg-radius: 6px;
+    --sitg-border: rgba(0,0,0,.08);
+    --sitg-active: currentColor;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sitg-gap);
+    width: 100%;
+    max-width: var(--sitg-max-w);
+    margin: 0 auto;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--thumbs-left,
+  .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--thumbs-right { flex-direction: row; align-items: flex-start; }
+  .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--thumbs-right { flex-direction: row-reverse; }
+
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__stage {
+    position: relative; flex: 1; width: 100%; min-width: 0;
+    background: rgba(0,0,0,.02); border-radius: var(--sitg-radius); overflow: hidden;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__slide {
+    margin: 0; display: none; position: relative; width: 100%;
+    aspect-ratio: var(--sitg-aspect, 1);
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__slide.is-active { display: block; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__img,
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__video,
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__model {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__embed { position: absolute; inset: 0; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__iframe { width: 100%; height: 100%; border: 0; }
+
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumbs {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-wrap: nowrap; gap: 8px;
+    overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--vertical .sitg-gallery__thumbs {
+    flex-direction: column; overflow-x: hidden; overflow-y: auto;
+    width: calc(var(--sitg-thumb-size) + 12px); max-height: var(--sitg-max-w);
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb-item { scroll-snap-align: start; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb {
+    position: relative; padding: 0; border: 2px solid transparent; background: transparent;
+    border-radius: var(--sitg-radius); cursor: pointer; overflow: hidden;
+    width: var(--sitg-thumb-size); height: var(--sitg-thumb-size);
+    display: block; flex: 0 0 auto;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb:hover { border-color: var(--sitg-border); }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb:focus-visible { outline: 2px solid var(--sitg-active); outline-offset: 2px; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb.is-active { border-color: var(--sitg-active); }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__thumb-badge {
+    position: absolute; right: 4px; bottom: 4px; padding: 1px 5px;
+    font-size: 10px; line-height: 1.4; font-weight: 600;
+    background: rgba(0,0,0,.7); color: #fff; border-radius: 3px;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .visually-hidden {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__placeholder { width: 100%; aspect-ratio: 1; }
+  .sitg-gallery[data-section-id="{{ sid }}"] .sitg-gallery__placeholder-svg { width: 100%; height: 100%; }
+
+  @media (max-width: 749px) {
+    .sitg-gallery[data-section-id="{{ sid }}"],
+    .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--vertical { flex-direction: column; }
+    .sitg-gallery[data-section-id="{{ sid }}"].sitg-gallery--vertical .sitg-gallery__thumbs {
+      flex-direction: row; overflow-x: auto; overflow-y: hidden; width: 100%; max-height: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.querySelector('.sitg-gallery[data-section-id="{{ sid }}"]');
+    if (!root) return;
+
+    var slides = root.querySelectorAll('[data-sitg-stage] .sitg-gallery__slide');
+    var thumbs = root.querySelectorAll('[data-sitg-thumbs] .sitg-gallery__thumb');
+    var status = root.querySelector('[data-sitg-status]');
+    if (!slides.length) return;
+
+    function activate(mediaId) {
+      var matched = false;
+      slides.forEach(function (s) {
+        var on = s.getAttribute('data-media-id') === String(mediaId);
+        s.classList.toggle('is-active', on);
+        if (on) { s.removeAttribute('aria-hidden'); matched = true; }
+        else { s.setAttribute('aria-hidden', 'true'); }
+        // Pause any playing video/iframe in slides being hidden
+        if (!on) {
+          var v = s.querySelector('video');
+          if (v && !v.paused) { try { v.pause(); } catch (e) {} }
+          var iframe = s.querySelector('iframe');
+          if (iframe) {
+            var src = iframe.getAttribute('src');
+            if (src) iframe.setAttribute('src', src); // reload to stop playback
+          }
+        }
+      });
+      thumbs.forEach(function (t) {
+        var on = t.getAttribute('data-thumb-for') === String(mediaId);
+        t.classList.toggle('is-active', on);
+        if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+      });
+      if (matched && status) {
+        var active = root.querySelector('.sitg-gallery__slide.is-active img, .sitg-gallery__slide.is-active video');
+        var label = active && active.getAttribute('alt');
+        status.textContent = label ? 'Showing: ' + label : 'Media changed';
+      }
+    }
+
+    thumbs.forEach(function (t) {
+      t.addEventListener('click', function () { activate(t.getAttribute('data-thumb-for')); });
+    });
+
+    root.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var list = Array.prototype.slice.call(thumbs);
+      if (!list.length) return;
+      var idx = list.findIndex(function (t) { return t.classList.contains('is-active'); });
+      if (idx < 0) idx = 0;
+      var next = e.key === 'ArrowRight' ? (idx + 1) % list.length : (idx - 1 + list.length) % list.length;
+      list[next].focus();
+      list[next].click();
+      e.preventDefault();
+    });
+
+    if (root.getAttribute('data-variant-switching') === 'true') {
+      function switchToVariantMedia(variant) {
+        if (!variant || !variant.featured_media) return;
+        activate(variant.featured_media.id);
+      }
+      // Dawn-style event
+      document.addEventListener('variant:change', function (e) {
+        if (e && e.detail && e.detail.variant) switchToVariantMedia(e.detail.variant);
+      });
+      // Fallback: watch the product form's id input
+      var idInputs = document.querySelectorAll('form[action*="/cart/add"] input[name="id"]');
+      idInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+          var vid = input.value;
+          if (!vid || !window.SitgVariantsCache) return;
+          var v = window.SitgVariantsCache[vid];
+          if (v) switchToVariantMedia(v);
+        });
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "SITG Gallery",
+  "tag": "section",
+  "class": "sitg-gallery-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "thumbnails_position",
+      "label": "Thumbnails (desktop)",
+      "default": "bottom",
+      "options": [
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" },
+        { "value": "hidden", "label": "Hidden" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_variant_switching",
+      "label": "Switch image when variant changes",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 480,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Max gallery width",
+      "default": 640
+    }
+  ],
+  "presets": [
+    { "name": "SITG Gallery" }
+  ]
+}
+{% endschema %}
