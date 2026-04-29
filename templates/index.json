@@ -208,11 +208,11 @@
         "feature_KRzUk9": {
           "type": "feature",
           "settings": {
-            "toggle": "Toggle",
+            "toggle": "Carry-On Fit",
             "image": "shopify://shop_images/7FP3-DpZaT9Rl_hFUljxD_CREJ109u.png",
-            "sub_heading": "<p>Subheading</p>",
-            "heading": "<h3>Heading</h3>",
-            "text": "<p>Pair text with an image to focus on your chosen product. Add details on availability, style, or even provide a review.</p>"
+            "sub_heading": "<p>Fits the overhead. Skips the bag drop</p>",
+            "heading": "<p>CARRY-ON CERTIFIED</p>",
+            "text": "<p>Independently measured against the carry-on rules of every major US, EU, and UK airline. Walk past the queue, board priority, and your bag goes overhead — every flight, no exceptions</p>"
           }
         },
         "feature_GM9U4R": {
