@@ -391,6 +391,17 @@
         "nsaid_body": "We didn't ship until our prototype had survived three years of real cabin use. Three head-to-head comparisons against the bags women actually carry today:"
       }
     },
+    "sitg_founder": {
+      "type": "sitg-founder",
+      "settings": {
+        "eyebrow": "Why I built this",
+        "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
+        "story": "<p>11 years as a flight attendant. 2,000 flights. 47 countries.</p><p>I never owned a bag I loved. Designer ones were beautiful but useless. Functional ones were ugly. Every bag made me choose.</p><p>So I built one. 41 prototypes. One bag that's both.</p><p>10,000 women have it now. <em>\"I will never check a bag again.\"</em></p>",
+        "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
+        "pullquote_attribution": "— Founder, HerVoyage",
+        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
+      }
+    },
     "sitg_comparison": {
       "type": "sitg-comparison",
       "blocks": {
@@ -578,17 +589,6 @@
         "b5"
       ],
       "settings": {}
-    },
-    "sitg_founder": {
-      "type": "sitg-founder",
-      "settings": {
-        "eyebrow": "Why I built this",
-        "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
-        "story": "<p>11 years as a flight attendant. 2,000 flights. 47 countries.</p><p>I never owned a bag I loved. Designer ones were beautiful but useless. Functional ones were ugly. Every bag made me choose.</p><p>So I built one. 41 prototypes. One bag that's both.</p><p>10,000 women have it now. <em>\"I will never check a bag again.\"</em></p>",
-        "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
-        "pullquote_attribution": "— Founder, HerVoyage",
-        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
-      }
     },
     "sitg_testimonials": {
       "type": "sitg-testimonials",
@@ -833,12 +833,12 @@
     "sitg_marquee",
     "sitg_reframe",
     "sitg_ingredients",
+    "sitg_founder",
     "ss_feature_43_epnHKE",
     "sitg_science",
     "sitg_comparison",
     "sitg_timeline",
     "sitg_trust",
-    "sitg_founder",
     "sitg_testimonials",
     "sitg_purchase",
     "sitg_faq",
