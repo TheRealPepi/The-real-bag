@@ -226,25 +226,10 @@
 }
 
 .luhxe-stars {
-  position: relative;
   display: inline-block;
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.18);
-}
-
-.luhxe-stars__back,
-.luhxe-stars__fore {
-  display: inline-block;
-}
-
-.luhxe-stars__fore {
-  position: absolute;
-  inset: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  color: var(--luhxe-stars-color, #b91c1c);
 }
 
 .luhxe-reviews-summary__count {

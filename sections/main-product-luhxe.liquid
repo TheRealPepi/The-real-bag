@@ -204,18 +204,13 @@
 
           {%- for block in section.blocks -%}
             {%- if block.type == 'reviews_summary' -%}
-              {%- assign rating = block.settings.rating | default: '5' | times: 1.0 -%}
-              {%- assign rating_pct = rating | times: 20 -%}
               <div class="luhxe-reviews-summary" {{ block.shopify_attributes }}>
                 <span
                   class="luhxe-stars"
-                  style="--luhxe-stars-color: {{ block.settings.star_color | default: '#b91c1c' }};"
-                  aria-label="Rated {{ rating }} out of 5"
+                  style="color: {{ block.settings.star_color | default: '#b91c1c' }};"
+                  aria-label="5 out of 5 stars"
                   role="img"
-                >
-                  <span class="luhxe-stars__back" aria-hidden="true">★★★★★</span>
-                  <span class="luhxe-stars__fore" style="width: {{ rating_pct }}%;" aria-hidden="true">★★★★★</span>
-                </span>
+                >★★★★★</span>
                 {%- if block.settings.count_text != blank -%}
                   {%- if block.settings.link != blank -%}
                     <a href="{{ block.settings.link }}" class="luhxe-reviews-summary__count">{{ block.settings.count_text }}</a>
@@ -681,24 +676,6 @@
       "limit": 1,
       "settings": [
         {
-          "type": "select",
-          "id": "rating",
-          "label": "Rating",
-          "default": "5",
-          "options": [
-            { "value": "5",   "label": "5.0" },
-            { "value": "4.5", "label": "4.5" },
-            { "value": "4",   "label": "4.0" },
-            { "value": "3.5", "label": "3.5" },
-            { "value": "3",   "label": "3.0" },
-            { "value": "2.5", "label": "2.5" },
-            { "value": "2",   "label": "2.0" },
-            { "value": "1.5", "label": "1.5" },
-            { "value": "1",   "label": "1.0" },
-            { "value": "0",   "label": "0" }
-          ]
-        },
-        {
           "type": "color",
           "id": "star_color",
           "label": "Star color",
@@ -792,7 +769,7 @@
         { "type": "trust_badge", "settings": { "icon": "✈️", "text": "Carry-on approved on 100+ Airlines" } },
         { "type": "trust_badge", "settings": { "icon": "🎁", "text": "FREE GIFTS WORTH $35" } },
         { "type": "trust_badge", "settings": { "icon": "🏆", "text": "2026 TOP-RATED TRAVEL BAG" } },
-        { "type": "reviews_summary", "settings": { "rating": "5", "count_text": "1346 Reviews" } },
+        { "type": "reviews_summary", "settings": { "count_text": "1346 Reviews" } },
         { "type": "guarantee_badge", "settings": { "icon": "🛡️", "label": "90-DAY MONEY-BACK GUARANTEE" } },
         { "type": "accordion_row", "settings": { "title": "90-Day Guarantee", "body": "<p>Try HerVoyage for 90 days. If you don't love it, return it for a full refund.</p>" } },
         { "type": "accordion_row", "settings": { "title": "The Science Behind It", "body": "<p>Tested across 47 fabric types and 21 major airlines. Wrinkle-free arrival, every flight.</p>" } },
