@@ -192,7 +192,7 @@
         "feature_CfmP8H": {
           "type": "feature",
           "settings": {
-            "toggle": "Toggle",
+            "toggle": "Vegan Leather",
             "image": "shopify://shop_images/exterior_finish.jpg",
             "sub_heading": "<p>The Saffiano finish. Without the four-figure price tag.</p>",
             "heading": "<p>PREMIUM-GRADE EXTERIOR</p>",
@@ -202,7 +202,7 @@
         "feature_HXpYaJ": {
           "type": "feature",
           "settings": {
-            "toggle": "Toggle",
+            "toggle": "Garment Bay",
             "image": "shopify://shop_images/xowwUCSiUeh-ckpRutWBY_jtw1wH5q.png",
             "sub_heading": "<p>Hang it. Fold once. Unpack ready to wear</p>",
             "heading": "<p>WRINKLE-FREE ARRIVAL</p>",
@@ -222,7 +222,7 @@
         "feature_GM9U4R": {
           "type": "feature",
           "settings": {
-            "toggle": "ROLL OR CARRY. YOUR CALL.",
+            "toggle": "Detachable Wheels",
             "image": "shopify://shop_images/rj3JTt0ojNMoM22mvVE7u_GGJSlWiF.png",
             "sub_heading": "<p>Wheels when you want them. Gone when you don't</p>",
             "heading": "<p>ROLL OR CARRY. YOUR CALL</p>",
