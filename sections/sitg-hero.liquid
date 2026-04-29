@@ -22,10 +22,12 @@
   <div class="sitg-container-wide">
     <div class="sitg-hero-inner">
       <div class="sitg-hero-content">
-        <div class="sitg-hero-badge">
-          <span class="dot"></span>
-          {{ section.settings.badge_text }}
-        </div>
+        {%- if section.settings.badge_text != blank -%}
+          <div class="sitg-hero-badge">
+            <span class="dot"></span>
+            {{ section.settings.badge_text }}
+          </div>
+        {%- endif -%}
         <h1>
           {{ section.settings.headline_line1 }}<br>
           <span class="highlight">{{ section.settings.headline_line2 }}</span><br>
