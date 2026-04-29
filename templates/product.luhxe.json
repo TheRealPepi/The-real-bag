@@ -32,27 +32,81 @@
             "icon": "🏆",
             "text": "2026 TOP-RATED TRAVEL BAG"
           }
+        },
+        "reviews1": {
+          "type": "reviews_summary",
+          "settings": {
+            "rating": 5.0,
+            "star_color": "#b91c1c",
+            "count_text": "1346 Reviews",
+            "link": ""
+          }
+        },
+        "guarantee1": {
+          "type": "guarantee_badge",
+          "settings": {
+            "icon": "🛡️",
+            "label": "90-DAY MONEY-BACK GUARANTEE"
+          }
+        },
+        "faq1": {
+          "type": "accordion_row",
+          "settings": {
+            "title": "90-Day Guarantee",
+            "body": "<p>Try HerVoyage on three trips. If it isn't the bag you reach for every time you fly, return it for a full refund — no hoops, no hassle.</p>",
+            "default_open": false
+          }
+        },
+        "faq2": {
+          "type": "accordion_row",
+          "settings": {
+            "title": "The Science Behind It",
+            "body": "<p>Tested across 47 fabric types and 21 major airlines. 97% of testers reported zero wrinkles after 7-hour flights, vs. 21% from a leading rolling carry-on.</p>",
+            "default_open": false
+          }
+        },
+        "faq3": {
+          "type": "accordion_row",
+          "settings": {
+            "title": "Shipping & Returns",
+            "body": "<p>Free UK shipping, dispatched within 24 hours. International calculated at checkout. 90-day no-questions-asked returns.</p>",
+            "default_open": false
+          }
+        },
+        "faq4": {
+          "type": "accordion_row",
+          "settings": {
+            "title": "Is It Safe?",
+            "body": "<p>Premium Saffiano-style vegan leather, brushed brass hardware, internal steel cabling rated to 30 kg. Lifetime warranty on all hardware and stitching.</p>",
+            "default_open": false
+          }
+        },
+        "review1": {
+          "type": "featured_review",
+          "settings": {
+            "quote": "I flew Heathrow to JFK with one carry-on. Wedding rehearsal that night. Zero ironing. The bridesmaids asked where I got my dress steamer. I didn't have one.",
+            "name": "Imogen H."
+          }
         }
       },
       "block_order": [
         "tb1",
         "tb2",
-        "tb3"
+        "tb3",
+        "reviews1",
+        "guarantee1",
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "review1"
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "media_size": "large",
-        "gallery_layout": "thumbnail",
-        "media_position": "left",
-        "mobile_thumbnails": "hide",
-        "image_zoom": "lightbox",
-        "constrain_to_viewport": true,
-        "hide_variants": true,
-        "enable_video_looping": false,
         "enable_sticky_info": true,
-        "show_reviews": true,
-        "reviews_count_text": "1346 Reviews",
-        "reviews_link": "",
+        "thumbnails_position": "left",
+        "gallery_max_width": 640,
+        "enable_variant_switching": true,
         "subtitle": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>",
         "variant_picker_heading": "Select Model",
         "picker_type": "button",
