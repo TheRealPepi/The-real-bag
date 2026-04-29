@@ -1,5 +1,5 @@
-{%- assign check_yes = '<span class="sitg-comp-icon yes"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.15"/><path d="M7 12.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' -%}
-{%- assign check_no = '<span class="sitg-comp-icon no"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.12"/><path d="M8 8l8 8M16 8l-8 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>' -%}
+{%- assign check_yes = '<span class="sitg-comp-icon yes" aria-label="Yes">✓</span>' -%}
+{%- assign check_no = '<span class="sitg-comp-icon no" aria-label="Not included">—</span>' -%}
 
 <div class="sitg">
 <section class="sitg-comparison-v2" id="compare">
@@ -217,18 +217,19 @@
   font-weight: 500;
 }
 
-/* ── Check / X icons ── */
+/* ── Check / dash icons (plain text — universal, no SVG) ── */
 .sitg-comp-icon {
   display: inline-flex;
-  width: 28px;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
   height: 28px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
 }
-.sitg-comp-icon.yes { color: #22C55E; }
-.sitg-comp-icon.no  { color: #EF4444; }
-.sitg-comp-icon.yes svg circle { fill: currentColor; opacity: 1; }
-.sitg-comp-icon.yes svg path { stroke: #fff; }
-.sitg-comp-icon.no svg circle { fill: currentColor; opacity: 1; }
-.sitg-comp-icon.no svg path { stroke: #fff; }
+.sitg-comp-icon.yes { color: #2E7D5B; }
+.sitg-comp-icon.no  { color: #B8B0A6; font-weight: 400; }
 
 /* ── Mobile adjustments ── */
 @media (max-width: 600px) {

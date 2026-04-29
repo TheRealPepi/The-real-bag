@@ -192,7 +192,7 @@
             "row_label": "Carry-on approved",
             "us_type": "check",
             "us_value": "—",
-            "comp1_type": "check",
+            "comp1_type": "x",
             "comp1_value": "—",
             "comp2_type": "x",
             "comp2_value": "—"
@@ -240,7 +240,7 @@
             "row_label": "Under £150",
             "us_type": "check",
             "us_value": "—",
-            "comp1_type": "check",
+            "comp1_type": "x",
             "comp1_value": "—",
             "comp2_type": "x",
             "comp2_value": "—"
@@ -252,7 +252,7 @@
             "row_label": "Free UK shipping",
             "us_type": "check",
             "us_value": "—",
-            "comp1_type": "x",
+            "comp1_type": "check",
             "comp1_value": "—",
             "comp2_type": "x",
             "comp2_value": "—"
