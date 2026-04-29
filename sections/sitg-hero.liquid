@@ -42,16 +42,24 @@
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <div class="sitg-hero-proof">
-          <div>
-            <div class="sitg-hero-proof-text"><strong>{{ section.settings.rating }}</strong> {{ section.settings.review_count }}</div>
+        {%- if section.settings.rating != blank or section.settings.review_count != blank or section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank -%}
+          <div class="sitg-hero-proof">
+            {%- if section.settings.rating != blank or section.settings.review_count != blank -%}
+              <div>
+                <div class="sitg-hero-proof-text"><strong>{{ section.settings.rating }}</strong> {{ section.settings.review_count }}</div>
+              </div>
+            {%- endif -%}
+            {%- if (section.settings.rating != blank or section.settings.review_count != blank) and (section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank) -%}
+              <div class="divider"></div>
+            {%- endif -%}
+            {%- if section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank -%}
+              <div>
+                <div class="sitg-hero-proof-text" style="margin-bottom:2px;"><strong>{{ section.settings.guarantee_title }}</strong></div>
+                <div class="sitg-hero-proof-text">{{ section.settings.guarantee_subtitle }}</div>
+              </div>
+            {%- endif -%}
           </div>
-          <div class="divider"></div>
-          <div>
-            <div class="sitg-hero-proof-text" style="margin-bottom:2px;"><strong>{{ section.settings.guarantee_title }}</strong></div>
-            <div class="sitg-hero-proof-text">{{ section.settings.guarantee_subtitle }}</div>
-          </div>
-        </div>
+        {%- endif -%}
       </div>
 
       <div class="sitg-hero-visual">
