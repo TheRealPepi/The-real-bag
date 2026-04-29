@@ -84,42 +84,13 @@
     },
     "sitg_reframe": {
       "type": "sitg-reframe",
-      "blocks": {
-        "card1": {
-          "type": "card",
-          "settings": {
-            "icon": "🎯",
-            "title": "THE \"JUST CHECK A BAG\" LIE",
-            "description": "After 11 years as a flight attendant, I had taken over 2,000 flights. I had tried every bag on the market. None of them understood what a woman actually needs when she travels. So I stopped waiting for someone to design it and built it myself."
-          }
-        },
-        "card2": {
-          "type": "card",
-          "settings": {
-            "icon": "🧩",
-            "title": "YOU DON'T HAVE TIME FOR THIS",
-            "description": "You have a 6am flight, a meeting at 10, dinner at 8 and somehow you need to look effortless for all three. You don't have time to wait at a baggage carousel. You don't have time to iron a dress in a hotel room. You don't have time to look anything less than incredible.\n\nHerVoyage was built around one woman's schedule — and that woman never stops."
-          }
-        },
-        "card3": {
-          "type": "card",
-          "settings": {
-            "icon": "🔍",
-            "title": "THE \"SLOW DOWN\" LIE",
-            "description": "Women are told to pack less. Check a bag. Keep it simple. Travel light.\nWe say: bring everything, pay nothing extra, arrive perfect.\nYour full wardrobe. Your complete skincare. Your shoes. Your whole self — carried in one stunning bag that fits overhead, costs nothing to board and arrives wrinkle-free."
-          }
-        }
-      },
-      "block_order": [
-        "card1",
-        "card2",
-        "card3"
-      ],
+      "blocks": {},
+      "block_order": [],
       "settings": {
         "section_image": "shopify://shop_images/bbOKBMYpgX_1gLtDjQjWs_t0asHBxR.png",
-        "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
-        "headline": "Beautiful or practical Not anymore...",
-        "body": "You refuse to show up looking like you packed in the dark. The problem isn't you — it's that no bag has ever been designed for a woman who wants it all. No more baggage fees. No more wrinkled outfits. No more choosing between style and space."
+        "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE",
+        "headline": "Beautiful or practical. Not anymore.",
+        "body": "For a decade I lived out of carry-ons. Every bag forced a choice — beautiful or practical, never both. The rolling cases were ugly. The designer carry-ons couldn't hold a steamed dress, two pairs of heels and a skincare cube. Women were told to pack less, check a bag, keep it simple. We say: bring everything, pay nothing extra, arrive perfect. HerVoyage was built around one woman's schedule — and that woman never stops."
       }
     },
     "sitg_ingredients": {
