@@ -49,23 +49,11 @@
         <p class="sitg-pc-body">{{ section.settings.body }}</p>
         <div class="sitg-pc-divider"></div>
 
-        <div class="sitg-pc-toggle">
-          <button class="sitg-pc-toggle-btn active" data-plan="subscribe">
-            Subscribe & Save
-            <span class="pc-save">SAVE 30%</span>
-          </button>
-          <button class="sitg-pc-toggle-btn" data-plan="onetime">
-            One-Time Purchase
-          </button>
-        </div>
-
         <div class="sitg-pc-price-display">
           <div class="sitg-pc-price">
-            <span class="price-original">{{ section.settings.price_original }}</span>
-            <span class="price-main">{{ section.settings.price_subscribe }}</span>
-            <span class="price-period">/month</span>
+            <span class="price-main">{{ section.settings.price_onetime }}</span>
           </div>
-          <div class="sitg-pc-per-day">That's <strong>{{ section.settings.price_per_day_subscribe }}</strong> — less than a coffee</div>
+          <div class="sitg-pc-per-day">{{ section.settings.price_per_day_onetime }}</div>
         </div>
 
         <div class="sitg-pc-includes">
