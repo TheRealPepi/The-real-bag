@@ -20,6 +20,26 @@
             "link": ""
           }
         },
+        "vp1": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_picker_heading": "Select Model",
+            "picker_type": "button",
+            "swatch_shape": "circle",
+            "which_one_text": "Which one is for me?",
+            "which_one_link": ""
+          }
+        },
+        "kaching1": {
+          "type": "kaching_placeholder",
+          "settings": {}
+        },
+        "bb1": {
+          "type": "buy_button",
+          "settings": {
+            "button_text": "ADD TO CART"
+          }
+        },
         "guarantee1": {
           "type": "guarantee_badge",
           "settings": {
@@ -69,6 +89,9 @@
       },
       "block_order": [
         "reviews1",
+        "vp1",
+        "kaching1",
+        "bb1",
         "guarantee1",
         "faq1",
         "faq2",
@@ -83,13 +106,6 @@
         "gallery_max_width": 640,
         "enable_variant_switching": true,
         "subtitle": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>",
-        "variant_picker_heading": "Select Model",
-        "picker_type": "button",
-        "swatch_shape": "circle",
-        "which_one_text": "Which one is for me?",
-        "which_one_link": "",
-        "button_text": "ADD TO CART",
-        "kaching_placeholder": true,
         "show_description": false,
         "padding_top": 60,
         "padding_bottom": 40

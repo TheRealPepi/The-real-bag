@@ -237,116 +237,116 @@
             -%}
           </div>
 
-          {%- unless product.has_only_default_variant -%}
-            <div class="luhxe-product__variant-header">
-              <span class="luhxe-product__variant-heading">{{ section.settings.variant_picker_heading }}</span>
-              {%- if section.settings.which_one_text != blank -%}
-                {%- if section.settings.which_one_link != blank -%}
-                  <a href="{{ section.settings.which_one_link }}" class="luhxe-product__which-one">
-                    <span class="luhxe-product__which-one-icon" aria-hidden="true">i</span>
-                    {{ section.settings.which_one_text }}
-                  </a>
-                {%- else -%}
-                  <span class="luhxe-product__which-one">
-                    <span class="luhxe-product__which-one-icon" aria-hidden="true">i</span>
-                    {{ section.settings.which_one_text }}
-                  </span>
-                {%- endif -%}
-              {%- endif -%}
-            </div>
-
-            {% render 'product-variant-picker',
-              product: product,
-              block: section,
-              product_form_id: product_form_id
-            %}
-          {%- endunless -%}
-
-          {%- if section.settings.kaching_placeholder -%}
-            <div class="luhxe-product__kaching-placeholder" data-kaching-bundles="true">
-              {%- comment -%}
-                Kaching Bundles app injects its bundle UI here. Toggle off via section setting if Kaching is disabled.
-              {%- endcomment -%}
-            </div>
-          {%- endif -%}
-
-          <div class="luhxe-product__form">
-            <product-form
-              class="product-form"
-              data-section-id="{{ section.id }}"
-            >
-              <div class="product-form__error-message-wrapper" role="alert" hidden>
-                <span class="svg-wrapper">
-                  {{- 'icon-error.svg' | inline_asset_content -}}
-                </span>
-                <span class="product-form__error-message"></span>
-              </div>
-
-              {%- form 'product',
-                product,
-                id: product_form_id,
-                class: 'form',
-                novalidate: 'novalidate',
-                data-type: 'add-to-cart-form'
-              -%}
-                <input
-                  type="hidden"
-                  name="id"
-                  value="{{ product.selected_or_first_available_variant.id }}"
-                  {% if product.selected_or_first_available_variant.available == false %}
-                    disabled
-                  {% endif %}
-                  class="product-variant-id"
-                >
-
-                <div class="product-form__buttons">
-                  <button
-                    id="ProductSubmitButton-{{ section.id }}"
-                    type="submit"
-                    name="add"
-                    class="luhxe-product__add-to-cart product-form__submit button button--primary button--full-width"
-                    {% if product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                    <span>
-                      {%- if product.selected_or_first_available_variant.available == false -%}
-                        {{ 'products.product.sold_out' | t }}
-                      {%- else -%}
-                        {{ section.settings.button_text | default: 'Add to cart' }}
-                      {%- endif -%}
-                    </span>
-                    <div class="loading__spinner hidden">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        class="spinner"
-                        viewBox="0 0 66 66"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              {%- endform -%}
-            </product-form>
-          </div>
-
-          {%- comment -%} BOTTOM ZONE — guarantee, accordions, featured review (block_order preserved) {%- endcomment -%}
-          {%- assign bottom_types = 'guarantee_badge,accordion_row,featured_review' | split: ',' -%}
-          {%- assign has_bottom_blocks = false -%}
+          {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review) {%- endcomment -%}
+          {%- assign reorderable_types = 'variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review' | split: ',' -%}
+          {%- assign has_reorderable_blocks = false -%}
           {%- for block in section.blocks -%}
-            {%- if bottom_types contains block.type -%}
-              {%- assign has_bottom_blocks = true -%}
+            {%- if reorderable_types contains block.type or block.type == '@app' -%}
+              {%- assign has_reorderable_blocks = true -%}
               {%- break -%}
             {%- endif -%}
           {%- endfor -%}
 
-          {%- if has_bottom_blocks -%}
+          {%- if has_reorderable_blocks -%}
             <div class="luhxe-product__bottom">
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
+                  {%- when 'variant_picker' -%}
+                    {%- unless product.has_only_default_variant -%}
+                      <div class="luhxe-product__variant-header" {{ block.shopify_attributes }}>
+                        <span class="luhxe-product__variant-heading">{{ block.settings.variant_picker_heading }}</span>
+                        {%- if block.settings.which_one_text != blank -%}
+                          {%- if block.settings.which_one_link != blank -%}
+                            <a href="{{ block.settings.which_one_link }}" class="luhxe-product__which-one">
+                              <span class="luhxe-product__which-one-icon" aria-hidden="true">i</span>
+                              {{ block.settings.which_one_text }}
+                            </a>
+                          {%- else -%}
+                            <span class="luhxe-product__which-one">
+                              <span class="luhxe-product__which-one-icon" aria-hidden="true">i</span>
+                              {{ block.settings.which_one_text }}
+                            </span>
+                          {%- endif -%}
+                        {%- endif -%}
+                      </div>
+
+                      {% render 'product-variant-picker',
+                        product: product,
+                        block: block,
+                        product_form_id: product_form_id
+                      %}
+                    {%- endunless -%}
+
+                  {%- when 'kaching_placeholder' -%}
+                    <div class="luhxe-product__kaching-placeholder" data-kaching-bundles="true" {{ block.shopify_attributes }}></div>
+
+                  {%- when 'buy_button' -%}
+                    <div class="luhxe-product__form" {{ block.shopify_attributes }}>
+                      <product-form
+                        class="product-form"
+                        data-section-id="{{ section.id }}"
+                      >
+                        <div class="product-form__error-message-wrapper" role="alert" hidden>
+                          <span class="svg-wrapper">
+                            {{- 'icon-error.svg' | inline_asset_content -}}
+                          </span>
+                          <span class="product-form__error-message"></span>
+                        </div>
+
+                        {%- form 'product',
+                          product,
+                          id: product_form_id,
+                          class: 'form',
+                          novalidate: 'novalidate',
+                          data-type: 'add-to-cart-form'
+                        -%}
+                          <input
+                            type="hidden"
+                            name="id"
+                            value="{{ product.selected_or_first_available_variant.id }}"
+                            {% if product.selected_or_first_available_variant.available == false %}
+                              disabled
+                            {% endif %}
+                            class="product-variant-id"
+                          >
+
+                          <div class="product-form__buttons">
+                            <button
+                              id="ProductSubmitButton-{{ section.id }}"
+                              type="submit"
+                              name="add"
+                              class="luhxe-product__add-to-cart product-form__submit button button--primary button--full-width"
+                              {% if product.selected_or_first_available_variant.available == false %}
+                                disabled
+                              {% endif %}
+                            >
+                              <span>
+                                {%- if product.selected_or_first_available_variant.available == false -%}
+                                  {{ 'products.product.sold_out' | t }}
+                                {%- else -%}
+                                  {{ block.settings.button_text | default: 'Add to cart' }}
+                                {%- endif -%}
+                              </span>
+                              <div class="loading__spinner hidden">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="spinner"
+                                  viewBox="0 0 66 66"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                              </div>
+                            </button>
+                          </div>
+                        {%- endform -%}
+                      </product-form>
+                    </div>
+
+                  {%- when '@app' -%}
+                    {% render block %}
+
                   {%- when 'guarantee_badge' -%}
                     <div class="luhxe-guarantee-badge" {{ block.shopify_attributes }}>
                       {%- if block.settings.icon != blank -%}
@@ -561,65 +561,6 @@
       "default": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>"
     },
     {
-      "type": "header",
-      "content": "Variant picker"
-    },
-    {
-      "type": "text",
-      "id": "variant_picker_heading",
-      "label": "Heading above variants",
-      "default": "Select Model"
-    },
-    {
-      "type": "select",
-      "id": "picker_type",
-      "label": "Picker type",
-      "options": [
-        { "value": "button", "label": "Buttons" },
-        { "value": "dropdown", "label": "Dropdown" }
-      ],
-      "default": "button"
-    },
-    {
-      "type": "select",
-      "id": "swatch_shape",
-      "label": "Swatch shape",
-      "options": [
-        { "value": "circle", "label": "Circle" },
-        { "value": "square", "label": "Square" },
-        { "value": "none", "label": "None" }
-      ],
-      "default": "circle"
-    },
-    {
-      "type": "text",
-      "id": "which_one_text",
-      "label": "Helper link text",
-      "default": "Which one is for me?"
-    },
-    {
-      "type": "url",
-      "id": "which_one_link",
-      "label": "Helper link URL"
-    },
-    {
-      "type": "header",
-      "content": "Buy button"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Add-to-cart label",
-      "default": "ADD TO CART"
-    },
-    {
-      "type": "checkbox",
-      "id": "kaching_placeholder",
-      "label": "Render Kaching bundles container",
-      "info": "Outputs an empty div above the buy button for the Kaching app to inject into.",
-      "default": true
-    },
-    {
       "type": "checkbox",
       "id": "show_description",
       "label": "Show product description",
@@ -651,6 +592,78 @@
     }
   ],
   "blocks": [
+    {
+      "type": "variant_picker",
+      "name": "Variant picker",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "variant_picker_heading",
+          "label": "Heading above variants",
+          "default": "Select Model"
+        },
+        {
+          "type": "select",
+          "id": "picker_type",
+          "label": "Picker type",
+          "options": [
+            { "value": "button", "label": "Buttons" },
+            { "value": "dropdown", "label": "Dropdown" }
+          ],
+          "default": "button"
+        },
+        {
+          "type": "select",
+          "id": "swatch_shape",
+          "label": "Swatch shape",
+          "options": [
+            { "value": "circle", "label": "Circle" },
+            { "value": "square", "label": "Square" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "circle"
+        },
+        {
+          "type": "text",
+          "id": "which_one_text",
+          "label": "Helper link text",
+          "default": "Which one is for me?"
+        },
+        {
+          "type": "url",
+          "id": "which_one_link",
+          "label": "Helper link URL"
+        }
+      ]
+    },
+    {
+      "type": "buy_button",
+      "name": "Buy button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Add-to-cart label",
+          "default": "ADD TO CART"
+        }
+      ]
+    },
+    {
+      "type": "kaching_placeholder",
+      "name": "Kaching bundles slot",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Outputs an empty div the Kaching Bundles app injects its bundle UI into. Place this above the Buy button."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
     {
       "type": "trust_badge",
       "name": "Trust badge",
@@ -770,6 +783,9 @@
         { "type": "trust_badge", "settings": { "icon": "🎁", "text": "FREE GIFTS WORTH $35" } },
         { "type": "trust_badge", "settings": { "icon": "🏆", "text": "2026 TOP-RATED TRAVEL BAG" } },
         { "type": "reviews_summary", "settings": { "count_text": "1346 Reviews" } },
+        { "type": "variant_picker", "settings": { "variant_picker_heading": "Select Model", "picker_type": "button", "swatch_shape": "circle", "which_one_text": "Which one is for me?" } },
+        { "type": "kaching_placeholder" },
+        { "type": "buy_button", "settings": { "button_text": "ADD TO CART" } },
         { "type": "guarantee_badge", "settings": { "icon": "🛡️", "label": "90-DAY MONEY-BACK GUARANTEE" } },
         { "type": "accordion_row", "settings": { "title": "90-Day Guarantee", "body": "<p>Try HerVoyage for 90 days. If you don't love it, return it for a full refund.</p>" } },
         { "type": "accordion_row", "settings": { "title": "The Science Behind It", "body": "<p>Tested across 47 fabric types and 21 major airlines. Wrinkle-free arrival, every flight.</p>" } },
