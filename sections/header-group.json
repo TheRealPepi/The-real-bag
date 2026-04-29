@@ -26,7 +26,7 @@
           "type": "nav_link",
           "settings": {
             "label": "THE STORY",
-            "link": "",
+            "link": "https://hervoyage.co/#sitg-story",
             "icon": "flask"
           }
         },
@@ -103,6 +103,8 @@
       "settings": {
         "logo": "shopify://shop_images/HERVOYAGE_LOGO.png",
         "logo_link": "",
+        "track_label": "Track your order",
+        "track_link": "",
         "drawer_cta_text": "",
         "drawer_cta_link": ""
       }
