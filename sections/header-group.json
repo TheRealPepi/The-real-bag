@@ -104,7 +104,7 @@
         "logo": "shopify://shop_images/HERVOYAGE_LOGO.png",
         "logo_link": "",
         "track_label": "Track your order",
-        "track_link": "",
+        "track_link": "https://hervoyage.co/apps/track123",
         "drawer_cta_text": "",
         "drawer_cta_link": ""
       }
