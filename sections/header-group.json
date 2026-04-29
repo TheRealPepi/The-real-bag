@@ -43,7 +43,7 @@
           "type": "nav_link",
           "settings": {
             "label": "FAQ",
-            "link": "",
+            "link": "https://hervoyage.co/#sitg-faq",
             "icon": "help"
           }
         },
