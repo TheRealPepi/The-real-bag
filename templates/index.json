@@ -85,28 +85,10 @@
             "title": "THE \"JUST CHECK A BAG\" LIE",
             "description": "After 11 years as a flight attendant, I had tried every bag on the market. None of them understood what a woman actually needs. So I stopped waiting for someone to design it and built it myself."
           }
-        },
-        "card2": {
-          "type": "card",
-          "settings": {
-            "icon": "🧩",
-            "title": "ONE BAG. EVERYTHING YOU NEED.",
-            "description": "Designer carry-ons look incredible but hold three outfits. Functional travel bags hold a week of clothes and look like a gym duffel. HerVoyage holds 7 days of outfits, 2 pairs of shoes, your full skincare and your laptop — in a bag beautiful enough to walk into the Ritz with."
-          }
-        },
-        "card3": {
-          "type": "card",
-          "settings": {
-            "icon": "🔍",
-            "title": "THE \"SLOW DOWN\" LIE",
-            "description": "Women are told to pack less. Check a bag. Keep it simple. Travel light.\nWe say: bring everything, pay nothing extra, arrive perfect.\nYour full wardrobe. Your complete skincare. Your shoes. Your whole self — carried in one stunning bag that fits overhead, costs nothing to board and arrives wrinkle-free."
-          }
         }
       },
       "block_order": [
-        "card1",
-        "card2",
-        "card3"
+        "card1"
       ],
       "settings": {
         "section_image": "shopify://shop_images/y_wbzf_QhW8285npB8Yz-_GUPPKHVQ.png",
@@ -178,7 +160,7 @@
         "ing4"
       ],
       "settings": {
-        "eyebrow": "What's inside",
+        "eyebrow": "BUILT DIFFERENTLY. ON PURPOSE",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
         "subtitle": "Every detail of HerVoyage was designed by a flight attendant who'd lived the problem on 2,000+ flights. We didn't compromise on a single one."
       }
