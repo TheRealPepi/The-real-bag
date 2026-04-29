@@ -164,73 +164,23 @@
     "sitg_science": {
       "type": "sitg-science",
       "blocks": {
-        "stat1": {
-          "type": "stat",
-          "settings": {
-            "number": "10,000+",
-            "label": "Trips logged by HerVoyage owners since launch"
-          }
-        },
-        "stat2": {
-          "type": "stat",
-          "settings": {
-            "number": "2,000+",
-            "label": "Flights from our founder's testing journal"
-          }
-        },
-        "stat3": {
-          "type": "stat",
-          "settings": {
-            "number": "47",
-            "label": "Fabric types tested for wrinkle-free performance"
-          }
-        },
-        "stat4": {
-          "type": "stat",
-          "settings": {
-            "number": "21",
-            "label": "Major airlines verified for carry-on compliance"
-          }
-        },
-        "trial1": {
-          "type": "nsaid_trial",
-          "settings": {
-            "ingredient": "HerVoyage vs. Premium Italian designer carry-on",
-            "vs": "5-day work trip · London → Milan → Paris",
-            "result": "Same wardrobe capacity at one-eighth the price. Zero excess baggage fees vs. €110 in overweight charges (independent test, 2024)"
-          }
-        },
         "trial2": {
           "type": "nsaid_trial",
           "settings": {
-            "ingredient": "HerVoyage vs. Standard rolling carry-on",
+            "ingredient": "HerVoyage vs. standard rolling carry-on",
             "vs": "7-night packed test · all garment categories",
             "result": "Held 38% more outfits with zero wrinkling vs. 24% wrinkle rate from the rolling case (pack-test panel, n=42)"
-          }
-        },
-        "trial3": {
-          "type": "nsaid_trial",
-          "settings": {
-            "ingredient": "HerVoyage vs. Generic garment bag",
-            "vs": "Ryanair priority cabin sizer test",
-            "result": "Passed every airline's smallest cabin sizer; the comparison bag failed Ryanair, easyJet and Wizz Air gate checks (sizer test, 2024)"
           }
         }
       },
       "block_order": [
-        "stat1",
-        "stat2",
-        "stat3",
-        "stat4",
-        "trial1",
-        "trial2",
-        "trial3"
+        "trial2"
       ],
       "settings": {
         "eyebrow": "How we tested",
-        "headline": "TESTED ON 2,000+ FLIGHTS.<br>NOT IN A FOCUS GROUP.",
-        "nsaid_headline": "STILL FITS WHEN IT MATTERS. FROM SHOE-INS TO STILETTOS.",
-        "nsaid_body": "We didn't ship until our prototype had survived three years of real cabin use. Three head-to-head comparisons against the bags women actually carry today:"
+        "headline": "HERVOYAGE VS.<br>THE BAG YOU OWN NOW.",
+        "nsaid_headline": "ONE HEAD-TO-HEAD. NO MARKETING SPIN.",
+        "nsaid_body": "We packed both bags identically for a 7-night trip — same outfits, same shoes, same skincare cube — and ran them through real cabin conditions. Here's what came out the other side:"
       }
     },
     "sitg_comparison": {
