@@ -186,6 +186,19 @@
     "ss_hotspots_hFPNhn": {
       "type": "ss-hotspots",
       "blocks": {
+        "hotspot_UAm6P8": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 93,
+            "vertical_position_mobile": 50,
+            "horizontal_position": 50,
+            "horizontal_position_mobile": 50,
+            "type": "icon",
+            "title": "Hotspot",
+            "content": "<p>Content</p>",
+            "video_url": ""
+          }
+        },
         "hotspot_kY7wwV": {
           "type": "hotspot",
           "settings": {
@@ -199,12 +212,12 @@
             "video_url": ""
           }
         },
-        "hotspot_irxafW": {
+        "hotspot_94dV3g": {
           "type": "hotspot",
           "settings": {
-            "vertical_position": 64,
-            "vertical_position_mobile": 28,
-            "horizontal_position": 64,
+            "vertical_position": 50,
+            "vertical_position_mobile": 50,
+            "horizontal_position": 52,
             "horizontal_position_mobile": 50,
             "type": "icon",
             "title": "Hotspot",
@@ -212,13 +225,13 @@
             "video_url": ""
           }
         },
-        "hotspot_94dV3g": {
+        "hotspot_irxafW": {
           "type": "hotspot",
           "settings": {
-            "vertical_position": 93,
-            "vertical_position_mobile": 50,
-            "horizontal_position": 50,
-            "horizontal_position_mobile": 50,
+            "vertical_position": 64,
+            "vertical_position_mobile": 21,
+            "horizontal_position": 64,
+            "horizontal_position_mobile": 38,
             "type": "icon",
             "title": "Hotspot",
             "content": "<p>Content</p>",
@@ -227,11 +240,12 @@
         }
       },
       "block_order": [
+        "hotspot_UAm6P8",
         "hotspot_kY7wwV",
-        "hotspot_irxafW",
-        "hotspot_94dV3g"
+        "hotspot_94dV3g",
+        "hotspot_irxafW"
       ],
-      "name": "SS - Hotspots",
+      "name": "Broche",
       "settings": {
         "heading": "",
         "heading_custom": false,
