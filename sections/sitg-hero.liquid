@@ -45,7 +45,11 @@
                 <div class="sitg-hero-proof-text"><strong>{{ section.settings.rating }}</strong> {{ section.settings.review_count }}</div>
               </div>
             {%- endif -%}
-            {%- if (section.settings.rating != blank or section.settings.review_count != blank) and (section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank) -%}
+            {%- assign sitg_has_rating = false -%}
+            {%- if section.settings.rating != blank or section.settings.review_count != blank -%}{%- assign sitg_has_rating = true -%}{%- endif -%}
+            {%- assign sitg_has_guarantee = false -%}
+            {%- if section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank -%}{%- assign sitg_has_guarantee = true -%}{%- endif -%}
+            {%- if sitg_has_rating and sitg_has_guarantee -%}
               <div class="divider"></div>
             {%- endif -%}
             {%- if section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank -%}
