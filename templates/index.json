@@ -600,6 +600,7 @@
         "b4",
         "b5"
       ],
+      "disabled": true,
       "settings": {}
     },
     "sitg_testimonials": {
