@@ -13,7 +13,6 @@
       "type": "sitg-hero",
       "settings": {
         "product_image": "shopify://shop_images/vyD4ahULKjh_2tbRdIAqk_OxtqWfwq.png",
-        "badge_text": "",
         "headline_line1": "YOUR BAG SHOULD BE",
         "headline_line2": "AS BEAUTIFUL",
         "headline_line3": "AS YOUR JOURNEY",
@@ -29,7 +28,11 @@
         "float_card_1_unit": "DAYS",
         "float_card_2_label": "Zones",
         "float_card_2_value": "5",
-        "float_card_2_unit": "POCKETS"
+        "float_card_2_unit": "POCKETS",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 80,
+        "padding_bottom_mobile": 32
       }
     },
     "sitg_marquee": {
@@ -94,7 +97,11 @@
         "section_image": "shopify://shop_images/y_wbzf_QhW8285npB8Yz-_GUPPKHVQ.png",
         "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
         "headline": "Beautiful or practical Not anymore...",
-        "body": "\"No bag has ever been built for a woman who refuses to compromise. So I built one.\""
+        "body": "\"No bag has ever been built for a woman who refuses to compromise. So I built one.\"",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "sitg_ingredients": {
@@ -178,7 +185,11 @@
         "story": "<p>11 years as a flight attendant. 2,000 flights. 47 countries.</p><p>I never owned a bag I loved. Designer ones were beautiful but useless. Functional ones were ugly. Every bag made me choose.</p><p>So I built one. 41 prototypes. One bag that's both.</p><p>10,000 women have it now. <em>\"I will never check a bag again.\"</em></p>",
         "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
         "pullquote_attribution": "Amanda T. Scanlan, CEO",
-        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
+        "signature": "— Still travelling. Still beautiful. Still HerVoyage.",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "ss_feature_43_epnHKE": {
@@ -776,7 +787,11 @@
       ],
       "settings": {
         "eyebrow": "Questions",
-        "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE."
+        "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE.",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "sitg_final_cta": {
