@@ -102,9 +102,7 @@
       ],
       "settings": {
         "logo": "shopify://shop_images/HERVOYAGE_LOGO.png",
-        "account_label": "Account",
-        "drawer_cta_text": "Start My Ritual →",
-        "drawer_cta_link": ""
+        "account_label": "Track my order"
       }
     }
   },
