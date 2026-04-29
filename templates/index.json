@@ -31,7 +31,7 @@
         "float_card_2_unit": "POCKETS",
         "padding_top": 0,
         "padding_bottom": 0,
-        "padding_top_mobile": 80,
+        "padding_top_mobile": 32,
         "padding_bottom_mobile": 32
       }
     },
@@ -80,24 +80,11 @@
     },
     "sitg_reframe": {
       "type": "sitg-reframe",
-      "blocks": {
-        "card1": {
-          "type": "card",
-          "settings": {
-            "icon": "🎯",
-            "title": "THE \"JUST CHECK A BAG\" LIE",
-            "description": "After 11 years as a flight attendant, I had tried every bag on the market. None of them understood what a woman actually needs. So I stopped waiting for someone to design it and built it myself."
-          }
-        }
-      },
-      "block_order": [
-        "card1"
-      ],
       "settings": {
         "section_image": "shopify://shop_images/y_wbzf_QhW8285npB8Yz-_GUPPKHVQ.png",
         "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
         "headline": "Beautiful or practical Not anymore...",
-        "body": "\"No bag has ever been built for a woman who refuses to compromise. So I built one.\"",
+        "body": "After 11 years as a flight attendant, I had tried every bag on the market. None of them understood what a woman actually needs. So I stopped waiting for someone to design it and built it myself.",
         "padding_top": 120,
         "padding_bottom": 120,
         "padding_top_mobile": 60,
@@ -600,7 +587,6 @@
         "b4",
         "b5"
       ],
-      "disabled": true,
       "settings": {}
     },
     "sitg_testimonials": {
