@@ -19,9 +19,13 @@
           "settings": {
             "heading": "The Bag",
             "link_1_label": "What's Inside",
+            "link_1_url": "/#features",
             "link_2_label": "How We Tested",
+            "link_2_url": "/#science",
             "link_3_label": "Compare",
-            "link_4_label": "FAQ"
+            "link_3_url": "/#compare",
+            "link_4_label": "FAQ",
+            "link_4_url": "/#faq"
           }
         },
         "col2": {
@@ -29,19 +33,20 @@
           "settings": {
             "heading": "Company",
             "link_1_label": "Our Story",
-            "link_2_label": "Press",
-            "link_3_label": "Contact",
-            "link_4_label": "Careers"
+            "link_1_url": "/#story",
+            "link_2_label": "",
+            "link_3_label": "",
+            "link_4_label": ""
           }
         },
         "col3": {
           "type": "link_column",
           "settings": {
             "heading": "Support",
-            "link_1_label": "Shipping & Returns",
-            "link_2_label": "Lifetime Warranty",
-            "link_3_label": "Privacy Policy",
-            "link_4_label": "Terms of Service"
+            "link_1_label": "",
+            "link_2_label": "",
+            "link_3_label": "",
+            "link_4_label": ""
           }
         }
       },

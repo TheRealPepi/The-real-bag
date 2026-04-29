@@ -190,23 +190,53 @@
     </div>
 
     <!-- Link columns -->
+    {%- comment -%}
+      Footer links only render when BOTH label and URL are configured.
+      For internal /pages/<handle> URLs we additionally verify the page
+      exists in the store — prevents 404s from going live with the theme.
+      TODO: when links are re-added, ensure each handle exists in
+      Shopify Admin → Online Store → Pages before configuring its URL.
+    {%- endcomment -%}
     {%- for block in section.blocks -%}
       {%- if block.type == 'link_column' -%}
-        <div class="sitg-footer-col" {{ block.shopify_attributes }}>
-          <h4>{{ block.settings.heading }}</h4>
-          {%- if block.settings.menu != blank -%}
-            {%- for link in block.settings.menu.links -%}
-              <a href="{{ link.url }}">{{ link.title }}</a>
-            {%- endfor -%}
-          {%- endif -%}
-          {%- for i in (1..6) -%}
-            {%- assign link_label = 'link_' | append: i | append: '_label' -%}
-            {%- assign link_url = 'link_' | append: i | append: '_url' -%}
-            {%- if block.settings[link_label] != blank -%}
-              <a href="{{ block.settings[link_url] }}">{{ block.settings[link_label] }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
+        {%- liquid
+          assign rendered_links = ''
+          if block.settings.menu != blank
+            for link in block.settings.menu.links
+              capture rendered_links
+                echo rendered_links
+                echo '<a href="' | append: link.url | append: '">' | append: link.title | append: '</a>'
+              endcapture
+            endfor
+          endif
+          for i in (1..6)
+            assign link_label_key = 'link_' | append: i | append: '_label'
+            assign link_url_key = 'link_' | append: i | append: '_url'
+            assign label_value = block.settings[link_label_key]
+            assign url_value = block.settings[link_url_key]
+            if label_value != blank and url_value != blank
+              assign skip_link = false
+              if url_value contains '/pages/'
+                assign handle_part = url_value | split: '/pages/' | last | split: '?' | first | split: '#' | first
+                if pages[handle_part] == empty
+                  assign skip_link = true
+                endif
+              endif
+              unless skip_link
+                capture rendered_links
+                  echo rendered_links
+                  echo '<a href="' | append: url_value | append: '">' | append: label_value | append: '</a>'
+                endcapture
+              endunless
+            endif
+          endfor
+        -%}
+        {%- if rendered_links != blank -%}
+          <div class="sitg-footer-col" {{ block.shopify_attributes }}>
+            <h4>{{ block.settings.heading }}</h4>
+            {{ rendered_links }}
+          </div>
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </div>
