@@ -31,35 +31,27 @@
   "name": "SITG Ingredients",
   "settings": [
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What's inside" },
-    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "FOUR MECHANISMS.<br>FOUR BRANDED INGREDIENTS.<br>ZERO GUESSWORK." },
-    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "No supplement on the market combines all four of these clinically studied ingredients. We researched 40+ brands and 60+ SKUs. The closest competitors cover two or three at best." }
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK." },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Every detail of HerVoyage was designed by a flight attendant who'd lived the problem on 2,000+ flights." }
   ],
   "blocks": [
     {
       "type": "ingredient",
-      "name": "Ingredient card",
+      "name": "Feature card",
       "settings": [
-        { "type": "text", "id": "branded_name", "label": "Branded form name", "default": "Meriva® by Indena" },
-        { "type": "text", "id": "ingredient_name", "label": "Ingredient name", "default": "CURCUMIN PHYTOSOME" },
-        { "type": "text", "id": "dose", "label": "Dose", "default": "1,000 mg/day delivering ~200 mg curcuminoids" },
-        { "type": "text", "id": "mechanism_icon", "label": "Mechanism icon", "default": "⚡" },
-        { "type": "text", "id": "mechanism_name", "label": "Mechanism name", "default": "COX-2 & NF-κB Inhibition" },
-        { "type": "textarea", "id": "description", "label": "Description", "default": "The deepest evidence base of any joint supplement ingredient. An umbrella meta-analysis of 11 prior meta-analyses confirmed significant reductions in pain, stiffness, and function. Proven comparable to prescription NSAIDs — with zero GI side effects." },
-        { "type": "text", "id": "stat_number", "label": "Stat number", "default": "50%+" },
-        { "type": "textarea", "id": "stat_label", "label": "Stat label", "default": "WOMAC score reduction in 8-month clinical study. The gold standard used by Thorne, Jarrow, and Momentous." }
+        { "type": "text", "id": "branded_name", "label": "Feature subhead", "default": "Saffiano-grade vegan leather" },
+        { "type": "text", "id": "ingredient_name", "label": "Feature name", "default": "EXTERIOR FINISH" },
+        { "type": "text", "id": "dose", "label": "Spec line", "default": "Premium-grade · scratch & water resistant" },
+        { "type": "text", "id": "mechanism_icon", "label": "Icon", "default": "✨" },
+        { "type": "text", "id": "mechanism_name", "label": "Benefit", "default": "Looks new every flight" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "The same Saffiano-style finish used by Italian heritage houses — without the four-figure price tag, and without the leather. Resists scratches, repels water, wipes clean with a damp cloth." },
+        { "type": "text", "id": "stat_number", "label": "Stat number", "default": "0" },
+        { "type": "textarea", "id": "stat_label", "label": "Stat label", "default": "scuffs after our 50-flight stress test." }
       ]
     }
   ],
   "presets": [
-    {
-      "name": "SITG Ingredients",
-      "blocks": [
-        { "type": "ingredient", "settings": { "branded_name": "Meriva® by Indena", "ingredient_name": "CURCUMIN PHYTOSOME", "dose": "1,000 mg/day delivering ~200 mg curcuminoids", "mechanism_icon": "⚡", "mechanism_name": "COX-2 & NF-κB Inhibition", "description": "The deepest evidence base of any joint supplement ingredient. An umbrella meta-analysis of 11 prior meta-analyses confirmed significant reductions in pain, stiffness, and function. Proven comparable to prescription NSAIDs — with zero GI side effects.", "stat_number": "50%+", "stat_label": "WOMAC score reduction in 8-month clinical study. The gold standard used by Thorne, Jarrow, and Momentous." } },
-        { "type": "ingredient", "settings": { "branded_name": "AprèsFlex® (20% AKBA)", "ingredient_name": "BOSWELLIA SERRATA", "dose": "100 mg/day — the lowest effective dose of any ingredient", "mechanism_icon": "🔥", "mechanism_name": "5-Lipoxygenase Inhibition", "description": "Covers the second major inflammatory cascade that curcumin doesn't touch. Benefits appear as early as day 5 — the fastest onset of any botanical studied. Effects persisted a full month after stopping, suggesting possible disease-modifying action.", "stat_number": "61.7%", "stat_label": "WOMAC pain reduction. Safest high-efficacy option for adults taking blood thinners, statins, or diabetes meds." } },
-        { "type": "ingredient", "settings": { "branded_name": "UC-II® by Lonza", "ingredient_name": "UNDENATURED TYPE II COLLAGEN", "dose": "40 mg/day — only 40 mg needed", "mechanism_icon": "🛡️", "mechanism_name": "Oral Immune Tolerance", "description": "Outperformed glucosamine + chondroitin in a head-to-head 191-patient RCT. Works through a unique mechanism: tiny doses of native collagen reprogram T-cells to stop immune-mediated cartilage destruction. 40 mg adds virtually no capsule burden.", "stat_number": "41%", "stat_label": "Pain reduction in the landmark Lugo 2016 trial — outperforming glucosamine + chondroitin on every measure." } },
-        { "type": "ingredient", "settings": { "branded_name": "Levagen+® by Gencor", "ingredient_name": "PEA — PALMITOYLETHANOLAMIDE", "dose": "350 mg micronized with LipiSperse® technology", "mechanism_icon": "🧠", "mechanism_name": "Endocannabinoid Modulation", "description": "The most compelling emerging ingredient in joint health. A 2025 meta-analysis found significant pain reduction at 6, 8, and 24 weeks. Works through PPAR-α receptor activation — a mechanism entirely distinct from every other ingredient in this formula.", "stat_number": "1.75×", "stat_label": "Greater absorption than standard PEA via cold-water dispersibility technology. No major brand combines PEA with joint ingredients — until now." } }
-      ]
-    }
+    { "name": "SITG Ingredients" }
   ]
 }
 {% endschema %}

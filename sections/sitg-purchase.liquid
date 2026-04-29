@@ -11,7 +11,7 @@
           {%- if section.settings.product_image != blank -%}
             <img
               src="{{ section.settings.product_image | image_url: width: 800 }}"
-              alt="{{ section.settings.product_image.alt | default: 'Still In The Game — Joint Performance Fuel' }}"
+              alt="{{ section.settings.product_image.alt | default: 'HerVoyage — carry-on garment bag' }}"
               loading="lazy"
             >
           {%- elsif product != blank and product.featured_image != blank -%}
@@ -117,19 +117,19 @@
       "type": "text",
       "id": "product_display_name",
       "label": "Product display name",
-      "default": "STILL IN THE GAME"
+      "default": "HERVOYAGE"
     },
     {
       "type": "text",
       "id": "product_subtitle",
       "label": "Product subtitle",
-      "default": "Joint Performance Fuel · 90 capsules · 30 Day Supply"
+      "default": "Foldable Garment Bag · Cream + Cognac · Carry-On"
     },
     {
       "type": "text",
       "id": "eyebrow",
       "label": "Card eyebrow",
-      "default": "Your daily ritual"
+      "default": "The HerVoyage bag"
     },
     {
       "type": "textarea",
@@ -141,7 +141,7 @@
       "type": "textarea",
       "id": "body",
       "label": "Card body text",
-      "default": "Two capsules every morning. That's it. Your daily reminder that you're still in the game — and you're not going anywhere."
+      "default": "Order today. Pack for your next trip in twelve minutes. Wear what you actually love — and arrive looking like you didn't even fly."
     },
     {
       "type": "text",
@@ -177,7 +177,7 @@
       "type": "text",
       "id": "button_text",
       "label": "Button text",
-      "default": "Start My Ritual"
+      "default": "Get HerVoyage"
     },
     {
       "type": "text",
@@ -198,7 +198,7 @@
       "type": "include",
       "name": "Included (right card)",
       "settings": [
-        { "type": "text", "id": "text", "label": "Included text", "default": "90 capsules (30-day supply)" }
+        { "type": "text", "id": "text", "label": "Included text", "default": "1 × HerVoyage garment bag" }
       ]
     }
   ],
@@ -208,11 +208,11 @@
       "blocks": [
         { "type": "benefit", "settings": { "text": "All four branded ingredients at clinically studied doses" } },
         { "type": "benefit", "settings": { "text": "Four distinct biological mechanisms in one formula" } },
-        { "type": "benefit", "settings": { "text": "Benefits as early as day 5 (Boswellia onset)" } },
+        { "type": "benefit", "settings": { "text": "Wrinkle-free arrival — no ironing, no steamer needed" } },
         { "type": "benefit", "settings": { "text": "Minimal drug interaction risk for adults 45+" } },
         { "type": "benefit", "settings": { "text": "90-day money-back guarantee — no questions asked" } },
         { "type": "benefit", "settings": { "text": "Free shipping on every order" } },
-        { "type": "include", "settings": { "text": "90 capsules (30-day supply)" } },
+        { "type": "include", "settings": { "text": "1 × HerVoyage garment bag" } },
         { "type": "include", "settings": { "text": "Free shipping, always" } },
         { "type": "include", "settings": { "text": "Cancel or pause anytime" } },
         { "type": "include", "settings": { "text": "90-day money-back guarantee" } }

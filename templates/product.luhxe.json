@@ -231,7 +231,7 @@
         "ms2": { "type": "milestone", "settings": { "when": "PACKING NIGHT", "what": "<strong>The 12-minute pack.</strong> Hang your outfits, fold once, slide in shoes, zip the skincare cube. Average pack time across our beta panel: 12 minutes for a 7-day trip. The longest? 19. Even she made the flight." } },
         "ms3": { "type": "milestone", "settings": { "when": "AT THE AIRPORT", "what": "<strong>Walk past the bag drop.</strong> No queue, no checked-bag fee, no hovering by carousel 9. Glide through priority security with one stunning bag overhead. Boarding group A every time." } },
         "ms4": { "type": "milestone", "settings": { "when": "AT YOUR DESTINATION", "what": "<strong>Unfold, hang, and you're done.</strong> Outfits arrive wrinkle-free thanks to the internal hanger vault. Shoes stayed in their sealed pocket. Skincare didn't leak. You're at dinner in twenty minutes." } },
-        "ms5": { "type": "milestone", "settings": { "when": "TRIP AFTER TRIP", "what": "<strong>The travel ritual locks in.</strong> By trip three, you'll have your favourite layout. By trip ten, you'll have stopped checking bags forever. The lifetime warranty means HerVoyage outlasts every other case in your wardrobe." } }
+        "ms5": { "type": "milestone", "settings": { "when": "TRIP AFTER TRIP", "what": "<strong>The travel routine locks in.</strong> By trip three, you'll have your favourite layout. By trip ten, you'll have stopped checking bags forever. The lifetime warranty means HerVoyage outlasts every other case in your wardrobe." } }
       },
       "block_order": ["ms1", "ms2", "ms3", "ms4", "ms5"],
       "settings": {

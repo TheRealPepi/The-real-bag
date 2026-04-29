@@ -46,43 +46,32 @@
   "name": "SITG Science",
   "settings": [
     { "type": "image_picker", "id": "section_image", "label": "Lifestyle image (displays beside headline)" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The evidence" },
-    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "BACKED BY 50+ CLINICAL TRIALS.<br>NOT BACKED BY MARKETING BUDGETS." },
-    { "type": "text", "id": "nsaid_headline", "label": "NSAID section headline", "default": "AS EFFECTIVE AS NSAIDS. WITHOUT THE GI SIDE EFFECTS." },
-    { "type": "textarea", "id": "nsaid_body", "label": "NSAID section body", "default": "Multiple head-to-head clinical trials have shown supplement ingredients performing comparably to prescription-strength anti-inflammatories — with significantly fewer side effects. Here are three from our ingredient stack:" }
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "How we tested" },
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "HERVOYAGE VS.<br>THE BAG YOU OWN NOW." },
+    { "type": "text", "id": "nsaid_headline", "label": "Comparison headline", "default": "ONE HEAD-TO-HEAD. NO MARKETING SPIN." },
+    { "type": "textarea", "id": "nsaid_body", "label": "Comparison intro", "default": "We packed both bags identically for a 7-night trip — same outfits, same shoes, same skincare cube — and ran them through real cabin conditions. Here's what came out the other side:" }
   ],
   "blocks": [
     {
       "type": "stat",
-      "name": "Evidence stat",
+      "name": "Stat",
       "settings": [
-        { "type": "text", "id": "number", "label": "Number", "default": "50+" },
-        { "type": "text", "id": "label", "label": "Label", "default": "Randomized controlled trials supporting these ingredients" }
+        { "type": "text", "id": "number", "label": "Number", "default": "21" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Major airlines verified for carry-on compliance" }
       ]
     },
     {
       "type": "nsaid_trial",
-      "name": "NSAID comparison",
+      "name": "Head-to-head comparison",
       "settings": [
-        { "type": "text", "id": "ingredient", "label": "Ingredient", "default": "Curcumin (BCM-95, 1,500mg)" },
-        { "type": "text", "id": "vs", "label": "Vs. comparator", "default": "vs. Diclofenac 100mg/day" },
-        { "type": "textarea", "id": "result", "label": "Result", "default": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)" }
+        { "type": "text", "id": "ingredient", "label": "What's being compared", "default": "HerVoyage vs. standard rolling carry-on" },
+        { "type": "text", "id": "vs", "label": "Test conditions", "default": "7-night packed test · all garment categories" },
+        { "type": "textarea", "id": "result", "label": "Result", "default": "Held 38% more outfits with zero wrinkling vs. 24% wrinkle rate from the rolling case (pack-test panel, n=42)" }
       ]
     }
   ],
   "presets": [
-    {
-      "name": "SITG Science",
-      "blocks": [
-        { "type": "stat", "settings": { "number": "50+", "label": "Randomized controlled trials supporting these ingredients" } },
-        { "type": "stat", "settings": { "number": "15+", "label": "Meta-analyses — the gold standard of clinical evidence" } },
-        { "type": "stat", "settings": { "number": "4", "label": "Distinct biological mechanisms in one formula" } },
-        { "type": "stat", "settings": { "number": "6", "label": "Ingredients in this category proven comparable to NSAIDs" } },
-        { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (BCM-95, 1,500mg)", "vs": "vs. Diclofenac 100mg/day", "result": "Non-inferior with zero GI side effects vs. the NSAID group (Shep 2019, n=139)" } },
-        { "type": "nsaid_trial", "settings": { "ingredient": "Curcumin (C. domestica, 1,500mg)", "vs": "vs. Ibuprofen 1,200mg/day", "result": "Non-inferior; fewer GI complaints at p=0.046 (Kuptniratsaikul 2014, n=367)" } },
-        { "type": "nsaid_trial", "settings": { "ingredient": "Boswellia 1,000mg", "vs": "vs. Valdecoxib 10mg/day", "result": "Non-inferior; benefit persisted 1 month after stopping therapy (Sontakke 2007, n=66)" } }
-      ]
-    }
+    { "name": "SITG Science" }
   ]
 }
 {% endschema %}

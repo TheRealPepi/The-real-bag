@@ -17,10 +17,10 @@
   "name": "SITG Final CTA",
   "settings": [
     { "type": "image_picker", "id": "section_image", "label": "Product/lifestyle image (displays above CTA button)" },
-    { "type": "text", "id": "handwritten", "label": "Handwritten text", "default": "Motion is lotion" },
-    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "YOU'RE STILL IN THE GAME.<br>WE'RE HERE TO <span style=\"color:var(--sitg-amber)\">KEEP YOU THERE.</span>" },
-    { "type": "textarea", "id": "body", "label": "Body", "default": "Your body was built to move. To hike, to play, to lift, to live. Three capsules a day. Four mechanisms working together. One daily reminder of who you've always been." },
-    { "type": "text", "id": "cta_text", "label": "CTA text", "default": "Start My Ritual" },
+    { "type": "text", "id": "handwritten", "label": "Handwritten text", "default": "" },
+    { "type": "textarea", "id": "headline", "label": "Headline (HTML allowed)", "default": "Your journey deserves a beautiful start." },
+    { "type": "textarea", "id": "body", "label": "Body", "default": "" },
+    { "type": "text", "id": "cta_text", "label": "CTA text", "default": "Get HerVoyage" },
     { "type": "url", "id": "cta_link", "label": "CTA link" }
   ],
   "blocks": [
@@ -28,18 +28,15 @@
       "type": "proof_point",
       "name": "Proof point",
       "settings": [
-        { "type": "text", "id": "number", "label": "Number", "default": "50+" },
-        { "type": "text", "id": "label", "label": "Label", "default": "Clinical trials" }
+        { "type": "text", "id": "number", "label": "Number", "default": "21" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Airlines verified" }
       ]
     }
   ],
   "presets": [
     {
       "name": "SITG Final CTA",
-      "blocks": [
-        { "type": "proof_point", "settings": { "number": "50+", "label": "Clinical trials" } },
-        { "type": "proof_point", "settings": { "number": "90 Days", "label": "Money-back guarantee" } }
-      ]
+      "blocks": []
     }
   ]
 }
