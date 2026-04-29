@@ -31,7 +31,7 @@
         "float_card_2_unit": "POCKETS",
         "padding_top": 0,
         "padding_bottom": 0,
-        "padding_top_mobile": 80,
+        "padding_top_mobile": 76,
         "padding_bottom_mobile": 32
       }
     },
@@ -88,7 +88,7 @@
         "padding_top": 120,
         "padding_bottom": 120,
         "padding_top_mobile": 60,
-        "padding_bottom_mobile": 60
+        "padding_bottom_mobile": 36
       }
     },
     "sitg_ingredients": {
@@ -175,7 +175,7 @@
         "signature": "— Still travelling. Still beautiful. Still HerVoyage.",
         "padding_top": 120,
         "padding_bottom": 120,
-        "padding_top_mobile": 60,
+        "padding_top_mobile": 40,
         "padding_bottom_mobile": 60
       }
     },
