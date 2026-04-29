@@ -12,27 +12,6 @@
     "main": {
       "type": "main-product-luhxe",
       "blocks": {
-        "tb1": {
-          "type": "trust_badge",
-          "settings": {
-            "icon": "✈️",
-            "text": "Carry-on approved on 100+ Airlines"
-          }
-        },
-        "tb2": {
-          "type": "trust_badge",
-          "settings": {
-            "icon": "🎁",
-            "text": "FREE GIFTS WORTH $35"
-          }
-        },
-        "tb3": {
-          "type": "trust_badge",
-          "settings": {
-            "icon": "🏆",
-            "text": "2026 TOP-RATED TRAVEL BAG"
-          }
-        },
         "reviews1": {
           "type": "reviews_summary",
           "settings": {
@@ -89,9 +68,6 @@
         }
       },
       "block_order": [
-        "tb1",
-        "tb2",
-        "tb3",
         "reviews1",
         "guarantee1",
         "faq1",
