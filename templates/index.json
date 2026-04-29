@@ -12,7 +12,7 @@
     "sitg_hero": {
       "type": "sitg-hero",
       "settings": {
-        "product_image": "shopify://shop_images/CREME1.png",
+        "product_image": "shopify://shop_images/vyD4ahULKjh_2tbRdIAqk_OxtqWfwq.png",
         "badge_text": "10,000+ Women already travelling in style",
         "headline_line1": "YOUR BAG SHOULD BE",
         "headline_line2": "AS BEAUTIFUL",
@@ -167,6 +167,17 @@
         "eyebrow": "BUILT DIFFERENTLY. ON PURPOSE",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
         "subtitle": "Every detail of HerVoyage was designed by a flight attendant who'd lived the problem on 2,000+ flights. We didn't compromise on a single one."
+      }
+    },
+    "sitg_founder": {
+      "type": "sitg-founder",
+      "settings": {
+        "eyebrow": "Why I built this",
+        "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
+        "story": "<p>11 years as a flight attendant. 2,000 flights. 47 countries.</p><p>I never owned a bag I loved. Designer ones were beautiful but useless. Functional ones were ugly. Every bag made me choose.</p><p>So I built one. 41 prototypes. One bag that's both.</p><p>10,000 women have it now. <em>\"I will never check a bag again.\"</em></p>",
+        "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
+        "pullquote_attribution": "— Founder, HerVoyage",
+        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
       }
     },
     "ss_feature_43_epnHKE": {
@@ -389,17 +400,6 @@
         "headline": "TESTED ON 2,000+ FLIGHTS.<br>NOT IN A FOCUS GROUP.",
         "nsaid_headline": "",
         "nsaid_body": "We didn't ship until our prototype had survived three years of real cabin use. Three head-to-head comparisons against the bags women actually carry today:"
-      }
-    },
-    "sitg_founder": {
-      "type": "sitg-founder",
-      "settings": {
-        "eyebrow": "Why I built this",
-        "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
-        "story": "<p>11 years as a flight attendant. 2,000 flights. 47 countries.</p><p>I never owned a bag I loved. Designer ones were beautiful but useless. Functional ones were ugly. Every bag made me choose.</p><p>So I built one. 41 prototypes. One bag that's both.</p><p>10,000 women have it now. <em>\"I will never check a bag again.\"</em></p>",
-        "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
-        "pullquote_attribution": "— Founder, HerVoyage",
-        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
       }
     },
     "sitg_comparison": {
