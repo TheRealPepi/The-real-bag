@@ -1,29 +1,11 @@
 <div class="sitg">
 <section class="sitg-final-cta">
   <div class="sitg-container reveal">
-    <div class="fc-handwritten">{{ section.settings.handwritten }}</div>
     <h2>{{ section.settings.headline }}</h2>
-    <p>{{ section.settings.body }}</p>
-    {%- if section.settings.section_image != blank -%}
-      <img
-        class="sitg-final-cta-img"
-        src="{{ section.settings.section_image | image_url: width: 800 }}"
-        alt="{{ section.settings.section_image.alt | default: 'Still In The Game' }}"
-        loading="lazy"
-      >
-    {%- endif -%}
-    <a href="{{ section.settings.cta_link | default: '#sitg-buy' }}" class="btn-primary" style="font-size:17px;padding:18px 42px;">
+    <a href="{{ section.settings.cta_link | default: '#shop' }}" class="btn-primary" style="font-size:17px;padding:18px 42px;">
       {{ section.settings.cta_text }}
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <div class="sitg-final-proof">
-      {%- for block in section.blocks -%}
-        <div class="sitg-final-proof-item" {{ block.shopify_attributes }}>
-          <div class="fp-num">{{ block.settings.number }}</div>
-          <div class="fp-label">{{ block.settings.label }}</div>
-        </div>
-      {%- endfor -%}
-    </div>
   </div>
 </section>
 </div>

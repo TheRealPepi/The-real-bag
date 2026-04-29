@@ -527,30 +527,12 @@
     },
     "sitg_final_cta": {
       "type": "sitg-final-cta",
-      "blocks": {
-        "pp1": {
-          "type": "proof_point",
-          "settings": {
-            "number": "21",
-            "label": "Airlines verified"
-          }
-        },
-        "pp2": {
-          "type": "proof_point",
-          "settings": {
-            "number": "90 Days",
-            "label": "Money-back guarantee"
-          }
-        }
-      },
-      "block_order": [
-        "pp1",
-        "pp2"
-      ],
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "handwritten": "Travel beautifully",
-        "headline": "YOUR JOURNEY IS WAITING.<br>YOU MIGHT AS WELL <span style=\"color:var(--sitg-amber)\">PACK BEAUTIFUL.</span>",
-        "body": "Order HerVoyage today. Pack in twelve minutes. Walk past the bag drop. Land looking like you didn't even fly — and repeat for the rest of your travelling life.",
+        "handwritten": "",
+        "headline": "Your journey deserves a beautiful start.",
+        "body": "",
         "cta_text": "Get HerVoyage",
         "cta_link": ""
       }
