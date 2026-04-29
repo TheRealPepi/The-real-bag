@@ -103,7 +103,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "enable_sticky_info": true,
-        "thumbnails_position": "left",
+        "thumbnails_position": "bottom",
         "gallery_max_width": 640,
         "enable_variant_switching": true,
         "subtitle": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>",
@@ -226,7 +226,11 @@
       "settings": {
         "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
         "headline": "Beautiful or practical Not anymore...",
-        "body": "You refuse to show up looking like you packed in the dark. The problem isn't you — it's that no bag has ever been designed for a woman who wants it all. No more baggage fees. No more wrinkled outfits. No more choosing between style and space."
+        "body": "You refuse to show up looking like you packed in the dark. The problem isn't you — it's that no bag has ever been designed for a woman who wants it all. No more baggage fees. No more wrinkled outfits. No more choosing between style and space.",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "sitg_ingredients": {
@@ -556,7 +560,11 @@
         "story": "<p>I spent 11 years as a flight attendant. Two thousand flights. Forty-seven countries. I lived out of carry-ons before any influencer made it a lifestyle.</p><p>And in all that time, I never owned a single bag I actually loved. The premium designer cases were beautiful but useless — no garment bay, no shoe compartment, scuffed in a month. The functional travel bags were ugly. <strong>Every bag I tried made me choose: beautiful, or practical. Never both.</strong></p><p>So I built one. I started by drafting the bag I would have wanted on my first 5am London-Milan turnaround. Then I tested 41 prototypes against the actual chaos of cabin life — gate sizers, overhead lockers, the back of a Heathrow taxi at 11pm.</p><p><strong>HerVoyage is what I would have killed to own at 26.</strong> It's the bag I never had — the one that makes you look effortless when you're anything but.</p><p>Now ten thousand women have it. They send me photos from Tokyo, from São Paulo, from a hotel breakfast in Marrakech, hair perfect, dress wrinkle-free. They write things like: <em>\"I will never check a bag again.\"</em></p><p>Neither will I.</p>",
         "pullquote": "I wasn't waiting for someone else to design it. So I built it myself.",
         "pullquote_attribution": "— Founder, HerVoyage",
-        "signature": "— Still travelling. Still beautiful. Still HerVoyage."
+        "signature": "— Still travelling. Still beautiful. Still HerVoyage.",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "sitg_testimonials": {
@@ -650,7 +658,11 @@
       ],
       "settings": {
         "eyebrow": "Questions",
-        "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE."
+        "headline": "STRAIGHT ANSWERS.<br>NO COMPROMISE.",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 60
       }
     },
     "17774261277925bf3f": {
