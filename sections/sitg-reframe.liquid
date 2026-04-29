@@ -1,3 +1,16 @@
+<style>
+  #shopify-section-{{ section.id }} .sitg-reframe {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .sitg-reframe {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+</style>
+
 <div class="sitg">
 <section class="sitg-reframe">
   <div class="sitg-container">
@@ -62,7 +75,12 @@
       "id": "body",
       "label": "Body text (HTML allowed)",
       "default": "You feel 45 inside. You hike, you play, you lift, you move. <strong>That's who you are.</strong> Joint discomfort doesn't change that — it just means your body needs better fuel to keep up with who you've always been. The problem isn't you. It's that no supplement has ever combined the science that actually works."
-    }
+    },
+    { "type": "header", "content": "Section padding" },
+    { "type": "range", "id": "padding_top",          "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top padding (desktop)",    "default": 120 },
+    { "type": "range", "id": "padding_bottom",       "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom padding (desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile",   "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding (mobile)",     "default": 60 },
+    { "type": "range", "id": "padding_bottom_mobile","min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding (mobile)",  "default": 60 }
   ],
   "blocks": [
     {

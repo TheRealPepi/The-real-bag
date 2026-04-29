@@ -1,3 +1,16 @@
+<style>
+  #shopify-section-{{ section.id }} .sitg-founder {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .sitg-founder {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+</style>
+
 <div class="sitg">
 <section class="sitg-founder" id="sitg-story">
   <div class="sitg-container">
@@ -48,7 +61,12 @@
     },
     { "type": "text", "id": "pullquote", "label": "Pull quote", "default": "I was told to slow down. I decided to find better fuel instead." },
     { "type": "text", "id": "pullquote_attribution", "label": "Pull quote attribution", "default": "— Founder, Still In The Game" },
-    { "type": "text", "id": "signature", "label": "Signature line", "default": "— Still moving. Still playing. Still in the game." }
+    { "type": "text", "id": "signature", "label": "Signature line", "default": "— Still moving. Still playing. Still in the game." },
+    { "type": "header", "content": "Section padding" },
+    { "type": "range", "id": "padding_top",          "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top padding (desktop)",    "default": 120 },
+    { "type": "range", "id": "padding_bottom",       "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom padding (desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile",   "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Top padding (mobile)",     "default": 60 },
+    { "type": "range", "id": "padding_bottom_mobile","min": 0, "max": 120, "step": 4, "unit": "px", "label": "Bottom padding (mobile)",  "default": 60 }
   ],
   "presets": [{ "name": "SITG Founder Story" }]
 }
