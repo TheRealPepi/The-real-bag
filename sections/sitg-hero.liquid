@@ -22,12 +22,6 @@
   <div class="sitg-container-wide">
     <div class="sitg-hero-inner">
       <div class="sitg-hero-content">
-        {%- if section.settings.badge_text != blank -%}
-          <div class="sitg-hero-badge">
-            <span class="dot"></span>
-            {{ section.settings.badge_text }}
-          </div>
-        {%- endif -%}
         <h1>
           {{ section.settings.headline_line1 }}<br>
           <span class="highlight">{{ section.settings.headline_line2 }}</span><br>
@@ -107,12 +101,6 @@
       "type": "image_picker",
       "id": "product_image",
       "label": "Product image"
-    },
-    {
-      "type": "text",
-      "id": "badge_text",
-      "label": "Badge text",
-      "default": "The first 4-mechanism joint formula"
     },
     {
       "type": "text",
