@@ -383,6 +383,7 @@
         "stat4",
         "trial3"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "How we tested",
         "headline": "TESTED ON 2,000+ FLIGHTS.<br>NOT IN A FOCUS GROUP.",
