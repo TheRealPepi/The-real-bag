@@ -546,22 +546,6 @@
     "sitg_trust": {
       "type": "sitg-trust",
       "blocks": {
-        "b1": {
-          "type": "badge",
-          "settings": {
-            "icon": "🛬",
-            "label": "Carry-On Approved",
-            "sublabel": "21 major airlines verified"
-          }
-        },
-        "b2": {
-          "type": "badge",
-          "settings": {
-            "icon": "✨",
-            "label": "Premium Materials",
-            "sublabel": "Saffiano vegan leather · brass hardware"
-          }
-        },
         "b3": {
           "type": "badge",
           "settings": {
@@ -588,8 +572,6 @@
         }
       },
       "block_order": [
-        "b1",
-        "b2",
         "b3",
         "b4",
         "b5"
