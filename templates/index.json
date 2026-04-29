@@ -83,7 +83,7 @@
           "settings": {
             "icon": "🎯",
             "title": "THE \"JUST CHECK A BAG\" LIE",
-            "description": "After 11 years as a flight attendant, I had taken over 2,000 flights. I had tried every bag on the market. None of them understood what a woman actually needs when she travels. So I stopped waiting for someone to design it and built it myself."
+            "description": "After 11 years as a flight attendant, I had tried every bag on the market. None of them understood what a woman actually needs. So I stopped waiting for someone to design it and built it myself."
           }
         },
         "card2": {
@@ -181,141 +181,6 @@
         "eyebrow": "What's inside",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
         "subtitle": "Every detail of HerVoyage was designed by a flight attendant who'd lived the problem on 2,000+ flights. We didn't compromise on a single one."
-      }
-    },
-    "ss_hotspots_hFPNhn": {
-      "type": "ss-hotspots",
-      "blocks": {
-        "hotspot_UAm6P8": {
-          "type": "hotspot",
-          "settings": {
-            "vertical_position": 93,
-            "vertical_position_mobile": 50,
-            "horizontal_position": 50,
-            "horizontal_position_mobile": 50,
-            "type": "icon",
-            "title": "Hotspot",
-            "content": "<p>Content</p>",
-            "video_url": ""
-          }
-        },
-        "hotspot_kY7wwV": {
-          "type": "hotspot",
-          "settings": {
-            "vertical_position": 22,
-            "vertical_position_mobile": 50,
-            "horizontal_position": 37,
-            "horizontal_position_mobile": 50,
-            "type": "icon",
-            "title": "Hotspot",
-            "content": "<p>Content</p>",
-            "video_url": ""
-          }
-        },
-        "hotspot_94dV3g": {
-          "type": "hotspot",
-          "settings": {
-            "vertical_position": 50,
-            "vertical_position_mobile": 50,
-            "horizontal_position": 52,
-            "horizontal_position_mobile": 50,
-            "type": "icon",
-            "title": "Hotspot",
-            "content": "<p>Content</p>",
-            "video_url": ""
-          }
-        },
-        "hotspot_irxafW": {
-          "type": "hotspot",
-          "settings": {
-            "vertical_position": 64,
-            "vertical_position_mobile": 21,
-            "horizontal_position": 64,
-            "horizontal_position_mobile": 38,
-            "type": "icon",
-            "title": "Hotspot",
-            "content": "<p>Content</p>",
-            "video_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_UAm6P8",
-        "hotspot_kY7wwV",
-        "hotspot_94dV3g",
-        "hotspot_irxafW"
-      ],
-      "name": "Broche",
-      "settings": {
-        "heading": "",
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 40,
-        "heading_size_mobile": 30,
-        "heading_height": 150,
-        "heading_align": "left",
-        "heading_align_mobile": "center",
-        "body_padding_vertical": 0,
-        "body_padding_horizontal": 0,
-        "body_radius": 16,
-        "body_border_thickness": 0,
-        "body_shadow": false,
-        "image": "shopify://shop_images/pinkrollgood.png",
-        "image_ratio": "square",
-        "image_ratio_mobile": "square",
-        "image_radius": 16,
-        "image_border_thickness": 0,
-        "image_shadow": false,
-        "item_padding_vertical": 6,
-        "item_padding_horizontal": 6,
-        "item_radius": 16,
-        "item_border_thickness": 0,
-        "item_animation": true,
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 14,
-        "title_size_mobile": 14,
-        "title_height": 100,
-        "item_image_width": 30,
-        "item_image_width_mobile": 30,
-        "item_image_radius": 16,
-        "item_content_width": 300,
-        "item_content_width_mobile": 190,
-        "item_content_padding_vertical": 12,
-        "item_content_padding_horizontal": 12,
-        "item_content_radius": 16,
-        "item_content_border_thickness": 0,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 14,
-        "text_size_mobile": 14,
-        "text_height": 100,
-        "text_mt": 8,
-        "item_bg": "#000000",
-        "item_border_color": "#FFFFFF",
-        "item_icon_color": "#FFFFFF",
-        "title_color": "#FFFFFF",
-        "item_content_bg": "#FFFFFF",
-        "item_content_border_color": "#000000",
-        "text_color": "#000000",
-        "heading_color": "#000000",
-        "body_bg_color": "#f3f3f3",
-        "body_border_color": "#000000",
-        "body_shadow_color": "#000000",
-        "image_border_color": "#000000",
-        "image_shadow_color": "#000000",
-        "background_color": "#FFFFFF",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0
       }
     },
     "sitg_science": {
@@ -850,7 +715,6 @@
     "sitg_marquee",
     "sitg_reframe",
     "sitg_ingredients",
-    "ss_hotspots_hFPNhn",
     "sitg_science",
     "sitg_comparison",
     "sitg_timeline",
