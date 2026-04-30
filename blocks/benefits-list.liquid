@@ -1,0 +1,118 @@
+{% liquid
+  assign block_uid = 'luhxe-bl-' | append: block.id | replace: '_', '-'
+  assign check_color = block.settings.check_color | default: '#1A1A1A'
+%}
+
+<div
+  class="luhxe-bl"
+  id="{{ block_uid }}"
+  style="--luhxe-check-color: {{ check_color }}; margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem; margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.heading != blank %}
+    <h3 class="luhxe-bl__heading">{{ block.settings.heading }}</h3>
+  {% endif %}
+  <ul class="luhxe-bl__list">
+    {% content_for 'blocks' %}
+  </ul>
+</div>
+
+<style>
+  #{{ block_uid }} {
+    color: rgb(var(--color-foreground));
+  }
+  #{{ block_uid }} .luhxe-bl__heading {
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  #{{ block_uid }} .luhxe-bl__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  #{{ block_uid }} .luhxe-bl__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 1.5rem;
+    line-height: 1.45;
+  }
+  #{{ block_uid }} .luhxe-bl__icon {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.15rem;
+    color: var(--luhxe-check-color);
+  }
+  #{{ block_uid }} .luhxe-bl__text {
+    flex: 1;
+  }
+  @media (max-width: 749px) {
+    #{{ block_uid }} .luhxe-bl__heading { font-size: 1.4rem; }
+    #{{ block_uid }} .luhxe-bl__item { font-size: 1.4rem; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Benefits list",
+  "tag": null,
+  "blocks": [
+    { "type": "benefit-item" }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (optional)"
+    },
+    {
+      "type": "color",
+      "id": "check_color",
+      "label": "Checkmark color",
+      "default": "#7a3d23"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits list",
+      "blocks": [
+        { "type": "benefit-item", "settings": { "text": "Carry-on approved on 21 major airlines" } },
+        { "type": "benefit-item", "settings": { "text": "Wrinkle-free arrival, every flight" } },
+        { "type": "benefit-item", "settings": { "text": "Fits 5–7 outfits + 2 pairs of shoes" } },
+        { "type": "benefit-item", "settings": { "text": "Lifetime warranty on hardware & stitching" } },
+        { "type": "benefit-item", "settings": { "text": "Free UK shipping, dispatched in 24h" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

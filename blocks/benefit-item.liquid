@@ -1,0 +1,22 @@
+<li class="luhxe-bl__item" {{ block.shopify_attributes }}>
+  <svg class="luhxe-bl__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="12" r="11" fill="currentColor"></circle>
+    <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  <span class="luhxe-bl__text">{{ block.settings.text }}</span>
+</li>
+
+{% schema %}
+{
+  "name": "Benefit item",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Bullet text",
+      "default": "Benefit description"
+    }
+  ]
+}
+{% endschema %}
