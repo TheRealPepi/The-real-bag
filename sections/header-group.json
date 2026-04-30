@@ -30,21 +30,20 @@
             "icon": "flask"
           }
         },
-        "nav3": {
-          "type": "nav_link",
-          "disabled": true,
-          "settings": {
-            "label": "REVIEWS",
-            "link": "",
-            "icon": "book"
-          }
-        },
         "nav4": {
           "type": "nav_link",
           "settings": {
             "label": "FAQ",
             "link": "https://hervoyage.co/#sitg-faq",
             "icon": "help"
+          }
+        },
+        "nav3": {
+          "type": "nav_link",
+          "settings": {
+            "label": "CONTACT",
+            "link": "https://hervoyage.co/pages/contact",
+            "icon": "none"
           }
         },
         "div1": {
@@ -92,8 +91,8 @@
       "block_order": [
         "nav1",
         "nav2",
-        "nav3",
         "nav4",
+        "nav3",
         "div1",
         "drawer1",
         "drawer2",

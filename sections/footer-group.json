@@ -18,34 +18,65 @@
           "type": "link_column",
           "settings": {
             "heading": "The Bag",
+            "menu": "",
             "link_1_label": "What's Inside",
+            "link_1_url": "",
             "link_2_label": "How We Tested",
+            "link_2_url": "",
             "link_3_label": "Compare",
-            "link_4_label": "FAQ"
+            "link_3_url": "",
+            "link_4_label": "FAQ",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
           }
         },
         "col2": {
           "type": "link_column",
           "settings": {
             "heading": "Company",
+            "menu": "",
             "link_1_label": "Our Story",
+            "link_1_url": "",
             "link_2_label": "Press",
+            "link_2_url": "",
             "link_3_label": "Contact",
-            "link_4_label": "Careers"
+            "link_3_url": "https://hervoyage.co/pages/contact",
+            "link_4_label": "Careers",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
           }
         },
         "col3": {
           "type": "link_column",
           "settings": {
             "heading": "Support",
+            "menu": "",
             "link_1_label": "Shipping & Returns",
+            "link_1_url": "",
             "link_2_label": "Lifetime Warranty",
+            "link_2_url": "",
             "link_3_label": "Privacy Policy",
-            "link_4_label": "Terms of Service"
+            "link_3_url": "",
+            "link_4_label": "Terms of Service",
+            "link_4_url": "",
+            "link_5_label": "",
+            "link_5_url": "",
+            "link_6_label": "",
+            "link_6_url": ""
           }
         }
       },
-      "block_order": ["col1", "col2", "col3"],
+      "block_order": [
+        "col1",
+        "col2",
+        "col3"
+      ],
       "settings": {
         "brand_name": "HerVoyage",
         "tagline": "The carry-on garment bag for women who refuse to choose between beautiful and practical.",
@@ -53,9 +84,15 @@
         "disclaimer": "*HerVoyage carry-on dimensions (55×35×22 cm folded) comply with the standard carry-on rules of 21 major airlines as of 2025, including British Airways, easyJet, Ryanair, Lufthansa, Emirates, Delta, American Airlines, KLM, Air France, JAL and ANA. Some ultra-low-cost regional carriers operate non-standard cabins — please verify allowance with your specific airline before travel. Lifetime warranty covers manufacturing defects in hardware (zips, brass fittings, internal cabling) and stitching. Cosmetic wear from normal use is not covered.",
         "show_email_capture": true,
         "email_placeholder": "Your email address",
-        "email_button": "Join"
+        "email_button": "Join",
+        "social_instagram": "",
+        "social_facebook": "",
+        "social_youtube": "",
+        "social_tiktok": ""
       }
     }
   },
-  "order": ["sitg_footer"]
+  "order": [
+    "sitg_footer"
+  ]
 }
