@@ -20,6 +20,10 @@
             "link": ""
           }
         },
+        "price1": {
+          "type": "price",
+          "settings": {}
+        },
         "buy_button_bDGbnk": {
           "type": "buy_button",
           "settings": {
@@ -75,6 +79,7 @@
       },
       "block_order": [
         "reviews1",
+        "price1",
         "buy_button_bDGbnk",
         "guarantee1",
         "faq1",
