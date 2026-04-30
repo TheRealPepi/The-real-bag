@@ -75,10 +75,50 @@
             "quote": "I flew Heathrow to JFK with one carry-on. Wedding rehearsal that night. Zero ironing. The bridesmaids asked where I got my dress steamer. I didn't have one.",
             "name": "Imogen H."
           }
+        },
+        "bi1": {
+          "type": "benefit_item",
+          "settings": {
+            "text": "Carry-on approved on 21 major airlines",
+            "check_color": "#7a3d23"
+          }
+        },
+        "bi2": {
+          "type": "benefit_item",
+          "settings": {
+            "text": "Wrinkle-free arrival, every flight",
+            "check_color": "#7a3d23"
+          }
+        },
+        "bi3": {
+          "type": "benefit_item",
+          "settings": {
+            "text": "Fits 5–7 outfits + 2 pairs of shoes",
+            "check_color": "#7a3d23"
+          }
+        },
+        "bi4": {
+          "type": "benefit_item",
+          "settings": {
+            "text": "Lifetime warranty on hardware & stitching",
+            "check_color": "#7a3d23"
+          }
+        },
+        "bi5": {
+          "type": "benefit_item",
+          "settings": {
+            "text": "Free UK shipping, dispatched in 24h",
+            "check_color": "#7a3d23"
+          }
         }
       },
       "block_order": [
         "reviews1",
+        "bi1",
+        "bi2",
+        "bi3",
+        "bi4",
+        "bi5",
         "price1",
         "buy_button_bDGbnk",
         "guarantee1",

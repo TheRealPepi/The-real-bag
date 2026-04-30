@@ -228,8 +228,28 @@
             <div class="luhxe-product__subtitle">{{ section.settings.subtitle }}</div>
           {%- endif -%}
 
-          {%- comment -%} BENEFITS LIST — static theme block, sits between subtitle and bottom zone {%- endcomment -%}
-          {% content_for 'block', type: 'benefits-list', id: 'BenefitsList' %}
+          {%- comment -%} BENEFITS LIST — section-defined benefit_item blocks {%- endcomment -%}
+          {%- assign benefit_items = section.blocks | where: 'type', 'benefit_item' -%}
+          {%- if benefit_items.size > 0 or section.settings.benefits_heading != blank -%}
+            <div class="luhxe-bl">
+              {%- if section.settings.benefits_heading != blank -%}
+                <h3 class="luhxe-bl__heading">{{ section.settings.benefits_heading | escape }}</h3>
+              {%- endif -%}
+              {%- if benefit_items.size > 0 -%}
+                <ul class="luhxe-bl__list" role="list">
+                  {%- for block in benefit_items -%}
+                    <li class="luhxe-bl__item" style="color: {{ block.settings.check_color | default: '#7a3d23' }};" {{ block.shopify_attributes }}>
+                      <svg class="luhxe-bl__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="11" fill="currentColor"></circle>
+                        <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span class="luhxe-bl__text">{{ block.settings.text }}</span>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
 
           {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (price, variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review) {%- endcomment -%}
           {%- assign reorderable_types = 'price,variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review' | split: ',' -%}
@@ -565,6 +585,11 @@
       "default": "<p>Pack smarter, travel lighter, and skip the luggage fees—all in style</p>"
     },
     {
+      "type": "text",
+      "id": "benefits_heading",
+      "label": "Benefits list heading (optional)"
+    },
+    {
       "type": "checkbox",
       "id": "show_description",
       "label": "Show product description",
@@ -693,6 +718,25 @@
       ]
     },
     {
+      "type": "benefit_item",
+      "name": "Benefit bullet",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Bullet text",
+          "default": "Benefit description"
+        },
+        {
+          "type": "color",
+          "id": "check_color",
+          "label": "Checkmark color",
+          "default": "#7a3d23"
+        }
+      ]
+    },
+    {
       "type": "reviews_summary",
       "name": "Reviews summary",
       "limit": 1,
@@ -792,6 +836,11 @@
         { "type": "trust_badge", "settings": { "icon": "🎁", "text": "FREE GIFTS WORTH $35" } },
         { "type": "trust_badge", "settings": { "icon": "🏆", "text": "2026 TOP-RATED TRAVEL BAG" } },
         { "type": "reviews_summary", "settings": { "count_text": "1346 Reviews" } },
+        { "type": "benefit_item", "settings": { "text": "Carry-on approved on 21 major airlines", "check_color": "#7a3d23" } },
+        { "type": "benefit_item", "settings": { "text": "Wrinkle-free arrival, every flight", "check_color": "#7a3d23" } },
+        { "type": "benefit_item", "settings": { "text": "Fits 5–7 outfits + 2 pairs of shoes", "check_color": "#7a3d23" } },
+        { "type": "benefit_item", "settings": { "text": "Lifetime warranty on hardware & stitching", "check_color": "#7a3d23" } },
+        { "type": "benefit_item", "settings": { "text": "Free UK shipping, dispatched in 24h", "check_color": "#7a3d23" } },
         { "type": "price" },
         { "type": "variant_picker", "settings": { "variant_picker_heading": "Select Model", "picker_type": "button", "swatch_shape": "circle", "which_one_text": "Which one is for me?" } },
         { "type": "kaching_placeholder" },
