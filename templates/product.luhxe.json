@@ -76,7 +76,7 @@
         "faq1": {
           "type": "accordion_row",
           "settings": {
-            "title": "90-Day Guarantee",
+            "title": "The 90-Day Promise",
             "body": "<p>Try HerVoyage on three trips. If it isn't the bag you reach for every time you fly, return it for a full refund — no hoops, no hassle.</p>",
             "default_open": false
           }
@@ -84,7 +84,7 @@
         "faq2": {
           "type": "accordion_row",
           "settings": {
-            "title": "The Science Behind It",
+            "title": "Designed by a Flight Attendant",
             "body": "<p>Tested across 47 fabric types and 21 major airlines. 97% of testers reported zero wrinkles after 7-hour flights, vs. 21% from a leading rolling carry-on.</p>",
             "default_open": false
           }
@@ -100,7 +100,7 @@
         "faq4": {
           "type": "accordion_row",
           "settings": {
-            "title": "Is It Safe?",
+            "title": "Lifetime Warranty",
             "body": "<p>Premium Saffiano-style vegan leather, brushed brass hardware, internal steel cabling rated to 30 kg. Lifetime warranty on all hardware and stitching.</p>",
             "default_open": false
           }
