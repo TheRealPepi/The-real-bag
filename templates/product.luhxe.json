@@ -20,21 +20,7 @@
             "link": ""
           }
         },
-        "vp1": {
-          "type": "variant_picker",
-          "settings": {
-            "variant_picker_heading": "Select Model",
-            "picker_type": "button",
-            "swatch_shape": "circle",
-            "which_one_text": "Which one is for me?",
-            "which_one_link": ""
-          }
-        },
-        "kaching1": {
-          "type": "kaching_placeholder",
-          "settings": {}
-        },
-        "bb1": {
+        "buy_button_bDGbnk": {
           "type": "buy_button",
           "settings": {
             "button_text": "ADD TO CART"
@@ -89,9 +75,7 @@
       },
       "block_order": [
         "reviews1",
-        "vp1",
-        "kaching1",
-        "bb1",
+        "buy_button_bDGbnk",
         "guarantee1",
         "faq1",
         "faq2",
