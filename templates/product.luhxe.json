@@ -580,6 +580,7 @@
     },
     "sitg_founder": {
       "type": "sitg-founder",
+      "disabled": true,
       "settings": {
         "eyebrow": "Why I built this",
         "headline": "I LIVED OUT OF CARRY-ONS<br>FOR 11 YEARS.",
@@ -626,6 +627,7 @@
         "t2",
         "t3"
       ],
+      "disabled": true,
       "settings": {}
     },
     "sitg_faq": {
