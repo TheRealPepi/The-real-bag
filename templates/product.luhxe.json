@@ -548,7 +548,7 @@
         "grid_radius": 16,
         "grid_border_thickness": 0,
         "grid_shadow": false,
-        "media_position": "left",
+        "media_position": "right",
         "media_position_mobile": "top",
         "content_padding_vertical": 16,
         "content_padding_horizontal": 16,
