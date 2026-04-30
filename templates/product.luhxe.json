@@ -582,7 +582,7 @@
         "text_align": "left",
         "text_align_mobile": "center",
         "text_mt": 16,
-        "button": "Shop The Look",
+        "button": "",
         "button_url": "",
         "button_custom": false,
         "button_font": "josefin_sans_n4",
