@@ -148,7 +148,7 @@
         "m1": {
           "type": "message",
           "settings": {
-            "text": "90 DAYS FULL WARRANTY"
+            "text": "LIFETIME WARRANTY"
           }
         },
         "m2": {
@@ -169,12 +169,6 @@
             "text": "NO BAGGAGE FEES"
           }
         },
-        "m6": {
-          "type": "message",
-          "settings": {
-            "text": "FREE UK SHIPPING"
-          }
-        },
         "m7": {
           "type": "message",
           "settings": {
@@ -186,12 +180,6 @@
           "settings": {
             "text": "CARRY-ON APPROVED"
           }
-        },
-        "m9": {
-          "type": "message",
-          "settings": {
-            "text": "SHIPS TODAY"
-          }
         }
       },
       "block_order": [
@@ -199,10 +187,8 @@
         "m2",
         "m3",
         "m4",
-        "m6",
         "m7",
-        "m8",
-        "m9"
+        "m8"
       ],
       "settings": {}
     },
@@ -920,7 +906,7 @@
           "type": "faq",
           "settings": {
             "question": "Will HerVoyage actually fit as a carry-on?",
-            "answer": "Yes — and we tested it on the smallest cabin sizers in the industry, including Ryanair's notorious 55×40×20 cage. HerVoyage measures 55×35×22 cm folded, fitting the carry-on rules of 21 major airlines including BA, easyJet, Ryanair, Lufthansa, Emirates, Delta, AA, KLM, Air France, JAL and ANA. The only exception is some ultra-low-cost regional carriers with non-standard cabins — check before you book."
+            "answer": "Yes — and we tested it on the smallest cabin sizers in the industry. HerVoyage measures 51×23×32 cm folded, fitting the carry-on rules of 21 major airlines including BA, easyJet, Lufthansa, Emirates, Delta, AA, KLM, Air France, JAL and ANA. The only exception is some ultra-low-cost regional carriers with non-standard cabins — check before you book."
           }
         },
         "faq2": {
