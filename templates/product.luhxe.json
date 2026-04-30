@@ -246,6 +246,7 @@
         "card2",
         "card3"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "EVERY OTHER BAG MAKES YOU CHOOSE BETWEEN",
         "headline": "Beautiful or practical Not anymore...",
@@ -318,6 +319,7 @@
         "ing3",
         "ing4"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "What's inside",
         "headline": "FOUR DETAILS.<br>FOUR REASONS<br>WOMEN NEVER GO BACK.",
@@ -516,6 +518,7 @@
         "ms4",
         "ms5"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "What to expect",
         "headline": "FROM UNBOXING<br>TO TRIP TEN.",
@@ -694,7 +697,7 @@
         "judge_me_reviews_review_widget_EK7tpF": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "real_data",
+            "review_data": "sample_data",
             "max_width": 1200,
             "show_shop_reviews": false,
             "empty_state": "empty_widget"
