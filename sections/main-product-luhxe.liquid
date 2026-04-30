@@ -228,8 +228,8 @@
             <div class="luhxe-product__subtitle">{{ section.settings.subtitle }}</div>
           {%- endif -%}
 
-          {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (price, variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review) {%- endcomment -%}
-          {%- assign reorderable_types = 'price,variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review' | split: ',' -%}
+          {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (price, variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review, benefits list) {%- endcomment -%}
+          {%- assign reorderable_types = 'price,variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review,benefits_list,benefit_item' | split: ',' -%}
           {%- assign has_reorderable_blocks = false -%}
           {%- for block in section.blocks -%}
             {%- if reorderable_types contains block.type or block.type == '@app' -%}
@@ -240,7 +240,13 @@
 
           {%- if has_reorderable_blocks -%}
             <div class="luhxe-product__bottom">
+              {%- assign in_benefits_list = false -%}
               {%- for block in section.blocks -%}
+                {%- comment -%} Auto-close an open benefits list when any non-list block appears {%- endcomment -%}
+                {%- if in_benefits_list and block.type != 'benefit_item' and block.type != 'benefits_list' -%}
+                  </ul></div>
+                  {%- assign in_benefits_list = false -%}
+                {%- endif -%}
                 {%- case block.type -%}
                   {%- when 'price' -%}
                     <div id="price-{{ section.id }}" class="luhxe-product__price" role="status" {{ block.shopify_attributes }}>
@@ -369,6 +375,27 @@
                       <div class="luhxe-accordion__body rte">{{ block.settings.body }}</div>
                     </details>
 
+                  {%- when 'benefits_list' -%}
+                    {%- if in_benefits_list -%}</ul></div>{%- endif -%}
+                    <div class="luhxe-benefits" style="--luhxe-check-color: {{ block.settings.check_color | default: '#1A1A1A' }};" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="luhxe-benefits__heading">{{ block.settings.heading | escape }}</h3>
+                      {%- endif -%}
+                      <ul class="luhxe-benefits__list">
+                    {%- assign in_benefits_list = true -%}
+
+                  {%- when 'benefit_item' -%}
+                    {%- unless in_benefits_list -%}
+                      <div class="luhxe-benefits"><ul class="luhxe-benefits__list">
+                      {%- assign in_benefits_list = true -%}
+                    {%- endunless -%}
+                    <li class="luhxe-benefits__item" {{ block.shopify_attributes }}>
+                      <span class="luhxe-benefits__icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" focusable="false"><polyline points="3.5,8.5 6.8,11.5 12.5,5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span class="luhxe-benefits__text">{{ block.settings.text | escape }}</span>
+                    </li>
+
                   {%- when 'featured_review' -%}
                     <div class="luhxe-featured-review" {{ block.shopify_attributes }}>
                       {%- if block.settings.photo != blank -%}
@@ -390,6 +417,7 @@
                     </div>
                 {%- endcase -%}
               {%- endfor -%}
+              {%- if in_benefits_list -%}</ul></div>{%- endif -%}
             </div>
           {%- endif -%}
 
@@ -757,6 +785,37 @@
       ]
     },
     {
+      "type": "benefits_list",
+      "name": "Benefits list",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading (optional)",
+          "default": "Why women never travel without it"
+        },
+        {
+          "type": "color",
+          "id": "check_color",
+          "label": "Checkmark circle color",
+          "default": "#7a3d23"
+        }
+      ]
+    },
+    {
+      "type": "benefit_item",
+      "name": "Benefit item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Bullet text",
+          "default": "Add a benefit here"
+        }
+      ]
+    },
+    {
       "type": "featured_review",
       "name": "Featured review",
       "limit": 2,
@@ -789,6 +848,12 @@
         { "type": "trust_badge", "settings": { "icon": "🎁", "text": "FREE GIFTS WORTH $35" } },
         { "type": "trust_badge", "settings": { "icon": "🏆", "text": "2026 TOP-RATED TRAVEL BAG" } },
         { "type": "reviews_summary", "settings": { "count_text": "1346 Reviews" } },
+        { "type": "benefits_list", "settings": { "heading": "", "check_color": "#7a3d23" } },
+        { "type": "benefit_item",  "settings": { "text": "Carry-on approved on 21 major airlines" } },
+        { "type": "benefit_item",  "settings": { "text": "Wrinkle-free arrival, every flight" } },
+        { "type": "benefit_item",  "settings": { "text": "Fits 5–7 outfits + 2 pairs of shoes" } },
+        { "type": "benefit_item",  "settings": { "text": "Lifetime warranty on hardware & stitching" } },
+        { "type": "benefit_item",  "settings": { "text": "Free UK shipping, dispatched in 24h" } },
         { "type": "price" },
         { "type": "variant_picker", "settings": { "variant_picker_heading": "Select Model", "picker_type": "button", "swatch_shape": "circle", "which_one_text": "Which one is for me?" } },
         { "type": "kaching_placeholder" },
