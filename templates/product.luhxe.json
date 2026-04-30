@@ -44,14 +44,14 @@
         "bi4": {
           "type": "benefit_item",
           "settings": {
-            "text": "Lifetime warranty on hardware & stitching",
+            "text": "Lifetime warranty",
             "check_color": "#7a3d23"
           }
         },
         "bi5": {
           "type": "benefit_item",
           "settings": {
-            "text": "Free UK shipping, dispatched in 24h",
+            "text": "Free Shipping, dispatched in 24h",
             "check_color": "#7a3d23"
           }
         },
