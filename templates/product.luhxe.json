@@ -1030,7 +1030,7 @@
         "headline": "YOUR JOURNEY IS WAITING.<br>YOU MIGHT AS WELL <span style=\"color:var(--sitg-amber)\">PACK BEAUTIFUL.</span>",
         "body": "Order HerVoyage today. Pack in twelve minutes. Walk past the bag drop. Land looking like you didn't even fly — and repeat for the rest of your travelling life.",
         "cta_text": "Get HerVoyage",
-        "cta_link": "shopify://products/smart-travel-bag"
+        "cta_link": "#sitg-buy"
       }
     }
   },
