@@ -318,6 +318,7 @@ a.luhxe-product__which-one:hover { background: rgba(var(--color-foreground), 0.0
 /* Add-to-cart button ---------------------------------------------------- */
 
 .luhxe-product__form { margin-top: 0.5rem; }
+.luhxe-product__form .product-form__buttons { max-width: none; }
 
 .luhxe-product__add-to-cart {
   width: 100%;
