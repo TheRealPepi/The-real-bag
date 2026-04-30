@@ -1,21 +1,29 @@
 {% liquid
   assign block_uid = 'luhxe-bl-' | append: block.id | replace: '_', '-'
   assign check_color = block.settings.check_color | default: '#1A1A1A'
+  assign has_items = false
+  if block.blocks.size > 0
+    assign has_items = true
+  endif
 %}
 
-<div
-  class="luhxe-bl"
-  id="{{ block_uid }}"
-  style="--luhxe-check-color: {{ check_color }}; margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem; margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
-  {{ block.shopify_attributes }}
->
-  {% if block.settings.heading != blank %}
-    <h3 class="luhxe-bl__heading">{{ block.settings.heading }}</h3>
-  {% endif %}
-  <ul class="luhxe-bl__list">
-    {% content_for 'blocks' %}
-  </ul>
-</div>
+{% if has_items or block.settings.heading != blank %}
+  <div
+    class="luhxe-bl"
+    id="{{ block_uid }}"
+    style="--luhxe-check-color: {{ check_color }}; margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem; margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+    {{ block.shopify_attributes }}
+  >
+    {% if block.settings.heading != blank %}
+      <h3 class="luhxe-bl__heading">{{ block.settings.heading }}</h3>
+    {% endif %}
+    {% if has_items %}
+      <ul class="luhxe-bl__list">
+        {% content_for 'blocks' %}
+      </ul>
+    {% endif %}
+  </div>
+{% endif %}
 
 <style>
   #{{ block_uid }} {

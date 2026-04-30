@@ -228,8 +228,11 @@
             <div class="luhxe-product__subtitle">{{ section.settings.subtitle }}</div>
           {%- endif -%}
 
-          {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (price, variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review, benefits list) {%- endcomment -%}
-          {%- assign reorderable_types = 'price,variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review,benefits-list' | split: ',' -%}
+          {%- comment -%} BENEFITS LIST — static theme block, sits between subtitle and bottom zone {%- endcomment -%}
+          {% content_for 'block', type: 'benefits-list', id: 'BenefitsList' %}
+
+          {%- comment -%} MIDDLE + BOTTOM ZONE — reorderable blocks (price, variant picker, buy button, Kaching, app blocks, guarantee, accordions, featured review) {%- endcomment -%}
+          {%- assign reorderable_types = 'price,variant_picker,buy_button,kaching_placeholder,guarantee_badge,accordion_row,featured_review' | split: ',' -%}
           {%- assign has_reorderable_blocks = false -%}
           {%- for block in section.blocks -%}
             {%- if reorderable_types contains block.type or block.type == '@app' -%}
@@ -368,9 +371,6 @@
                       </summary>
                       <div class="luhxe-accordion__body rte">{{ block.settings.body }}</div>
                     </details>
-
-                  {%- when 'benefits-list' -%}
-                    {% content_for 'block', id: block.id, type: block.type %}
 
                   {%- when 'featured_review' -%}
                     <div class="luhxe-featured-review" {{ block.shopify_attributes }}>
@@ -760,9 +760,6 @@
       ]
     },
     {
-      "type": "benefits-list"
-    },
-    {
       "type": "featured_review",
       "name": "Featured review",
       "limit": 2,
@@ -795,7 +792,6 @@
         { "type": "trust_badge", "settings": { "icon": "🎁", "text": "FREE GIFTS WORTH $35" } },
         { "type": "trust_badge", "settings": { "icon": "🏆", "text": "2026 TOP-RATED TRAVEL BAG" } },
         { "type": "reviews_summary", "settings": { "count_text": "1346 Reviews" } },
-        { "type": "benefits-list" },
         { "type": "price" },
         { "type": "variant_picker", "settings": { "variant_picker_heading": "Select Model", "picker_type": "button", "swatch_shape": "circle", "which_one_text": "Which one is for me?" } },
         { "type": "kaching_placeholder" },
