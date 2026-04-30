@@ -19,7 +19,7 @@
           "settings": {
             "label": "THE BAG",
             "link": "shopify://products/smart-travel-bag",
-            "icon": "beaker"
+            "icon": "bag"
           }
         },
         "nav2": {
@@ -27,7 +27,7 @@
           "settings": {
             "label": "THE STORY",
             "link": "https://hervoyage.co/#sitg-story",
-            "icon": "flask"
+            "icon": "book"
           }
         },
         "nav4": {
@@ -43,7 +43,7 @@
           "settings": {
             "label": "CONTACT",
             "link": "https://hervoyage.co/pages/contact",
-            "icon": "none"
+            "icon": "mail"
           }
         },
         "div1": {

@@ -347,6 +347,8 @@
       {%- if block.type == 'nav_link' -%}
         <a href="{{ block.settings.link }}" onclick="document.getElementById('sitg-drawer').classList.remove('open');document.getElementById('sitg-drawer-overlay').classList.remove('open');document.body.style.overflow='';">
           {%- case block.settings.icon -%}
+            {%- when 'bag' -%}
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             {%- when 'beaker' -%}
               <svg viewBox="0 0 24 24"><path d="M9 3h6M12 3v7l-5.5 8.5a2 2 0 001.7 3h7.6a2 2 0 001.7-3L12 10V3"/></svg>
             {%- when 'flask' -%}
@@ -355,6 +357,10 @@
               <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
             {%- when 'help' -%}
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            {%- when 'mail' -%}
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {%- when 'phone' -%}
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             {%- when 'user' -%}
               <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
             {%- when 'refresh' -%}
@@ -449,15 +455,18 @@
           "id": "icon",
           "label": "Mobile drawer icon",
           "options": [
-            { "value": "beaker", "label": "Beaker (Ingredients)" },
-            { "value": "flask", "label": "Flask (Science)" },
+            { "value": "bag", "label": "Bag (The Bag)" },
             { "value": "book", "label": "Book (Story)" },
             { "value": "help", "label": "Help circle (FAQ)" },
+            { "value": "mail", "label": "Mail (Contact)" },
+            { "value": "phone", "label": "Phone (Contact)" },
+            { "value": "beaker", "label": "Beaker (Ingredients)" },
+            { "value": "flask", "label": "Flask (Science)" },
             { "value": "user", "label": "User" },
             { "value": "refresh", "label": "Refresh (Subscription)" },
             { "value": "none", "label": "Dot" }
           ],
-          "default": "beaker"
+          "default": "bag"
         }
       ]
     },
