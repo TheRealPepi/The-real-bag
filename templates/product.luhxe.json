@@ -312,7 +312,7 @@
         "slide_gap_mobile": 10,
         "slide_radius": 20,
         "slide_border_thickness": 0,
-        "slide_layout": "content_image",
+        "slide_layout": "image_content",
         "slide_layout_mobile": "image_content",
         "image_width": "medium",
         "image_radius": 20,
