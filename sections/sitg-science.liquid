@@ -33,21 +33,37 @@
       {%- endfor -%}
     </div>
 
-    <div class="sitg-nsaid-block reveal">
-      <h3>{{ section.settings.nsaid_headline }}</h3>
-      <p>{{ section.settings.nsaid_body }}</p>
-      <div class="sitg-nsaid-grid">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'nsaid_trial' -%}
-            <div class="sitg-nsaid-card" {{ block.shopify_attributes }}>
-              <div class="nc-ingredient">{{ block.settings.ingredient }}</div>
-              <div class="nc-vs">{{ block.settings.vs }}</div>
-              <div class="nc-result">{{ block.settings.result }}</div>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
+    {%- assign has_nsaid_trials = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'nsaid_trial' -%}
+        {%- assign has_nsaid_trials = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if section.settings.nsaid_headline != blank or section.settings.nsaid_body != blank or has_nsaid_trials -%}
+      <div class="sitg-nsaid-block reveal">
+        {%- if section.settings.nsaid_headline != blank -%}
+          <h3>{{ section.settings.nsaid_headline }}</h3>
+        {%- endif -%}
+        {%- if section.settings.nsaid_body != blank -%}
+          <p>{{ section.settings.nsaid_body }}</p>
+        {%- endif -%}
+        {%- if has_nsaid_trials -%}
+          <div class="sitg-nsaid-grid">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'nsaid_trial' -%}
+                <div class="sitg-nsaid-card" {{ block.shopify_attributes }}>
+                  <div class="nc-ingredient">{{ block.settings.ingredient }}</div>
+                  <div class="nc-vs">{{ block.settings.vs }}</div>
+                  <div class="nc-result">{{ block.settings.result }}</div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
       </div>
-    </div>
+    {%- endif -%}
   </div>
 </section>
 </div>
