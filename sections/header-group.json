@@ -48,6 +48,7 @@
         },
         "div1": {
           "type": "drawer_divider",
+          "disabled": true,
           "settings": {
             "label": "Account"
           }
@@ -78,14 +79,6 @@
             "link": "",
             "icon": "package"
           }
-        },
-        "drawer4": {
-          "type": "drawer_link",
-          "settings": {
-            "label": "Contact Us",
-            "link": "",
-            "icon": "mail"
-          }
         }
       },
       "block_order": [
@@ -96,8 +89,7 @@
         "div1",
         "drawer1",
         "drawer2",
-        "drawer3",
-        "drawer4"
+        "drawer3"
       ],
       "settings": {
         "logo": "shopify://shop_images/HERVOYAGE_LOGO.png",
