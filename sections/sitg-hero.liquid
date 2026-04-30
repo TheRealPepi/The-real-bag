@@ -33,10 +33,13 @@
             {{ section.settings.cta_text }}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#sitg-ingredients" class="btn-secondary">
-            Features
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          {%- assign sitg_cta2_text = section.settings.cta2_text | default: 'Features' -%}
+          {%- if sitg_cta2_text != blank -%}
+            <a href="{{ section.settings.cta2_link | default: '#sitg-ingredients' }}" class="btn-secondary">
+              {{ sitg_cta2_text }}
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          {%- endif -%}
         </div>
         {%- if section.settings.rating != blank or section.settings.review_count != blank or section.settings.guarantee_title != blank or section.settings.guarantee_subtitle != blank -%}
           <div class="sitg-hero-proof">
@@ -132,6 +135,19 @@
       "type": "url",
       "id": "cta_link",
       "label": "CTA button link"
+    },
+    {
+      "type": "text",
+      "id": "cta2_text",
+      "label": "Secondary CTA button text",
+      "info": "Leave blank to hide the secondary button.",
+      "default": "Features"
+    },
+    {
+      "type": "url",
+      "id": "cta2_link",
+      "label": "Secondary CTA button link",
+      "info": "Defaults to #sitg-ingredients if blank."
     },
     {
       "type": "text",
