@@ -93,7 +93,7 @@
           "type": "accordion_row",
           "settings": {
             "title": "Shipping & Returns",
-            "body": "<p>Free UK shipping, dispatched within 24 hours. International calculated at checkout. 90-day no-questions-asked returns.</p>",
+            "body": "<p>Free shipping, dispatched within 24 hours. 90-day no-questions-asked returns.</p>",
             "default_open": false
           }
         },
