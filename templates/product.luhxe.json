@@ -715,7 +715,7 @@
         "row6": {
           "type": "row",
           "settings": {
-            "row_label": "Free UK shipping",
+            "row_label": "Free shipping",
             "us_type": "check",
             "us_value": "—",
             "comp1_type": "x",
