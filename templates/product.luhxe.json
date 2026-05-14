@@ -714,6 +714,54 @@
             "comp2_type": "x",
             "comp2_value": "—"
           }
+        },
+        "row7": {
+          "type": "row",
+          "settings": {
+            "row_label": "Anti-wrinkle design",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row8": {
+          "type": "row",
+          "settings": {
+            "row_label": "Built-in hanger",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row9": {
+          "type": "row",
+          "settings": {
+            "row_label": "Detachable wheels & handle",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
+        },
+        "row10": {
+          "type": "row",
+          "settings": {
+            "row_label": "Organization compartments",
+            "us_type": "check",
+            "us_value": "—",
+            "comp1_type": "x",
+            "comp1_value": "—",
+            "comp2_type": "x",
+            "comp2_value": "—"
+          }
         }
       },
       "block_order": [
@@ -722,7 +770,11 @@
         "row3",
         "row4",
         "row5",
-        "row6"
+        "row6",
+        "row7",
+        "row8",
+        "row9",
+        "row10"
       ],
       "settings": {
         "eyebrow": "Comparison table",
